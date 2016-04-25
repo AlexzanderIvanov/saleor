@@ -14,7 +14,6 @@ DEBUG = ast.literal_eval(os.environ.get('DEBUG', 'True'))
 SITE_ID = 1
 
 PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '..'))
-# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 ROOT_URLCONF = 'saleor.urls'
 
@@ -29,7 +28,6 @@ INTERNAL_IPS = os.environ.get('INTERNAL_IPS', '127.0.0.1').split()
 CACHE_URL = os.environ.get('CACHE_URL',
                            os.environ.get('REDIS_URL', 'locmem://'))
 CACHES = {'default': django_cache_url.parse(CACHE_URL)}
-
 
 SQLITE_DB_URL = 'sqlite:///' + os.path.join(PROJECT_ROOT, 'dev.sqlite')
 DATABASES = {'default': dj_database_url.config(default=SQLITE_DB_URL)}
@@ -58,22 +56,11 @@ DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
 
-# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#     os.path.join(PROJECT_ROOT, 'saleor', 'static')
-# ]
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
-
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
-
+STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, 'saleor', 'static')
+]
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder'
