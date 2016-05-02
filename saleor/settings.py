@@ -5,9 +5,8 @@ import os.path
 
 import dj_database_url
 import dj_email_url
-from django.contrib.messages import constants as messages
 import django_cache_url
-
+from django.contrib.messages import constants as messages
 
 DEBUG = ast.literal_eval(os.environ.get('DEBUG', 'True'))
 
@@ -30,17 +29,14 @@ CACHE_URL = os.environ.get('CACHE_URL',
                            os.environ.get('REDIS_URL', 'locmem://'))
 CACHES = {'default': django_cache_url.parse(CACHE_URL)}
 
-
 SQLITE_DB_URL = 'sqlite:///' + os.path.join(PROJECT_ROOT, 'dev.sqlite')
 DATABASES = {'default': dj_database_url.config(default=SQLITE_DB_URL)}
-
 
 TIME_ZONE = 'America/Chicago'
 LANGUAGE_CODE = 'en-us'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
 
 EMAIL_URL = os.environ.get('EMAIL_URL', 'console://')
 email_config = dj_email_url.parse(EMAIL_URL)
@@ -54,14 +50,15 @@ EMAIL_BACKEND = email_config['EMAIL_BACKEND']
 EMAIL_USE_TLS = email_config['EMAIL_USE_TLS']
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 
-
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_ROOT, 'saleor', 'static')
+    os.path.join(PROJECT_ROOT, 'saleor', 'static'),
+    '/app/static',
+    '/app/saleor/static'
 ]
 
 STATICFILES_FINDERS = [
@@ -100,7 +97,7 @@ TEMPLATES = [{
         'string_if_invalid': '<< MISSING VARIABLE "%s" >>' if DEBUG else ''}}]
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '98vwae)iy65n3pl%)h-x0o2@g*!m)_4985zwhp&(1sq+d*3&4%' #os.environ.get('SECRET_KEY')
+SECRET_KEY = '98vwae)iy65n3pl%)h-x0o2@g*!m)_4985zwhp&(1sq+d*3&4%'  # os.environ.get('SECRET_KEY')
 
 MIDDLEWARE_CLASSES = [
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -162,7 +159,7 @@ LOGGING = {
     'formatters': {
         'verbose': {
             'format': '%(levelname)s %(asctime)s %(module)s '
-            '%(process)d %(thread)d %(message)s'
+                      '%(process)d %(thread)d %(message)s'
         },
         'simple': {
             'format': '%(levelname)s %(message)s'
