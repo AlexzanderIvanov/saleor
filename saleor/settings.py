@@ -12,8 +12,8 @@ DEBUG = ast.literal_eval(os.environ.get('DEBUG', 'True'))
 
 SITE_ID = 1
 
-PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '..'))
-# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+# PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '..'))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 ROOT_URLCONF = 'saleor.urls'
 
@@ -57,8 +57,6 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'saleor', 'static'),
-    '/app/static',
-    '/app/saleor/static'
 ]
 
 STATICFILES_FINDERS = [
