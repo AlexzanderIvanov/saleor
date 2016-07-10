@@ -1,0 +1,68 @@
+{% extends "dashboard/base.html" %}
+{% load materializecss %}
+{% load i18n %}
+{% load mptt_tags %}
+
+
+{% block title %}
+    {% trans "Country" %}
+    {% if shipping_country.pk %}
+        - {{ shipping_country }}
+    {% else %}
+        - {% trans 'Add new country' %}
+    {% endif %}
+    - {{ block.super }}
+{% endblock %}
+
+{% block body_class %}body-shipping-countries{% endblock %}
+
+{% block menu_shipping_class %} active{% endblock %}
+
+{% block page_title %}{% if shipping_country.pk %}{{ shipping_country }}{% else %}
+    {% trans 'Add new country' %}
+{% endif %}{% endblock %}
+
+{% block breadcrumbs %}
+    <ul class="breadcrumbs breadcrumbs--with-menu">
+        <li><a href="{% url 'dashboard:countries-list' %}"
+               class="breadcrumbs--ellipsed-item">{% trans "Country" %}</a>
+        </li>
+        <li>
+            {% if shipping_country.pk %}
+                <span class="breadcrumbs--ellipsed-item">{{ shipping_country }}</span>
+            {% else %}
+                <span class="breadcrumbs--ellipsed-item">{% trans 'Add new country' %}</span>
+            {% endif %}
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <form method="post" id="form-country">
+        {% csrf_token %}
+
+        <div class="row">
+            {{ shipping_country_form|materializecss }}
+        </div>
+
+        <div class="row">
+            {% if shipping_country.pk %}
+                <div class="col s12 l6">
+                    <a href="{% url 'dashboard:shipping-method-delete' pk=shipping_country.pk %}"
+                       class="btn red">{% trans "Delete" %}</a>
+                </div>
+                <div class="col s12 l6 right-align">
+                    <a href="{% url 'dashboard:countries-list' %}"
+                       class="btn-flat">{% trans "Cancel" %}</a>
+                    <button type="submit" class="btn">{% trans "Update" %}</button>
+                </div>
+            {% else %}
+                <div class="col s12 right-align">
+                    <a href="{% url 'dashboard:countries-list' %}"
+                       class="btn-flat">{% trans "Cancel" %}</a>
+                    <button type="submit" class="btn">{% trans "Create" %}</button>
+                </div>
+            {% endif %}
+        </div>
+    </form>
+{% endblock %}

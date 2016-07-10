@@ -84,3 +84,9 @@ Prepare the database
 .. code::
 
  $ heroku run python manage.py migrate
+
+heroku create ap-shop --buildpack https://github.com/ddollar/heroku-buildpack-multi.git
+heroku addons:add heroku-postgresql
+heroku addons:add heroku-redis
+heroku config:set ALLOWED_HOSTS='ap-shop'
+git push heroku master

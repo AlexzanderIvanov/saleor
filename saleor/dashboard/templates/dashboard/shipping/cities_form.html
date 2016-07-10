@@ -1,0 +1,45 @@
+{% extends "dashboard/base.html" %}
+{% load materializecss %}
+{% load i18n %}
+{% load mptt_tags %}
+
+
+{% block title %}
+    {% trans "Cities" %}
+        - {% trans 'Load cities from file' %}
+    - {{ block.super }}
+{% endblock %}
+
+{% block body_class %}body-shipping-countries{% endblock %}
+
+{% block menu_cities_class %} active{% endblock %}
+
+{% block page_title %}
+    {% trans 'Load cities from file' %}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul class="breadcrumbs breadcrumbs--with-menu">
+        <li><a href="{% url 'dashboard:countries-list' %}"
+               class="breadcrumbs--ellipsed-item">{% trans "Cities" %}</a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <form enctype="multipart/form-data" method="post" id="form-cities">
+        {% csrf_token %}
+
+        <div class="row">
+            {{ shipping_cities_form|materializecss }}
+        </div>
+
+        <div class="row">
+            <div class="col s12 right-align">
+                <a href="{% url 'dashboard:shipping-cities-list' %}"
+                   class="btn-flat">{% trans "Cancel" %}</a>
+                <button type="submit" class="btn">{% trans "Load" %}</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

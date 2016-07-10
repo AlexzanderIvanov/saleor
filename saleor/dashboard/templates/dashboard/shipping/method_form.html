@@ -16,7 +16,8 @@
 
 {% block body_class %}body-shipping-methods{% endblock %}
 
-{% block menu_delivery_class %}active{% endblock %}
+{#{% block menu_delivery_class %}active{% endblock %}#}
+{% block menu_shipping_class %} active{% endblock %}
 
 {% block page_title %}{% if shipping_method.pk %}{{ shipping_method }}{% else %}
     {% trans 'Add new method' %}
@@ -36,8 +37,6 @@
         </li>
     </ul>
 {% endblock %}
-
-{% block menu_shipping_class %} active{% endblock %}
 
 {% block content %}
     <form method="post" id="form-method">

@@ -1,4 +1,5 @@
 from __future__ import absolute_import
+
 from itertools import groupby
 from operator import itemgetter
 
@@ -10,12 +11,9 @@ from django.utils.translation import pgettext_lazy, gettext as _
 from django_prices.models import PriceField
 from prices import PriceRange
 
-from django_countries.data import COUNTRIES
-
 
 @python_2_unicode_compatible
 class ShippingMethod(models.Model):
-
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True, default='')
 
@@ -35,7 +33,6 @@ class ShippingMethod(models.Model):
 
 
 class ShippingMethodCountryQueryset(models.QuerySet):
-
     def unique_for_country_code(self, country_code):
         shipping = self.filter(
             Q(country_code=country_code) |
@@ -60,9 +57,11 @@ class ShippingMethodCountryQueryset(models.QuerySet):
 
 @python_2_unicode_compatible
 class ShippingMethodCountry(models.Model):
-
     ANY_COUNTRY = ''
-    COUNTRY_CODE_CHOICES = [(ANY_COUNTRY, _('Any country'))] + list(COUNTRIES.items())
+    COUNTRIES = {
+        ("BG", "Bulgaria"),
+    }
+    COUNTRY_CODE_CHOICES = [(ANY_COUNTRY, _('Any country'))] + list(COUNTRIES)
 
     country_code = models.CharField(
         choices=COUNTRY_CODE_CHOICES, max_length=2, blank=True, default=ANY_COUNTRY)
@@ -72,6 +71,7 @@ class ShippingMethodCountry(models.Model):
     shipping_method = models.ForeignKey(ShippingMethod, related_name='price_per_country')
 
     objects = ShippingMethodCountryQueryset.as_manager()
+    country = models.Manager()
 
     class Meta:
         unique_together = ('country_code', 'shipping_method')
@@ -82,3 +82,75 @@ class ShippingMethodCountry(models.Model):
 
     def get_total(self):
         return self.price
+
+
+@python_2_unicode_compatible
+class ShippingCountry(models.Model):
+    ANY_COUNTRY = ''
+    COUNTRIES = {
+        ("BG", "Bulgaria"),
+    }
+    COUNTRY_CODE_CHOICES = [(ANY_COUNTRY, _('Any country'))] + list(COUNTRIES)
+
+    country_code = models.CharField(
+        choices=COUNTRY_CODE_CHOICES, max_length=2, blank=True, default=ANY_COUNTRY, unique=True)
+
+    def __str__(self):
+        # https://docs.djangoproject.com/en/dev/ref/models/instances/#django.db.models.Model.get_FOO_display  # noqa
+        return "%s %s" % (self.country_code, self.get_country_code_display())
+
+
+@python_2_unicode_compatible
+class ShippingCity(models.Model):
+    """Example yaml format containit city data
+    - hub_code: '4000'
+        hub_name: "\u041F\u043B\u043E\u0432\u0434\u0438\u0432"
+        hub_name_en: Plovdiv
+          id: '61186'
+          id_country: '1033'
+          id_office: '37'
+          id_zone: '1'
+          name: Aksakovo
+          name_en: Aksakovo
+          post_code: '9602'
+          region: ''
+          region_en: ''
+          type: "\u0433\u0440."
+          updated_time: '2016-01-01 03:00:10'"""
+    external_id = models.IntegerField(primary_key=True)
+    country = models.ForeignKey(ShippingCountry)
+    name = models.CharField(max_length=255)
+    name_en = models.CharField(max_length=255)
+    post_code = models.CharField(max_length=255)
+    region = models.CharField(max_length=255)
+    region_en = models.CharField(max_length=255)
+    village_or_city = models.CharField(max_length=2)
+    update_time = models.DateTimeField(max_length=255)
+
+
+@python_2_unicode_compatible
+class ShippingOffice(models.Model):
+    """Example yaml format containit city data
+    -     address: "Варна кв. Център ул. Цариброд №48"
+          address_en: "Varna kv. Center ul. Tsaribrod \u211648"
+          city_name: "Варна"
+          city_name_en: Varna
+          id: '569'
+          id_city: '7'
+          name: "Варна ЖП Гаар"
+          name_en: Varna JP gara
+          office_code: '9006'
+          phone: +359 87 9922026,+359 52 610619
+          post_code: '9000'
+          updated_time: '2016-04-14 12:09:40'"""
+    external_id = models.IntegerField(primary_key=True)
+    address = models.CharField(max_length=255)
+    address_en = models.CharField(max_length=255)
+    country = models.ForeignKey(ShippingCountry)
+    city = models.ForeignKey(ShippingCity)
+    name = models.CharField(max_length=255)
+    name_en = models.CharField(max_length=255)
+    office_code = models.CharField(max_length=255)
+    phone = models.CharField(max_length=255)
+    post_code = models.CharField(max_length=255)
+    update_time = models.DateTimeField(max_length=255, )

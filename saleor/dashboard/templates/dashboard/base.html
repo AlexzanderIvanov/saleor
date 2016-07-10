@@ -90,9 +90,24 @@
                             </div>
                         </li>
 
+{#                        <li class="divider"></li>#}
+{##}
+{#                        <li class="{% block menu_delivery_class %}{% endblock %}"><a href="{% url 'dashboard:shipping-methods' %}">{% trans "Shipping methods" %}</a></li>#}
+
                         <li class="divider"></li>
 
-                        <li class="{% block menu_delivery_class %}{% endblock %}"><a href="{% url 'dashboard:shipping-methods' %}">{% trans "Shipping methods" %}</a></li>
+                        <li>
+                            <a class="waves-effect waves-teal collapsible-header{% block menu_shipping_class %}{% endblock %}">{% trans "Shipping" %}</a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li class="subnav-shipping-methods"><a href="{% url 'dashboard:shipping-methods' %}">{% trans "Shipping methods" %}</a></li>
+                                    <li class="subnav-countries"><a href="{% url 'dashboard:countries-list' %}">{% trans "Countries" %}</a></li>
+                                    <li class="subnav-cities"><a href="{% url 'dashboard:shipping-cities-list' %}">{% trans "Cities" %}</a></li>
+                                    <li class="subnav-offices"><a href="{% url 'dashboard:shipping-offices-list' %}">{% trans "Offices" %}</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
                     </ul>
                 </li>
             </ul>

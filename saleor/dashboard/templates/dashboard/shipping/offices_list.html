@@ -1,0 +1,67 @@
+{% extends "dashboard/base.html" %}
+{% load i18n %}
+{% load prices_i18n %}
+{% load status %}
+
+{% block title %}{% trans "Offices" %} - {{ block.super }}{% endblock %}
+
+{% block body_class %}body-shipping-offices{% endblock %}
+
+{% block menu_shipping_class %} active{% endblock %}
+
+{% block breadcrumbs %}
+    <ul class="breadcrumbs">
+        <li>{% trans "Shipping" %}</li>
+        <li>{% trans "offices" %}</li>
+    </ul>
+{% endblock %}
+
+{% block header_extra %}
+    <div class="fixed-action-btn">
+        <a class="btn-fab btn-floating btn-large waves-effect waves-light teal"
+           title="{% trans "Load offices" %}"
+           href="{% url 'dashboard:shipping-offices-load' %}">
+            <i class="mdi-content-add"></i>
+        </a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    {% if shipping_offices %}
+        <div class="card">
+            <div class="data-table-container">
+                <table class="bordered hoverable responsive data-table">
+                    <thead>
+                    <tr>
+                        <th>{% trans "Name" %}</th>
+                        <th>{% trans "Name EN" %}</th>
+                        <th>{% trans "Office Code" %}</th>
+                        <th>{% trans "ID" %}</th>
+                        <th>{% trans "Address" %}</th>
+                        <th>{% trans "City" %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for office in shipping_offices %}
+                        <tr>
+                            <td>{{ office.name }}</td>
+                            <td>{{ office.name_en }}</td>
+                            <td>{{ office.office_code }}</td>
+                            <td>{{ office.external_id }}</td>
+                            <td>{{ office.address }}</td>
+                            <td>{{ office.city.name }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            {% include "dashboard/includes/_pagination.html" with page_obj=shipping_offices %}
+        </div>
+    {% else %}
+        <p>{% trans "No offices found." %}</p>
+    {% endif %}
+
+{% endblock %}

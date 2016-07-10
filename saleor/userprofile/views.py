@@ -40,7 +40,7 @@ def address_edit(request, pk):
 def address_create(request):
     user = request.user
     address_form = AddressForm(
-        request.POST or None, initial={'country': request.country})
+        request.POST or None)
     if address_form.is_valid():
         address = address_form.save()
         user.addresses.add(address)

@@ -8,7 +8,8 @@
 
 {% block page_title %}{% trans "Delete" %} {{ shipping_method }}{% endblock %}
 
-{% block menu_delivery_class %}active{% endblock %}
+{#{% block menu_delivery_class %}active{% endblock %}#}
+{% block menu_shipping_class %} active{% endblock %}
 
 {% block breadcrumbs %}
     <ul class="breadcrumbs breadcrumbs--with-menu">
@@ -23,8 +24,6 @@
         </li>
     </ul>
 {% endblock %}
-
-{% block menu_shipping_class %} active{% endblock %}
 
 {% block content %}
     <div class="row">

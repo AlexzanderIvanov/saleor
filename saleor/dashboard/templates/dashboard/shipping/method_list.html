@@ -7,7 +7,8 @@
 
 {% block body_class %}body-shipping-methods{% endblock %}
 
-{% block menu_delivery_class %}active{% endblock %}
+{#{% block menu_delivery_class %}active{% endblock %}#}
+{% block menu_shipping_class %} active{% endblock %}
 
 {% block breadcrumbs %}
     <ul class="breadcrumbs">
@@ -62,7 +63,7 @@
             </div>
         </div>
 
-        {% include "dashboard/includes/_pagination.html" %}
+        {% include "dashboard/includes/_pagination.html" with page_obj=shipping_methods%}
     {% else %}
         <p>{% trans "No shipping methods found." %}</p>
     {% endif %}

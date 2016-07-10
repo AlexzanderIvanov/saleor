@@ -1,0 +1,58 @@
+{% extends "dashboard/base.html" %}
+{% load i18n %}
+{% load prices_i18n %}
+{% load status %}
+
+{% block title %}{% trans "Countries" %} - {{ block.super }}{% endblock %}
+
+{% block body_class %}body-shipping-countries{% endblock %}
+
+{#{% block menu_delivery_class %}active{% endblock %}#}
+{% block menu_shipping_class %} active{% endblock %}
+
+{% block breadcrumbs %}
+    <ul class="breadcrumbs">
+        <li>{% trans "Shipping" %}</li>
+        <li>{% trans "methods" %}</li>
+    </ul>
+{% endblock %}
+
+{% block header_extra %}
+    <div class="fixed-action-btn">
+        <a class="btn-fab btn-floating btn-large waves-effect waves-light teal"
+           title="{% trans "Add method" %}"
+           href="{% url 'dashboard:shipping-country-add' %}">
+            <i class="mdi-content-add"></i>
+        </a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    {% if shipping_countries %}
+        <div class="card">
+            <div class="data-table-container">
+                <table class="bordered hoverable responsive data-table">
+                    <thead>
+                    <tr>
+                        <th>{% trans "Country Code" %}</th>
+                        <th>{% trans "Display Name" %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for country in shipping_countries %}
+                        <tr>
+                            <td>{{ country }}</td>
+                            <td>{{ country }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        {% include "dashboard/includes/_pagination.html" %}
+    {% else %}
+        <p>{% trans "No countries found." %}</p>
+    {% endif %}
+
+{% endblock %}
