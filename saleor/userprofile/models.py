@@ -10,9 +10,10 @@ from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import pgettext_lazy
 from django_countries.fields import Country, CountryField
 
+from saleor.shipping.models import ShippingCity, ShippingOffice
+
 
 class AddressManager(models.Manager):
-
     def as_data(self, address):
         data = model_to_dict(address, exclude=['id', 'user'])
         if isinstance(data['country'], Country):
@@ -47,9 +48,8 @@ class Address(models.Model):
     street_address_2 = models.CharField(
         pgettext_lazy('Address field', 'address'),
         max_length=256, blank=True)
-    city = models.CharField(
-        pgettext_lazy('Address field', 'city'),
-        max_length=256, blank=True)
+    city = models.ForeignKey(ShippingCity,  related_name='+', null=False,
+                             verbose_name=pgettext_lazy('Address field', 'city'))
     city_area = models.CharField(
         pgettext_lazy('Address field', 'district'),
         max_length=128, blank=True)
@@ -64,6 +64,9 @@ class Address(models.Model):
     phone = models.CharField(
         pgettext_lazy('Address field', 'phone number'),
         max_length=30, blank=True)
+    to_office = models.BooleanField(default=False)
+    office = models.ForeignKey(ShippingOffice, related_name='+', null=True, blank=True,
+                               verbose_name=pgettext_lazy('Postage office field', 'office'))
 
     objects = AddressManager()
 
@@ -88,7 +91,6 @@ class Address(models.Model):
 
 
 class UserManager(BaseUserManager):
-
     def create_user(self, email, password=None, is_staff=False,
                     is_active=True, **extra_fields):
         'Creates a User with the given username, email and password'
@@ -181,6 +183,7 @@ class User(PermissionsMixin, models.Model):
         def setter(raw_password):
             self.set_password(raw_password)
             self.save(update_fields=['password'])
+
         return check_password(raw_password, self.password, setter)
 
     def set_unusable_password(self):

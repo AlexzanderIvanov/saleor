@@ -14,6 +14,7 @@ from .order.urls import urlpatterns as order_urls
 from .product.urls import urlpatterns as product_urls
 from .registration.urls import urlpatterns as registration_urls
 from .userprofile.urls import urlpatterns as userprofile_urls
+from .shipping.urls import urlpatterns as shipping_urls
 
 admin.autodiscover()
 
@@ -31,6 +32,7 @@ urlpatterns = [
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
         name='django.contrib.sitemaps.views.sitemap'),
     url(r'', include('payments.urls')),
+    url(r'^shipping/', include(shipping_urls, namespace='shipping')),
 ]
 urlpatterns += staticfiles_urlpatterns()
 

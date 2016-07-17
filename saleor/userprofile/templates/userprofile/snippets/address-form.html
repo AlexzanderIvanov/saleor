@@ -8,7 +8,23 @@
         {% bootstrap_field address_form.last_name %}
     </div>
 </div>
-{% bootstrap_field address_form.company_name %}
+<div class="row">
+    <div class="col-sm-6">
+        {% bootstrap_field address_form.company_name %}
+    </div>
+    <div class="col-sm-6">
+        {% bootstrap_field address_form.phone %}
+    </div>
+</div>
+{% bootstrap_field address_form.city %}
+<div class="row">
+    <div class="col-sm-4">
+        {% bootstrap_field address_form.to_office %}
+    </div>
+    <div class="col-sm-8">
+        {% bootstrap_field address_form.office %}
+    </div>
+</div>
 <div class="row">
     <div class="col-sm-8">
         {% bootstrap_field address_form.street_address_1 %}
@@ -18,20 +34,13 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-6">
-        {% bootstrap_field address_form.city %}
-    </div>
-    <div class="col-sm-6">
+     <div class="col-sm-8">
         {% bootstrap_field address_form.city_area %}
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-8">
-        {% bootstrap_field address_form.country_area %}
     </div>
     <div class="col-sm-4">
         {% bootstrap_field address_form.postal_code %}
     </div>
 </div>
-{% bootstrap_field address_form.country %}
-{% bootstrap_field address_form.phone %}
+
+
+

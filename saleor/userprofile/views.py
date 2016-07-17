@@ -6,6 +6,8 @@ from django.shortcuts import get_object_or_404, redirect
 from django.template.response import TemplateResponse
 from django.views.decorators.http import require_POST
 from django.utils.translation import ugettext as _
+from saleor.userprofile.models import Address
+from saleor.shipping.models import ShippingCity
 
 from .forms import AddressForm
 
@@ -39,8 +41,9 @@ def address_edit(request, pk):
 @login_required
 def address_create(request):
     user = request.user
+    address = Address(country='BG')
     address_form = AddressForm(
-        request.POST or None)
+        request.POST or None, initial=request.country, instance=address)
     if address_form.is_valid():
         address = address_form.save()
         user.addresses.add(address)

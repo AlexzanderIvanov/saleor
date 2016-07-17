@@ -5,4 +5,6 @@
 {% endif %}
 {{ address.postal_code }} {{ address.city }}<br>
 {% if address.country_area %}{{ address.country_area }}, {% endif %}{{ address.get_country_display }}<br>
-{{ address.phone }}
+{{ address.phone }}<br>
+{% if address.to_office %} {{ address.office.name }} {% endif %}
+
