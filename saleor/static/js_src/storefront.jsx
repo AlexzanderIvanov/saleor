@@ -164,3 +164,9 @@ filterOffices();
 $(document).ready(function () {
     onToOfficeChange();
 });
+
+$(function() {
+    $('#id_lang').change(function() {
+        this.form.submit();
+    });
+});

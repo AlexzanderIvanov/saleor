@@ -7,6 +7,7 @@ import dj_database_url
 import dj_email_url
 import django_cache_url
 from django.contrib.messages import constants as messages
+from django.utils.translation import gettext
 
 DEBUG = ast.literal_eval(os.environ.get('DEBUG', 'True'))
 
@@ -32,10 +33,17 @@ SQLITE_DB_URL = 'sqlite:///' + os.path.join(PROJECT_ROOT, 'dev.sqlite')
 DATABASES = {'default': dj_database_url.config(default=SQLITE_DB_URL)}
 
 TIME_ZONE = 'America/Chicago'
-LANGUAGE_CODE = 'en-us'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
+LOCALE_PATHS = (
+    os.path.join(PROJECT_ROOT, 'saleor/locale'),
+)
+LANGUAGE_CODE = 'en-us' 'bg'
+LANGUAGES = [
+    ('en-us', 'English'),
+    ('bg', 'Bulgarian')
+]
 
 EMAIL_URL = os.environ.get('EMAIL_URL', 'console://')
 email_config = dj_email_url.parse(EMAIL_URL)

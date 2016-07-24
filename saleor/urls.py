@@ -33,6 +33,7 @@ urlpatterns = [
         name='django.contrib.sitemaps.views.sitemap'),
     url(r'', include('payments.urls')),
     url(r'^shipping/', include(shipping_urls, namespace='shipping')),
+    url(r'^i18n/', include('django.conf.urls.i18n')),
 ]
 urlpatterns += staticfiles_urlpatterns()
 

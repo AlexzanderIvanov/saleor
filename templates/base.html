@@ -9,7 +9,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="{% block meta_description %}{% endblock %}">
-        <meta name="author" content="{% trans "Mirumee Software" %}">
+        <meta name="author" content="{% trans "AP1 Software" %}">
         {% endblock meta %}
 
         <link rel="stylesheet" type="text/css" href="{% static "css/storefront.css" %}">
@@ -46,6 +46,21 @@
                             {% endfor %}
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                                    <input name="next" type="hidden" value="{{ request.path }}" />
+                                    <select name="language" id="id_lang">
+                                        {% get_current_language as LANGUAGE_CODE %}
+                                        {% get_available_languages as LANGUAGES %}
+                                        {% get_language_info_list for LANGUAGES as languages %}
+                                        {% for language in languages %}
+                                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                                                {{ language.name_local }} ({{ language.code }})
+                                            </option>
+                                        {% endfor %}
+                                    </select>
+                                </form>
+                            </li>
                             <li>
                                 <a href="{% url "cart:index" %}"><i class="fa fa-shopping-cart"></i> {% trans "Cart" %} {% if request.cart %}<span class="badge">{{ request.cart.count }}</span>{% endif %}</a>
                             </li>
