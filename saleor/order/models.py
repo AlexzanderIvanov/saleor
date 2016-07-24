@@ -82,6 +82,9 @@ class Order(models.Model, ItemSet):
         currency=settings.DEFAULT_CURRENCY, max_digits=12, decimal_places=2,
         blank=True, null=True)
     discount_name = models.CharField(max_length=255, default='', blank=True)
+    shipping_price = PriceField(
+        pgettext_lazy('Shipping method region field', 'price'),
+        currency=settings.DEFAULT_CURRENCY, max_digits=12, decimal_places=2)
 
     objects = OrderManager()
 

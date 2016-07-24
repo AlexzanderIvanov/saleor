@@ -136,6 +136,7 @@ INSTALLED_APPS = [
     'saleor.registration',
     'saleor.dashboard',
     'saleor.shipping',
+    'saleor.remoteecont',
 
     # External apps
     'versatileimagefield',
@@ -278,3 +279,6 @@ VERSATILEIMAGEFIELD_RENDITION_KEY_SETS = {
 }
 
 COUNTRIES_ONLY = ['BG']
+
+SERVICE_URL = b'http://demo.econt.com/e-econt/xml_service_tool.php'
+PARCEL_URL = b'http://demo.econt.com/e-econt/xml_parcel_import.php'

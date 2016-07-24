@@ -134,6 +134,7 @@ class SessionCart(cart.Cart):
     prices or item availability change but it should not matter as checkout
     depends on the full representation of the cart.
     """
+
     def __str__(self):
         return 'SessionCart'
 

@@ -124,14 +124,12 @@ function onToOfficeChange() {
       $('#id_street_address_1').prop("disabled", true);
       $('#id_street_address_2').prop("disabled", true);
       $('#id_city_area').prop("disabled", true);
-      $('#id_postal_code').prop("disabled", true);
     } else {
       $('#id_office').prop("disabled", true);
 
       $('#id_street_address_1').prop("disabled", false);
       $('#id_street_address_2').prop("disabled", false);
       $('#id_city_area').prop("disabled", false);
-      $('#id_postal_code').prop("disabled", false);
     }
   }
 }

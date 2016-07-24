@@ -51,8 +51,9 @@ class ShippingCountryChoiceField(forms.ModelChoiceField):
     widget = forms.RadioSelect()
 
     def label_from_instance(self, obj):
-        price_html = format_price(obj.price.gross, obj.price.currency)
-        label = mark_safe('%s %s' % (obj.shipping_method, price_html))
+        # price_html = format_price(obj.price.gross, obj.price.currency)
+        # label = mark_safe('%s %s' % (obj.shipping_method, price_html))
+        label = mark_safe('%s' % (obj.shipping_method))
         return label
 
 
@@ -71,6 +72,7 @@ class ShippingMethodForm(forms.Form):
             method_field.queryset = queryset.unique_for_country_code(country_code)
         if self.initial.get('method') is None:
             method_field.initial = method_field.queryset.first()
+        self.initial={'method':  method_field.queryset.first().id}
         method_field.empty_label = None
 
 

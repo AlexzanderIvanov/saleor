@@ -14,6 +14,7 @@ from .summary import summary_with_shipping_view, anonymous_summary_without_shipp
 @validate_cart
 @validate_is_shipping_required
 def index_view(request, checkout):
+    checkout.shipping_price_reset()
     return redirect('checkout:shipping-address')
 
 
@@ -21,6 +22,7 @@ def index_view(request, checkout):
 @validate_is_shipping_required
 @add_voucher_form
 def shipping_address_view(request, checkout):
+    checkout.shipping_price_reset()
     if request.user.is_authenticated():
         return user_shipping_address_view(request, checkout)
     return anonymous_user_shipping_address_view(request, checkout)

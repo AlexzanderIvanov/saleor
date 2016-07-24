@@ -93,23 +93,23 @@
                             {% trans "Shipping" %}
                         </td>
                         <td class="noborder text-right">
-                            {% if checkout.shipping_method %}
-                                {% net checkout.get_total_shipping %}
+                            {% if checkout.shipping_price %}
+                                {% net checkout.shipping_price %}
                             {% else %}
                                 &mdash;
                             {% endif %}
                         </td>
                     </tr>
-                    {% if total.tax or True %}
-                        <tr>
-                            <td class="noborder">
-                                {% trans "Taxes" %}
-                            </td>
-                            <td class="noborder text-right">
-                                {% tax total %}
-                            </td>
-                        </tr>
-                    {% endif %}
+{#                    {% if total.tax or True %}#}
+{#                        <tr>#}
+{#                            <td class="noborder">#}
+{#                                {% trans "Taxes" %}#}
+{#                            </td>#}
+{#                            <td class="noborder text-right">#}
+{#                                {% tax total %}#}
+{#                            </td>#}
+{#                        </tr>#}
+{#                    {% endif %}#}
                     <tr>
                         <th>
                             {% trans "Total" %}

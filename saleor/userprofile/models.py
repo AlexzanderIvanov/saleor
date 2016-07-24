@@ -27,6 +27,11 @@ class AddressManager(models.Manager):
 
     def store_address(self, user, address):
         data = self.as_data(address)
+        city = ShippingCity.objects.get(external_id=data['city'])
+        data['city'] = city
+        if data['office']:
+            office = ShippingOffice.objects.get(external_id=data['office'])
+            data['office'] = office
         address, dummy_created = user.addresses.get_or_create(**data)
         return address
 
@@ -55,7 +60,7 @@ class Address(models.Model):
         max_length=128, blank=True)
     postal_code = models.CharField(
         pgettext_lazy('Address field', 'postal code'),
-        max_length=20, blank=True)
+        max_length=20, blank=False)
     country = CountryField(
         pgettext_lazy('Address field', 'country'))
     country_area = models.CharField(

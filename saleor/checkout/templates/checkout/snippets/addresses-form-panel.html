@@ -12,7 +12,7 @@
                        {% if radio_value == value %}checked{% endif %}>
                 {% if address %}
                     {{ address }}, {{ address.street_address_1 }} {{ address.street_address_2 }}
-                    {{ address.city }}
+                    {{ address.city.name }}
                 {% else %}
                     {{ label }}
                 {% endif %}

@@ -127,6 +127,10 @@ class ShippingCity(models.Model):
     village_or_city = models.CharField(max_length=2)
     update_time = models.DateTimeField(max_length=255)
 
+    def __str__(self):
+        # https://docs.djangoproject.com/en/dev/ref/models/instances/#django.db.models.Model.get_FOO_display  # noqa
+        return "%s %s" % (self.external_id, self.name)
+
 
 @python_2_unicode_compatible
 class ShippingOffice(models.Model):

@@ -70,9 +70,9 @@ class AddressForm(forms.ModelForm):
             str(self.instance.country), None, city.name,
             city_area, postal_code, street_address)
 
-        if 'country' in errors:
-            self.add_error('country', _(
-                '%s is not supported country code.') % self.instance.country)
+        # if 'country' in errors:
+        #     self.add_error('country', _(
+        #         '%s is not supported country code.') % self.instance.country)
         if 'street_address' in errors:
             error = error_messages[errors['street_address']] % {
                 'value': street_address}

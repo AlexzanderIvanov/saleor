@@ -11,7 +11,7 @@ from ..cart import Cart
 from ..core import analytics
 from ..discount.models import Voucher, NotApplicable
 from ..order.models import Order
-from ..shipping.models import ShippingMethodCountry
+from ..shipping.models import ShippingMethodCountry, ShippingCity, ShippingOffice, ShippingCountry
 from ..userprofile.models import Address, User
 
 STORAGE_SESSION_KEY = 'checkout_storage'
@@ -55,6 +55,12 @@ class Checkout(object):
             except Address.DoesNotExist:
                 return None
         elif address_data:
+            address_data = dict(address_data)
+            city = ShippingCity.objects.get(external_id=address_data['city'])
+            address_data['city'] = city
+            if address_data['office']:
+                office = ShippingOffice.objects.get(external_id=address_data['office'])
+                address_data['office'] = office
             return Address(**address_data)
         return None
 
@@ -66,7 +72,7 @@ class Checkout(object):
     def deliveries(self):
         for partition in self.cart.partition():
             if self.shipping_method and partition.is_shipping_required():
-                shipping_cost = self.shipping_method.get_total()
+                shipping_cost = self.shipping_price
             else:
                 shipping_cost = Price(0, currency=settings.DEFAULT_CURRENCY)
             total_with_shipping = partition.get_total() + shipping_cost
@@ -84,6 +90,29 @@ class Checkout(object):
         address_data = model_to_dict(address)
         address_data['country'] = smart_text(address_data['country'])
         self.storage['shipping_address'] = address_data
+        self.modified = True
+
+    @property
+    def shipping_price(self):
+        value = self.storage.get('shipping_price_value')
+        currency = self.storage.get('shipping_price_currency')
+        if value is not None and currency is not None:
+            return Price(value, currency=currency)
+        else:
+            return Price(0, settings.DEFAULT_CURRENCY)
+
+    def __getattribute__(self, *args, **kwargs):
+        return super().__getattribute__(*args, **kwargs)
+
+    @shipping_price.setter
+    def shipping_price(self, price):
+        self.storage['shipping_price_value'] = smart_text(price.net)
+        self.storage['shipping_price_currency'] = price.currency
+        self.modified = True
+
+    def shipping_price_reset(self):
+        self.storage['shipping_price_value'] = '0'
+        self.storage['shipping_price_currency'] = settings.DEFAULT_CURRENCY
         self.modified = True
 
     @property
@@ -204,6 +233,7 @@ class Checkout(object):
             'billing_address': billing_address,
             'shipping_address': shipping_address,
             'tracking_client_id': self.tracking_code,
+            'shipping_price': self.shipping_price,
             'total': self.get_total()}
 
         if self.user.is_authenticated():
@@ -224,7 +254,7 @@ class Checkout(object):
         for partition in self.cart.partition():
             shipping_required = partition.is_shipping_required()
             if shipping_required:
-                shipping_price = self.shipping_method.get_total()
+                shipping_price = self.shipping_price
                 shipping_method_name = smart_text(self.shipping_method)
             else:
                 shipping_price = 0
