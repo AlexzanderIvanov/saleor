@@ -25,6 +25,13 @@
                 {% trans "Remove voucher" %}
                 </a>
             </li>
+            {% if voucher.group_id %}
+                <li>
+                    <a class="modal-trigger-custom" href="#base-modal" data-href="{% url 'dashboard:voucher-delete-group' pk=voucher.pk %}">
+                    {% trans "Remove group" %}
+                    </a>
+                </li>
+            {% endif %}
         </ul>
     {% endif %}
 {% endblock %}
@@ -76,6 +83,17 @@
                 </div>
             </div>
         </div>
+
+        {% if not voucher.pk %}
+            <div class="row">
+                <div class="col l4">
+                    {{ form.group|materializecss }}
+                </div>
+                <div class="col l8">
+                    {{ form.count|materializecss }}
+                </div>
+            </div>
+        {% endif %}
 
         <div class="row">
             <div class="col l8 right-align">

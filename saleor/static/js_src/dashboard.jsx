@@ -209,3 +209,22 @@ $(document).ready(() => {
     $voucherTypeInput.trigger('change');
   }
 });
+
+
+// Address offices dynamic forms
+function onToGroupChanged() {
+  let $groupCheckbox = $('#id_group');
+  if ($groupCheckbox) {
+    if ($groupCheckbox.is(':checked')) {
+      $('#id_count').prop("disabled", false);
+    } else {
+      $('#id_count').prop("disabled", true);
+    }
+  }
+}
+
+$("#id_group").click(onToGroupChanged).change(onToGroupChanged);
+
+$(document).ready(function () {
+    onToGroupChanged();
+});

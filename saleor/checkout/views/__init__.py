@@ -11,6 +11,15 @@ from .summary import summary_with_shipping_view, anonymous_summary_without_shipp
     summary_without_shipping
 
 
+def create_order(checkout):
+    order = checkout.create_order()
+    checkout.clear_storage()
+    checkout.cart.clear()
+    order.create_history_entry()
+    order.send_confirmation_email()
+    return order
+
+
 @validate_cart
 @validate_is_shipping_required
 def index_view(request, checkout):
@@ -38,7 +47,9 @@ def shipping_method_view(request, checkout):
         country_code, request.POST or None, initial={'method': checkout.shipping_method})
     if shipping_method_form.is_valid():
         checkout.shipping_method = shipping_method_form.cleaned_data['method']
-        return redirect('checkout:summary')
+        # return redirect('checkout:summary')
+        order = create_order(checkout)
+        return redirect('order:payment', token=order.token)
     return TemplateResponse(request, 'checkout/shipping_method.html', context={
         'shipping_method_form': shipping_method_form, 'checkout': checkout})
 

@@ -21,12 +21,12 @@
             <div class="nav-wedge"></div>
             <a href="{% url "checkout:shipping-method" %}">{% trans "Shipping method" %}</a>
 
-            <div class="nav-arrow"></div>
+{#            <div class="nav-arrow"></div>#}
         </li>
-        <li>
-            <div class="nav-wedge"></div>
-            <a>{% trans "Summary" %}</a>
-        </li>
+{#        <li>#}
+{#            <div class="nav-wedge"></div>#}
+{#            <a>{% trans "Summary" %}</a>#}
+{#        </li>#}
     </ul>
 {% endblock steps_menu %}
 
@@ -44,7 +44,7 @@
 
         <p class="text-right">
             <button type="submit" class="btn btn-primary btn-lg">
-                {% trans "Continue to payment" %}
+                {% trans "Make order" %}
             </button>
         </p>
     </form>

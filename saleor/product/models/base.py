@@ -10,7 +10,7 @@ from django.db import models
 from django.db.models import F, Q, Manager
 from django.utils.encoding import python_2_unicode_compatible, smart_text
 from django.utils.text import slugify
-from django.utils.translation import pgettext_lazy
+from django.utils.translation import pgettext_lazy, ugettext_lazy
 from django_prices.models import PriceField
 from jsonfield import JSONField
 from model_utils.managers import InheritanceManager
@@ -20,9 +20,9 @@ from satchless.item import InsufficientStock, Item, ItemRange
 from unidecode import unidecode
 from versatileimagefield.fields import VersatileImageField
 
-from ...discount.models import get_variant_discounts
-from ..utils import get_attributes_display_map
 from .fields import WeightField
+from ..utils import get_attributes_display_map
+from ...discount.models import get_variant_discounts
 
 
 @python_2_unicode_compatible
@@ -229,7 +229,6 @@ class ProductVariant(models.Model, Item):
 
 
 class StockManager(models.Manager):
-
     def allocate_stock(self, stock, quantity):
         stock.quantity_allocated = F('quantity_allocated') + quantity
         stock.save(update_fields=['quantity_allocated'])

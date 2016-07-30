@@ -27,10 +27,31 @@ class SaleForm(forms.ModelForm):
 
 
 class VoucherForm(forms.ModelForm):
+    group = forms.BooleanField(label="Create group")
+    count = forms.IntegerField(label="Count")
 
     class Meta:
         model = Voucher
-        exclude = ['limit', 'apply_to', 'product', 'category']
+        exclude = ['limit', 'apply_to', 'product', 'category', 'group_id']
+
+    def __init__(self, *args, **kwargs):
+        initial = kwargs.get('initial', {})
+        instance = kwargs.get('instance')
+        if instance and instance.id is None and not initial.get('code'):
+            initial['code'] = self.generate_code
+        kwargs['initial'] = initial
+        super(VoucherForm, self).__init__(*args, **kwargs)
+
+    @staticmethod
+    def generate_code():
+        while True:
+            code = str(uuid.uuid4()).replace('-', '').upper()[:12]
+            if not Voucher.objects.filter(code=code).exists():
+                return code
+
+class VoucherGroupForm(forms.Form):
+
+    name = forms.CharField(label='Your name')
 
     def __init__(self, *args, **kwargs):
         initial = kwargs.get('initial', {})

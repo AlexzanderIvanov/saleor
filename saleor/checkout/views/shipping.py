@@ -1,14 +1,15 @@
+from decimal import Decimal
+
+from django.conf import settings
 from django.shortcuts import redirect
 from django.template.response import TemplateResponse
+from prices import Price
 
 from ..forms import AnonymousUserShippingForm, ShippingAddressesForm
 from ...remoteecont import RemoteEcontXml
 from ...remoteecont.transfer import CurlTransfer
 from ...userprofile.forms import AddressForm
 from ...userprofile.models import Address
-from prices import Price
-from django.conf import settings
-from decimal import Decimal
 
 econt = RemoteEcontXml(settings.SERVICE_URL, settings.PARCEL_URL,  # Remote API urls
                        'itpartner', 'itpartner',  # Username and password
@@ -67,6 +68,7 @@ def user_shipping_address_view(request, checkout):
             checkout.shipping_address = address_form.instance
         shipping_price = calc_shipping_costs(checkout.shipping_address, checkout)
         checkout.shipping_price = shipping_price
+        checkout.get_total()
         return redirect('checkout:shipping-method')
     return TemplateResponse(
         request, 'checkout/shipping_address.html', context={

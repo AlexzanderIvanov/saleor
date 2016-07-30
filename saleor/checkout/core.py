@@ -71,7 +71,9 @@ class Checkout(object):
     @property
     def deliveries(self):
         for partition in self.cart.partition():
-            if self.shipping_method and partition.is_shipping_required():
+            # if self.shipping_method and partition.is_shipping_required():
+            #     shipping_cost = self.shipping_price
+            if self.shipping_price: # currently dirty hack, because we do not know shipping method at this point, but we have the price
                 shipping_cost = self.shipping_price
             else:
                 shipping_cost = Price(0, currency=settings.DEFAULT_CURRENCY)

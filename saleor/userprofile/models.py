@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.contrib.auth.hashers import (check_password, make_password,
                                          is_password_usable)
 from django.contrib.auth.models import BaseUserManager, PermissionsMixin
+from  django.core.validators import RegexValidator
 from django.db import models
 from django.forms.models import model_to_dict
 from django.utils import timezone
@@ -53,7 +54,7 @@ class Address(models.Model):
     street_address_2 = models.CharField(
         pgettext_lazy('Address field', 'address'),
         max_length=256, blank=True)
-    city = models.ForeignKey(ShippingCity,  related_name='+', null=False,
+    city = models.ForeignKey(ShippingCity, related_name='+', null=False,
                              verbose_name=pgettext_lazy('Address field', 'city'))
     city_area = models.CharField(
         pgettext_lazy('Address field', 'district'),
@@ -66,9 +67,10 @@ class Address(models.Model):
     country_area = models.CharField(
         pgettext_lazy('Address field', 'state or province'),
         max_length=128, blank=True)
-    phone = models.CharField(
-        pgettext_lazy('Address field', 'phone number'),
-        max_length=30, blank=True)
+    phone_regex = RegexValidator(regex=r'^\+?1?\d{6,12}$',
+                                 message=pgettext_lazy('Address field', 'Invalid phone number'))
+    phone = models.CharField(pgettext_lazy('Address field', 'phone number'), validators=[phone_regex],
+                             max_length=30)  # validators should be a list
     to_office = models.BooleanField(default=False)
     office = models.ForeignKey(ShippingOffice, related_name='+', null=True, blank=True,
                                verbose_name=pgettext_lazy('Postage office field', 'office'))

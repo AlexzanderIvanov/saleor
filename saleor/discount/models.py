@@ -101,6 +101,9 @@ class Voucher(models.Model):
     apply_to = models.CharField(max_length=20, blank=True, null=True)
     limit = PriceField(max_digits=12, decimal_places=2, null=True,
                        blank=True, currency=settings.DEFAULT_CURRENCY)
+    group_id = models.CharField(
+        pgettext_lazy('voucher', 'group_id'), max_length=12,
+        db_index=True, blank=True, null=True)
 
     objects = VoucherQueryset.as_manager()
 
