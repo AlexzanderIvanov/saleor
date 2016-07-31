@@ -157,6 +157,7 @@ INSTALLED_APPS = [
     'selectable',
     'materializecssform',
     'rest_framework',
+    'modeltranslation'
 ]
 
 LOGGING = {

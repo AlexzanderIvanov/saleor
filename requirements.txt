@@ -63,6 +63,7 @@ suds-jurko==0.6           # via django-payments
 unidecode==0.4.19
 uwsgi==2.0.12
 xmltodict==0.10.1         # via django-payments
+django-modeltranslation==0.11      # db model i18n
 
 # The following packages are commented out because they are
 # considered to be unsafe in a requirements file:
