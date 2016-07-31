@@ -9,7 +9,7 @@ import django_prices.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('product', '0013_data_init'),
+        ('product', '0012_auto_20160218_0812'),
     ]
 
     operations = [
