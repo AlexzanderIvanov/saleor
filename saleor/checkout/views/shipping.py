@@ -12,7 +12,7 @@ from ...userprofile.forms import AddressForm
 from ...userprofile.models import Address
 
 econt = RemoteEcontXml(settings.SERVICE_URL, settings.PARCEL_URL,  # Remote API urls
-                       'itpartner', 'itpartner',  # Username and password
+                       'ap1shop', 'Ap1forthewin!',  # Username and password
                        CurlTransfer)
 
 

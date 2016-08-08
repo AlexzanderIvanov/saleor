@@ -9,7 +9,7 @@ Local prerequisites
 *******************
 
 You will need to install Docker and
-`docker-compose <https://docs.docker.com/compose/install/>`__ before
+`docker-compose <https://docs.docker.com/compose/install/>`_ before
 performing the following steps.
 
 Usage
@@ -33,15 +33,7 @@ Usage
     ``admin@example.com`` with the password set to ``admin``.
 
 
-3. Install front-end dependencies
-
-   .. code::
-
-    $ docker-compose run web npm install
-    $ docker-compose run web grunt
-
-
-4. Run ``Saleor``
+3. Run ``Saleor``
 
    .. code::
 
@@ -59,9 +51,10 @@ First steps
 
 .. code::
 
- $ heroku create --buildpack https://github.com/ddollar/heroku-buildpack-multi.git
- $ heroku addons:add heroku-postgresql
- $ heroku addons:add heroku-redis
+ $ heroku create --buildpack https://github.com/heroku/heroku-buildpack-nodejs.git
+ $ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-python.git
+ $ heroku addons:create heroku-postgresql
+ $ heroku addons:create heroku-redis
  $ heroku config:set SECRET_KEY='<your secret key here>'
  $ heroku config:set ALLOWED_HOSTS='<your hosts here>'
 

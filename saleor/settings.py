@@ -30,17 +30,17 @@ CACHE_URL = os.environ.get('CACHE_URL',
 CACHES = {'default': django_cache_url.parse(CACHE_URL)}
 
 SQLITE_DB_URL = 'sqlite:///' + os.path.join(PROJECT_ROOT, 'dev.sqlite')
-# DATABASES = {'default': dj_database_url.config(default=SQLITE_DB_URL)}
-DATABASES = {
-    'default': {
-        'ENGINE': 'mysql.connector.django',
-        'NAME': 'saleor',
-        'USER': 'saleor',
-        'PASSWORD': 'saleor',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-    }
-}
+DATABASES = {'default': dj_database_url.config(default=SQLITE_DB_URL)}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'mysql.connector.django',
+#         'NAME': 'saleor',
+#         'USER': 'saleor',
+#         'PASSWORD': 'saleor',
+#         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+#         'PORT': '3306',
+#     }
+# }
 
 
 TIME_ZONE = 'America/Chicago'
@@ -132,7 +132,7 @@ MIDDLEWARE_CLASSES = [
 
 INSTALLED_APPS = [
     # External apps that need to go before django's
-    'offsite_storage',
+    'storages',
 
     # Django modules
     'django.contrib.contenttypes',
@@ -168,6 +168,7 @@ INSTALLED_APPS = [
     'selectable',
     'materializecssform',
     'rest_framework',
+    'webpack_loader',
     'modeltranslation'
 ]
 
@@ -273,17 +274,16 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Amazon S3 configuration
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_STATIC_BUCKET_NAME = os.environ.get('AWS_STATIC_BUCKET_NAME')
-
-AWS_MEDIA_ACCESS_KEY_ID = os.environ.get('AWS_MEDIA_ACCESS_KEY_ID')
-AWS_MEDIA_SECRET_ACCESS_KEY = os.environ.get('AWS_MEDIA_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 AWS_MEDIA_BUCKET_NAME = os.environ.get('AWS_MEDIA_BUCKET_NAME')
+AWS_QUERYSTRING_AUTH = ast.literal_eval(
+    os.environ.get('AWS_QUERYSTRING_AUTH', 'False'))
 
-if AWS_STATIC_BUCKET_NAME:
-    STATICFILES_STORAGE = 'offsite_storage.storages.CachedS3FilesStorage'
+if AWS_STORAGE_BUCKET_NAME:
+    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 if AWS_MEDIA_BUCKET_NAME:
-    DEFAULT_FILE_STORAGE = 'offsite_storage.storages.S3MediaStorage'
+    DEFAULT_FILE_STORAGE = 'saleor.core.storages.S3MediaStorage'
     THUMBNAIL_DEFAULT_STORAGE = DEFAULT_FILE_STORAGE
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
@@ -294,11 +294,25 @@ VERSATILEIMAGEFIELD_RENDITION_KEY_SETS = {
         ('dashboard', 'crop__400x400'),
         ('product_page_mobile', 'crop__680x680'),
         ('product_page_big', 'crop__750x750'),
-        ('product_page_thumb', 'crop__280x280')
-    ]
-}
+        ('product_page_thumb', 'crop__280x280')]}
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': not DEBUG,
+        'BUNDLE_DIR_NAME': 'assets/',
+        'STATS_FILE': os.path.join(PROJECT_ROOT, 'webpack-bundle.json'),
+        'POLL_INTERVAL': 0.1,
+        'IGNORE': [
+            r'.+\.hot-update\.js',
+            r'.+\.map']}}
 
 COUNTRIES_ONLY = ['BG']
 
-SERVICE_URL = b'http://demo.econt.com/e-econt/xml_service_tool.php'
-PARCEL_URL = b'http://demo.econt.com/e-econt/xml_parcel_import.php'
+# SERVICE_URL = b'http://demo.econt.com/e-econt/xml_service_tool.php'
+# PARCEL_URL = b'http://demo.econt.com/e-econt/xml_parcel_import.php'
+
+ECONT_USERNAME = ''
+ECONT_PASSWORD = ''
+
+SERVICE_URL = b'http://www.econt.com/e-econt/xml_service_tool.php'
+PARCEL_URL = b'http://www.econt.com/e-econt/xml_parcel_import.php'

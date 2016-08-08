@@ -1,19 +1,24 @@
-Welcome to saleor's documentation!
-==================================
+Saleor
+======
+
+An open source storefront written in Python.
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
 
-   install
-   deploy
+   installation
    stock
-
+   payments
+   social
+   reporting
+   development
+   deploy
 
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
