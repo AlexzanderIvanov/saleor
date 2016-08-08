@@ -28,7 +28,14 @@
             {% if voucher.group_id %}
                 <li>
                     <a class="modal-trigger-custom" href="#base-modal" data-href="{% url 'dashboard:voucher-delete-group' pk=voucher.pk %}">
-                    {% trans "Remove group" %}
+                    {% trans "Delete group" %}
+                    </a>
+                </li>
+            {% endif %}
+            {% if voucher.group_id %}
+                <li>
+                    <a class="modal-trigger-custom" href="#base-modal" data-href="{% url 'dashboard:voucher-group-export' pk=voucher.pk %}">
+                    {% trans "Export group" %}
                     </a>
                 </li>
             {% endif %}

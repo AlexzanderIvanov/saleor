@@ -13,4 +13,5 @@ urlpatterns = [
     url(r'voucher/add/$', views.voucher_edit, name='voucher-add'),
     url(r'voucher/(?P<pk>[0-9]+)/delete/$', views.voucher_delete, name='voucher-delete'),
     url(r'voucher/(?P<pk>[0-9]+)/delete-group/$', views.voucher_delete_group, name='voucher-delete-group'),
+    url(r'voucher/(?P<pk>[0-9]+)/export-group/$', views.voucher_export_group, name='voucher-group-export'),
 ]

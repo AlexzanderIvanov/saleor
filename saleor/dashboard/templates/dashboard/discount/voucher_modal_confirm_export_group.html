@@ -1,0 +1,17 @@
+{% load i18n %}
+
+<form action="{% url "dashboard:voucher-group-export" pk=voucher.pk %}" method="post">
+    {% csrf_token %}
+    <div class="modal-content">
+        <h5>{% trans "Are you sure?" %}</h5>
+
+        <p>
+            {% blocktrans %}You are about to export <strong>{{ voucher }}</strong> group.{% endblocktrans %}
+        </p>
+    </div>
+
+    <div class="modal-footer">
+        <button type="submit" class="modal-action btn-flat blue-text">{% trans "Export" %}</button>
+        <a href="#!" class="modal-action modal-close btn-flat blue-text">{% trans "Cancel" %}</a>
+    </div>
+</form>

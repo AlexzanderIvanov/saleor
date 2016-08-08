@@ -4,6 +4,8 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import get_object_or_404, redirect
 from django.template.response import TemplateResponse
 from django.utils.translation import ugettext_lazy as _
+import csv
+from django.http import HttpResponse
 
 from ...discount.models import Sale, Voucher
 from . import forms
@@ -140,8 +142,29 @@ def voucher_delete_group(request, pk):
     if request.method == 'POST':
         Voucher.objects.filter(group_id=instance.group_id).delete()
         messages.success(
-            request, _('Deleted voucher %s') % (instance,))
+            request, _('Deleted voucher group %s') % (instance,))
         return redirect('dashboard:voucher-list')
     ctx = {'voucher': instance}
     return TemplateResponse(
         request, 'dashboard/discount/voucher_modal_confirm_delete_group.html', ctx)
+
+
+@staff_member_required
+def voucher_export_group(request, pk):
+    instance = get_object_or_404(Voucher, pk=pk)
+    if request.method == 'POST':
+        vouchers = Voucher.objects.filter(group_id=instance.group_id).all()
+        # Create the HttpResponse object with the appropriate CSV header.
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="group-{0}.csv"'.format(vouchers[0].group_id)
+
+        writer = csv.writer(response)
+        for voucher in vouchers:
+            writer.writerow([voucher.code])
+        messages.success(
+            request, _('Deleted voucher %s') % (instance,))
+        # return redirect('dashboard:voucher-list')
+        return response
+    ctx = {'voucher': instance}
+    return TemplateResponse(
+        request, 'dashboard/discount/voucher_modal_confirm_export_group.html', ctx)
