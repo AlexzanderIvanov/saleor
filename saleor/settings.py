@@ -29,18 +29,19 @@ CACHE_URL = os.environ.get('CACHE_URL',
                            os.environ.get('REDIS_URL', 'locmem://'))
 CACHES = {'default': django_cache_url.parse(CACHE_URL)}
 
-SQLITE_DB_URL = 'sqlite:///' + os.path.join(PROJECT_ROOT, 'dev.sqlite')
-DATABASES = {'default': dj_database_url.config(default=SQLITE_DB_URL)}
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'mysql.connector.django',
-#         'NAME': 'saleor',
-#         'USER': 'saleor',
-#         'PASSWORD': 'saleor',
-#         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-#         'PORT': '3306',
-#     }
-# }
+# SQLITE_DB_URL = 'sqlite:///' + os.path.join(PROJECT_ROOT, 'dev.sqlite')
+# DATABASES = {'default': dj_database_url.config(default=SQLITE_DB_URL)}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'saleor',
+        'USER': 'saleor',
+        'PASSWORD': 'saleor',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+        'default-character-set': 'utf8',
+    }
+}
 
 
 TIME_ZONE = 'America/Chicago'
@@ -204,15 +205,22 @@ LOGGING = {
             'filters': ['require_debug_true'],
             'formatter': 'simple'
         },
+        'applogfile': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(PROJECT_ROOT, 'saleor.log'),
+            'maxBytes': 1024*1024*15, # 15MB
+            'backupCount': 10,
+        },
     },
     'loggers': {
         'django.request': {
-            'handlers': ['mail_admins'],
+            'handlers': ['mail_admins', 'applogfile'],
             'level': 'ERROR',
             'propagate': True
         },
         'saleor': {
-            'handlers': ['console'],
+            'handlers': ['console', 'applogfile'],
             'level': 'DEBUG',
             'propagate': True
         }
@@ -251,7 +259,8 @@ PAYMENT_VARIANTS = {
 }
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
-SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
+# SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 CHECKOUT_PAYMENT_CHOICES = [
     ('default', 'Cash on delivery')
@@ -311,8 +320,8 @@ COUNTRIES_ONLY = ['BG']
 # SERVICE_URL = b'http://demo.econt.com/e-econt/xml_service_tool.php'
 # PARCEL_URL = b'http://demo.econt.com/e-econt/xml_parcel_import.php'
 
-ECONT_USERNAME = ''
-ECONT_PASSWORD = ''
+ECONT_USERNAME = 'ap1shop'
+ECONT_PASSWORD = 'Ap1forthewin!'
 
 SERVICE_URL = b'http://www.econt.com/e-econt/xml_service_tool.php'
 PARCEL_URL = b'http://www.econt.com/e-econt/xml_parcel_import.php'

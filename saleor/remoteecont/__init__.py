@@ -260,7 +260,7 @@ class RemoteEcontXml(RemoteEcont):
         t = self._transfer_class()
 
         # t.append_data('xml', xml)
-        print(xml)
+        # print(xml)
         t.append_str_as_file(
             'file', xml.encode("UTF-8"), 'text/xml; charset=UTF-8', 'something.xml')
 
