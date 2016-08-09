@@ -25,7 +25,7 @@ def anonymous_user_shipping_address_view(request, checkout):
             data, instance=checkout.shipping_address, autocomplete_type='shipping')
     else:
         address_form = AddressForm(
-            data, autocomplete_type='shipping', initial=request.country, instance=address)
+            data, autocomplete_type='shipping', initial={'country': request.country}, instance=address)
     user_form = AnonymousUserShippingForm(data, initial={'email': checkout.email})
     if user_form.is_valid() and address_form.is_valid():
         checkout.shipping_address = address_form.instance
@@ -47,16 +47,16 @@ def user_shipping_address_view(request, checkout):
 
     if shipping_address is not None and shipping_address.id:
         address_form = AddressForm(
-            data, autocomplete_type='shipping', initial=request.country, instance=address)
+            data, autocomplete_type='shipping', initial={'country': request.country}, instance=address)
         addresses_form = ShippingAddressesForm(
             data, additional_addresses=additional_addresses,
             initial={'address': shipping_address.id})
     elif shipping_address:
-        address_form = AddressForm(data, initial=request.country, instance=shipping_address)
+        address_form = AddressForm(data, initial={'country': request.country}, instance=shipping_address)
         addresses_form = ShippingAddressesForm(
             data, additional_addresses=additional_addresses)
     else:
-        address_form = AddressForm(data, initial=request.country, instance=address)
+        address_form = AddressForm(data, initial={'country': request.country}, instance=address)
         addresses_form = ShippingAddressesForm(
             data, additional_addresses=additional_addresses)
 
