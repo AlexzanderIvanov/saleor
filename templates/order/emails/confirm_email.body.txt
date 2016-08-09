@@ -1,9 +1,21 @@
 {% load i18n %}
+{% load gross from prices_i18n %}
+{% load discount_amount_for from prices %}
 
 {% block content %}{% blocktrans %}Hi!
 
-Thank you for your order. To see your payment details please visit:
-{{ payment_url }}
-
+Thank you for your order.{% endblocktrans %}
+{% for group in groups %}
+Name                                                                                Price
+    {% for item in group %}
+{{ item.product }}{% if item.quantity != 1 %}×{{ item.quantity }}{% endif %}        {% gross item.get_total %}
+    {% endfor %}
+Shipping                                                                            {% gross group.shipping_price %}
+{% if order.discount_amount %}
+{{ order.discount_name }}                                                           {% gross order.discount|discount_amount_for:order.total %}{% endif %}
+Total                                                                               {% gross order.total %}
+{% endfor %}{% blocktrans %}
 Sincerely,
-Saleor Team{% endblocktrans %}{% endblock %}
+AP1 Ltd. Team
+{% endblocktrans %}
+{% endblock %}

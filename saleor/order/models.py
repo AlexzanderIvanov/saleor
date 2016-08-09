@@ -148,7 +148,7 @@ class Order(models.Model, ItemSet):
         email = self.get_user_email()
         payment_url = build_absolute_uri(
             reverse('order:details', kwargs={'token': self.token}))
-        context = {'payment_url': payment_url}
+        context = {'payment_url': payment_url, 'groups': self.groups.all(), 'order': self}
 
         emailit.api.send_mail(email, context, 'order/emails/confirm_email')
 

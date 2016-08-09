@@ -29,19 +29,19 @@ CACHE_URL = os.environ.get('CACHE_URL',
                            os.environ.get('REDIS_URL', 'locmem://'))
 CACHES = {'default': django_cache_url.parse(CACHE_URL)}
 
-# SQLITE_DB_URL = 'sqlite:///' + os.path.join(PROJECT_ROOT, 'dev.sqlite')
-# DATABASES = {'default': dj_database_url.config(default=SQLITE_DB_URL)}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'saleor',
-        'USER': 'saleor',
-        'PASSWORD': 'saleor',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-        'default-character-set': 'utf8',
-    }
-}
+SQLITE_DB_URL = 'sqlite:///' + os.path.join(PROJECT_ROOT, 'dev.sqlite')
+DATABASES = {'default': dj_database_url.config(default=SQLITE_DB_URL)}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'saleor',
+#         'USER': 'saleor',
+#         'PASSWORD': 'saleor',
+#         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+#         'PORT': '3306',
+#         'default-character-set': 'utf8',
+#     }
+# }
 
 
 TIME_ZONE = 'America/Chicago'
@@ -57,7 +57,7 @@ LANGUAGES = [
     ('bg', 'Bulgarian')
 ]
 
-EMAIL_URL = os.environ.get('EMAIL_URL', 'console://')
+EMAIL_URL = 'smtp://orders@ap1shop.com:ap1forthewin@mail.ap1shop.com:25' #os.environ.get('EMAIL_URL', 'console://')
 email_config = dj_email_url.parse(EMAIL_URL)
 
 EMAIL_FILE_PATH = email_config['EMAIL_FILE_PATH']
@@ -67,7 +67,7 @@ EMAIL_HOST = email_config['EMAIL_HOST']
 EMAIL_PORT = email_config['EMAIL_PORT']
 EMAIL_BACKEND = email_config['EMAIL_BACKEND']
 EMAIL_USE_TLS = email_config['EMAIL_USE_TLS']
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+DEFAULT_FROM_EMAIL = 'orders@ap1shop.com' #os.environ.get('DEFAULT_FROM_EMAIL')
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
