@@ -2,11 +2,11 @@
 
 {% block content %}{% blocktrans %}Hi!
 
-You have requested login access to saleor project. To continue visit the link below.
+You have requested login access to AP1shop. To continue visit the link below.
 
 {{ confirmation_url }}
 
-If you didn't try to login to saleor please ignore this message. We apologise for inconvenience.
+If you didn't try to login to AP1shop please ignore this message. We apologise for inconvenience.
 
 Sincerely,
-Saleor Team{% endblocktrans %}{% endblock %}
+AP1 Ltd.{% endblocktrans %}{% endblock %}
