@@ -153,6 +153,7 @@ class Order(models.Model, ItemSet):
                    'order': self}
 
         emailit.api.send_mail(email, context, 'order/emails/confirm_email')
+        emailit.api.send_mail(settings.REPORT_EMAIL, context, 'order/emails/confirm_email')
 
     def get_last_payment_status(self):
         last_payment = self.payments.last()
