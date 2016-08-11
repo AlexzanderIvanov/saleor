@@ -11,6 +11,10 @@ $fa-font-path: "~font-awesome/fonts";
 	margin-bottom: $grid-gutter-width;
 }
 
+.navbar-brand {
+	padding-top: 0px;
+}
+
 .price {
 	&.undiscounted {
 		text-decoration: line-through;
@@ -59,6 +63,7 @@ $fa-font-path: "~font-awesome/fonts";
 }
 
 .breadcrumb {
+  margin-left: 140px;
 	> li+li {
 		&:before {
 			content: '/';

@@ -93,7 +93,11 @@ $(document).ready(function () {
 });
 
 $(function() {
-    $('#id_lang').change(function() {
-        this.form.submit();
+    $(".language_change").click(function() {
+      var form = $("#language_form");
+      var code = $(this).data("code");
+
+      form.find("input[name=language]").val(code);
+      form.submit();
     });
 });
