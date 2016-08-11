@@ -11,7 +11,7 @@ $fa-font-path: "~font-awesome/fonts";
 	margin-bottom: $grid-gutter-width;
 }
 
-.navbar-brand {
+.navbar-brand-img {
 	padding-top: 0px;
 }
 
@@ -62,8 +62,14 @@ $fa-font-path: "~font-awesome/fonts";
 	}
 }
 
-.breadcrumb {
+.breadcrumb-img {
   margin-left: 140px;
+}
+
+.breadcrumb {
+  @media (min-width: 768px) {
+    margin-left: 140px;
+  }
 	> li+li {
 		&:before {
 			content: '/';
