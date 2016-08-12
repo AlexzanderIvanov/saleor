@@ -7,12 +7,11 @@ from django import forms
 from django.utils.translation import ugettext as _
 from i18naddress import validate_areas
 
+from saleor.shipping.models import ShippingOffice
 from .models import Address
-from saleor.shipping.models import ShippingCity, ShippingOffice
 
 
 class AddressForm(forms.ModelForm):
-
     AUTOCOMPLETE_MAPPING = (
         ('first_name', 'given-name'),
         ('last_name', 'family-name'),
@@ -36,8 +35,6 @@ class AddressForm(forms.ModelForm):
         autocomplete_type = kwargs.pop('autocomplete_type', None)
         super(AddressForm, self).__init__(*args, **kwargs)
         self.fields['city'].label_from_instance = lambda obj: "%s" % obj.name
-
-        self.fields['office'].label_from_instance = lambda obj: "%s" % obj.name
 
         if hasattr(self.instance, 'city'):
             self.fields['office'].queryset = ShippingOffice.objects.filter(city=self.instance.city)
@@ -92,7 +89,7 @@ class AddressForm(forms.ModelForm):
                     example = example.replace(',', ', ')
                     error = _(
                         'Invalid postal code. Please follow the format: %(example)s') % {
-                            'example': example}
+                                'example': example}
                 else:
                     error = _('Invalid postal code.')
             else:
@@ -103,5 +100,3 @@ class AddressForm(forms.ModelForm):
             self.add_error('office', 'Invalid office')
         elif not to_office and not street_address:
             self.add_error('street_address_1', 'Invalid address')
-
-

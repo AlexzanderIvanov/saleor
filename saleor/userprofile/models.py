@@ -71,7 +71,7 @@ class Address(models.Model):
                                  message=pgettext_lazy('Address field', 'Invalid phone number'))
     phone = models.CharField(pgettext_lazy('Address field', 'phone number'), validators=[phone_regex],
                              max_length=30)  # validators should be a list
-    to_office = models.BooleanField(default=False)
+    to_office = models.BooleanField(pgettext_lazy('Address field', 'To office'), default=False)
     office = models.ForeignKey(ShippingOffice, related_name='+', null=True, blank=True,
                                verbose_name=pgettext_lazy('Postage office field', 'office'))
 

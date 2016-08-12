@@ -125,7 +125,7 @@ def _calculate_approximate_price(address, checkout):
 
 
 def _validate_no_error(result):
-    error = result.get('error')  # handle error
+    error = result.get('error')
     if error:
         raise Exception
 

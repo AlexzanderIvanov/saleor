@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-30 14:52-0500\n"
+"POT-Creation-Date: 2016-08-12 06:43-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 #: saleor/cart/forms.py:23
 msgctxt "Form field"
 msgid "Quantity"
-msgstr ""
+msgstr "Количество"
 
 #: saleor/cart/forms.py:26
 msgid "Sorry. This product is currently out of stock."
@@ -42,89 +42,6 @@ msgstr ""
 msgid "Only %(remaining)d remaining in stock."
 msgstr ""
 
-#: saleor/cart/templates/cart/index.html:6
-msgid "Your cart"
-msgstr ""
-
-#: saleor/cart/templates/cart/index.html:10
-#: saleor/checkout/templates/checkout/details.html:40
-#: saleor/checkout/templates/checkout/shipping_address.html:8
-#: saleor/checkout/templates/checkout/shipping_method.html:10
-#: saleor/checkout/templates/checkout/summary.html:8 templates/base.html:65
-msgid "Cart"
-msgstr ""
-
-#: saleor/cart/templates/cart/index.html:18
-msgid "Product"
-msgstr ""
-
-#: saleor/cart/templates/cart/index.html:20 saleor/dashboard/order/forms.py:92
-#: saleor/dashboard/templates/dashboard/order/detail.html:200
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_line.html:21
-#: saleor/dashboard/templates/dashboard/product/product_form.html:239
-msgid "Quantity"
-msgstr ""
-
-#: saleor/cart/templates/cart/index.html:21
-#: saleor/dashboard/templates/dashboard/order/detail.html:199
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_line.html:20
-#: saleor/dashboard/templates/dashboard/product/product_form.html:160
-#: saleor/order/templates/order/details.html:81
-#: saleor/order/templates/order/payment.html:106
-#: saleor/userprofile/templates/userprofile/orders.html:23
-msgid "Price"
-msgstr ""
-
-#: saleor/cart/templates/cart/index.html:22
-#: saleor/checkout/templates/checkout/details.html:82
-#: saleor/dashboard/templates/dashboard/order/detail.html:291
-#: saleor/order/templates/order/details.html:82
-#: saleor/order/templates/order/payment.html:107
-msgid "Subtotal"
-msgstr ""
-
-#: saleor/cart/templates/cart/index.html:28
-#: saleor/checkout/templates/checkout/details.html:105
-#: saleor/dashboard/templates/dashboard/customer/detail.html:41
-#: saleor/dashboard/templates/dashboard/includes/_orders_table.html:14
-#: saleor/dashboard/templates/dashboard/order/detail.html:201
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_line.html:22
-#: saleor/order/templates/order/details.html:87
-#: saleor/order/templates/order/details.html:125
-#: saleor/order/templates/order/payment.html:112
-#: saleor/order/templates/order/payment.html:150
-msgid "Total"
-msgstr ""
-
-#: saleor/cart/templates/cart/index.html:56
-#: saleor/dashboard/templates/dashboard/category/detail.html:53
-#: saleor/dashboard/templates/dashboard/category/modal_edit.html:22
-#: saleor/dashboard/templates/dashboard/discount/sale_form.html:62
-#: saleor/dashboard/templates/dashboard/discount/voucher_form.html:101
-#: saleor/dashboard/templates/dashboard/order/modal_address_edit.html:20
-#: saleor/dashboard/templates/dashboard/order/modal_change_quantity.html:15
-#: saleor/dashboard/templates/dashboard/product/attributes/form.html:84
-#: saleor/dashboard/templates/dashboard/product/product_form.html:108
-#: saleor/dashboard/templates/dashboard/product/product_image_form.html:59
-#: saleor/dashboard/templates/dashboard/product/stock_form.html:55
-#: saleor/dashboard/templates/dashboard/product/variant_form.html:67
-#: saleor/dashboard/templates/dashboard/shipping/country_form.html:57
-#: saleor/dashboard/templates/dashboard/shipping/method_form.html:76
-msgid "Update"
-msgstr ""
-
-#: saleor/cart/templates/cart/index.html:68
-msgid "Remove from cart"
-msgstr ""
-
-#: saleor/cart/templates/cart/index.html:83
-msgid "Proceed to checkout"
-msgstr ""
-
-#: saleor/cart/templates/cart/index.html:88
-msgid "Your cart is empty"
-msgstr ""
-
 #: saleor/cart/views.py:21
 msgid ""
 "Sorry. We don't have that many items in stock. Quantity was set to maximum "
@@ -132,105 +49,22 @@ msgid ""
 msgstr ""
 
 #: saleor/checkout/forms.py:18 saleor/checkout/forms.py:37
-#: saleor/checkout/templates/checkout/snippets/addresses-form.html:9
+#: templates/checkout/snippets/addresses-form.html:9
 msgid "Enter a new address"
 msgstr ""
 
 #: saleor/checkout/forms.py:38
-#: saleor/checkout/templates/checkout/snippets/addresses-form.html:3
+#: templates/checkout/snippets/addresses-form.html:3
 msgid "Same as shipping"
 msgstr ""
 
-#: saleor/checkout/forms.py:65
-#: saleor/checkout/templates/checkout/details.html:50
-#: saleor/checkout/templates/checkout/shipping_address.html:20
-#: saleor/checkout/templates/checkout/shipping_method.html:22
-#: saleor/checkout/templates/checkout/shipping_method.html:41
-#: saleor/checkout/templates/checkout/summary.html:20
+#: saleor/checkout/forms.py:65 templates/checkout/details.html:50
+#: templates/checkout/shipping_address.html:20
+#: templates/checkout/shipping_method.html:22
+#: templates/checkout/shipping_method.html:41
+#: templates/checkout/summary.html:20
 msgid "Shipping method"
-msgstr ""
-
-#: saleor/checkout/templates/checkout/details.html:7
-msgid "Checkout"
-msgstr ""
-
-#: saleor/checkout/templates/checkout/details.html:27
-msgid "Already have an account?"
-msgstr ""
-
-#: saleor/checkout/templates/checkout/details.html:29
-msgid "Sign in"
-msgstr ""
-
-#: saleor/checkout/templates/checkout/details.html:45
-#: saleor/checkout/templates/checkout/shipping_address.html:14
-#: saleor/checkout/templates/checkout/shipping_address.html:35
-#: saleor/checkout/templates/checkout/shipping_method.html:16
-#: saleor/checkout/templates/checkout/shipping_method.html:35
-#: saleor/checkout/templates/checkout/summary.html:14
-#: saleor/dashboard/templates/dashboard/order/detail.html:130
-#: saleor/order/templates/order/details.html:58
-#: saleor/order/templates/order/payment.html:86
-msgid "Shipping address"
-msgstr ""
-
-#: saleor/checkout/templates/checkout/details.html:55
-#: saleor/checkout/templates/checkout/summary.html:26
-msgid "Summary"
-msgstr ""
-
-#: saleor/checkout/templates/checkout/details.html:93
-#: saleor/dashboard/templates/dashboard/base.html:100
-#: saleor/dashboard/templates/dashboard/order/detail.html:210
-#: saleor/dashboard/templates/dashboard/order/detail.html:299
-#: saleor/dashboard/templates/dashboard/shipping/cities_list.html:14
-#: saleor/dashboard/templates/dashboard/shipping/countries_list.html:15
-#: saleor/dashboard/templates/dashboard/shipping/method_list.html:15
-#: saleor/dashboard/templates/dashboard/shipping/offices_list.html:14
-#: saleor/order/templates/order/details.html:102
-#: saleor/order/templates/order/payment.html:127
-#: saleor/userprofile/templates/userprofile/details.html:25
-msgid "Shipping"
-msgstr ""
-
-#: saleor/checkout/templates/checkout/payment.html:9
-#: saleor/dashboard/templates/dashboard/customer/detail.html:39
-#: saleor/dashboard/templates/dashboard/payments/detail.html:7
-#: saleor/dashboard/templates/dashboard/payments/list.html:29
-#: saleor/order/templates/order/payment/details.html:4
-msgid "Payment"
-msgstr ""
-
-#: saleor/checkout/templates/checkout/payment.html:15
-#: saleor/checkout/templates/checkout/summary.html:41
-#: saleor/checkout/templates/checkout/summary_without_shipping.html:22
-msgid "Place order"
-msgstr ""
-
-#: saleor/checkout/templates/checkout/shipping_address.html:45
-msgid "Continue to shipping method"
-msgstr ""
-
-#: saleor/checkout/templates/checkout/shipping_method.html:47
-msgid "Make order"
-msgstr ""
-
-#: saleor/checkout/templates/checkout/snippets/voucher-form.html:17
-msgid "Remove"
-msgstr ""
-
-#: saleor/checkout/templates/checkout/snippets/voucher-form.html:30
-msgid "Apply"
-msgstr ""
-
-#: saleor/checkout/templates/checkout/summary.html:35
-#: saleor/checkout/templates/checkout/summary_without_shipping.html:12
-#: saleor/dashboard/templates/dashboard/order/detail.html:151
-#: saleor/dashboard/templates/dashboard/payments/detail.html:80
-#: saleor/order/templates/order/details.html:47
-#: saleor/order/templates/order/payment.html:74
-msgid "Billing address"
-msgstr ""
+msgstr "Метод за доставка"
 
 #: saleor/dashboard/category/views.py:32 saleor/dashboard/category/views.py:49
 #, python-format
@@ -243,19 +77,18 @@ msgid "Deleted category %s"
 msgstr ""
 
 #: saleor/dashboard/customer/forms.py:9
-#: saleor/dashboard/templates/dashboard/customer/list.html:45
+#: templates/dashboard/customer/list.html:45
 msgid "Email"
-msgstr ""
+msgstr "Електронна поща"
 
 #: saleor/dashboard/customer/forms.py:10
-#: saleor/dashboard/templates/dashboard/customer/list.html:46
-#: saleor/dashboard/templates/dashboard/discount/sale_list.html:34
-#: saleor/dashboard/templates/dashboard/discount/voucher_list.html:34
 #: saleor/dashboard/templates/dashboard/shipping/cities_list.html:36
-#: saleor/dashboard/templates/dashboard/shipping/method_list.html:37
 #: saleor/dashboard/templates/dashboard/shipping/offices_list.html:36
-#: saleor/order/templates/order/details.html:80
-#: saleor/order/templates/order/payment.html:105
+#: templates/dashboard/customer/list.html:46
+#: templates/dashboard/discount/sale_list.html:34
+#: templates/dashboard/discount/voucher_list.html:34
+#: templates/dashboard/shipping/method_list.html:37
+#: templates/order/details.html:80 templates/order/payment.html:105
 msgid "Name"
 msgstr ""
 
@@ -288,35 +121,40 @@ msgctxt "voucher"
 msgid "Only if purchase value is greater than or equal to"
 msgstr ""
 
-#: saleor/dashboard/discount/views.py:29
+#: saleor/dashboard/discount/views.py:31
 msgid "Updated sale"
 msgstr ""
 
-#: saleor/dashboard/discount/views.py:29
+#: saleor/dashboard/discount/views.py:31
 msgid "Added sale"
 msgstr ""
 
-#: saleor/dashboard/discount/views.py:42
+#: saleor/dashboard/discount/views.py:44
 #, python-format
 msgid "Deleted sale %s"
 msgstr ""
 
-#: saleor/dashboard/discount/views.py:80
+#: saleor/dashboard/discount/views.py:82
 msgid "Created group of vouchers"
 msgstr ""
 
-#: saleor/dashboard/discount/views.py:88
+#: saleor/dashboard/discount/views.py:90
 msgid "Updated voucher"
 msgstr ""
 
-#: saleor/dashboard/discount/views.py:88
+#: saleor/dashboard/discount/views.py:90
 msgid "Added voucher"
 msgstr ""
 
-#: saleor/dashboard/discount/views.py:130
-#: saleor/dashboard/discount/views.py:143
+#: saleor/dashboard/discount/views.py:132
+#: saleor/dashboard/discount/views.py:165
 #, python-format
 msgid "Deleted voucher %s"
+msgstr ""
+
+#: saleor/dashboard/discount/views.py:145
+#, python-format
+msgid "Deleted voucher group %s"
 msgstr ""
 
 #: saleor/dashboard/order/forms.py:25
@@ -340,6 +178,13 @@ msgstr ""
 #: saleor/dashboard/order/forms.py:80
 msgid "Only pre-authorized payments can be released"
 msgstr ""
+
+#: saleor/dashboard/order/forms.py:92 templates/cart/index.html:31
+#: templates/dashboard/order/detail.html:200
+#: templates/dashboard/order/modal_cancel_line.html:21
+#: templates/dashboard/product/product_form.html:243
+msgid "Quantity"
+msgstr "Количество"
 
 #: saleor/dashboard/order/forms.py:93
 msgid "Target shipment"
@@ -537,461 +382,16 @@ msgstr ""
 msgid "%(shipping_method_name)s successfully deleted"
 msgstr ""
 
-#: saleor/dashboard/templates/dashboard/base.html:8
-msgid "Dashboard - Saleor"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:27 templates/base.html:75
-msgid "Dashboard"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:42
-msgid "Visit storefront"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:43 templates/base.html:78
-msgid "Log out"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:54
-#: saleor/order/templates/order/details.html:13
-#: saleor/order/templates/order/payment.html:14 templates/base.html.py:106
-msgid "Home"
-msgstr "Начало"
-
-#: saleor/dashboard/templates/dashboard/base.html:58
-msgid "Catalogue"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:61
-#: saleor/dashboard/templates/dashboard/product/list.html:7
-#: saleor/dashboard/templates/dashboard/product/list.html:36
-#: saleor/dashboard/templates/dashboard/product/product_confirm_delete.html:17
-#: saleor/dashboard/templates/dashboard/product/product_form.html:8
-#: saleor/dashboard/templates/dashboard/product/product_form.html:40
-#: saleor/dashboard/templates/dashboard/product/product_image_confirm_delete.html:15
-#: saleor/dashboard/templates/dashboard/product/product_image_form.html:23
-#: saleor/dashboard/templates/dashboard/product/product_variant_confirm_delete.html:15
-#: saleor/dashboard/templates/dashboard/product/stock_confirm_delete.html:15
-#: saleor/dashboard/templates/dashboard/product/stock_form.html:23
-#: saleor/dashboard/templates/dashboard/product/variant_form.html:22
-msgid "Products"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:62
-#: saleor/dashboard/templates/dashboard/product/attributes/confirm_delete.html:8
-#: saleor/dashboard/templates/dashboard/product/attributes/form.html:6
-#: saleor/dashboard/templates/dashboard/product/attributes/form.html:33
-#: saleor/dashboard/templates/dashboard/product/attributes/list.html:5
-#: saleor/dashboard/templates/dashboard/product/attributes/list.html:20
-msgid "Attributes"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:63
-#: saleor/dashboard/templates/dashboard/category/detail.html:6
-#: saleor/dashboard/templates/dashboard/category/detail.html:14
-#: saleor/dashboard/templates/dashboard/category/list.html:6
-#: saleor/dashboard/templates/dashboard/category/list.html:56
-#: saleor/dashboard/templates/dashboard/category/list.html:59
-msgid "Categories"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:71
-#: saleor/dashboard/templates/dashboard/discount/sale_confirm_delete.html:8
-msgid "Discounts"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:74
-#: saleor/dashboard/templates/dashboard/base.html:83
-#: saleor/dashboard/templates/dashboard/discount/sale_form.html:7
-#: saleor/dashboard/templates/dashboard/discount/sale_form.html:36
-#: saleor/dashboard/templates/dashboard/discount/sale_list.html:6
-#: saleor/dashboard/templates/dashboard/discount/sale_list.html:21
-msgid "Sales"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:75
-#: saleor/dashboard/templates/dashboard/discount/voucher_form.html:7
-#: saleor/dashboard/templates/dashboard/discount/voucher_form.html:42
-#: saleor/dashboard/templates/dashboard/discount/voucher_list.html:6
-#: saleor/dashboard/templates/dashboard/discount/voucher_list.html:21
-msgid "Vouchers"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:86
-#: saleor/dashboard/templates/dashboard/order/detail.html:8
-#: saleor/dashboard/templates/dashboard/order/detail.html:35
-#: saleor/dashboard/templates/dashboard/order/list.html:6
-#: saleor/dashboard/templates/dashboard/order/list.html:12
-msgid "Orders"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:87
-#: saleor/dashboard/templates/dashboard/customer/detail.html:6
-#: saleor/dashboard/templates/dashboard/customer/detail.html:17
-#: saleor/dashboard/templates/dashboard/customer/list.html:6
-#: saleor/dashboard/templates/dashboard/customer/list.html:12
-msgid "Customers"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:88
-#: saleor/dashboard/templates/dashboard/order/detail.html:51
-#: saleor/dashboard/templates/dashboard/payments/detail.html:7
-#: saleor/dashboard/templates/dashboard/payments/detail.html:18
-#: saleor/dashboard/templates/dashboard/payments/list.html:6
-#: saleor/dashboard/templates/dashboard/payments/list.html:12
-msgid "Payments"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:103
-#: saleor/dashboard/templates/dashboard/shipping/method_form.html:8
-#: saleor/dashboard/templates/dashboard/shipping/method_form.html:29
-#: saleor/dashboard/templates/dashboard/shipping/method_list.html:6
-msgid "Shipping methods"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:104
-#: saleor/dashboard/templates/dashboard/shipping/countries_list.html:6
-#: saleor/dashboard/templates/dashboard/shipping/method_list.html:39
-msgid "Countries"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:105
-#: saleor/dashboard/templates/dashboard/shipping/cities_form.html:8
-#: saleor/dashboard/templates/dashboard/shipping/cities_form.html:24
-#: saleor/dashboard/templates/dashboard/shipping/cities_list.html:6
-msgid "Cities"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/base.html:106
-#: saleor/dashboard/templates/dashboard/shipping/offices_form.html:8
-#: saleor/dashboard/templates/dashboard/shipping/offices_form.html:24
-#: saleor/dashboard/templates/dashboard/shipping/offices_list.html:6
-msgid "Offices"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/category/category_confirm_delete.html:5
-msgid "Delete category"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/category/category_confirm_delete.html:16
-#: saleor/dashboard/templates/dashboard/category/modal_delete.html:10
-#, python-format
-msgid ""
-"\n"
-"                        Are you sure you want to delete the category "
-"%(category)s?\n"
-"                    "
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/category/category_confirm_delete.html:26
-#: saleor/dashboard/templates/dashboard/category/modal_delete.html:20
-msgid "The following child categories will be deleted:"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/category/category_confirm_delete.html:41
-#, python-format
-msgid ""
-"\n"
-"                        There is one product in this category that will be "
-"deleted.\n"
-"                    "
-msgid_plural ""
-"\n"
-"                        There are %(counter)s products in this category that "
-"will be deleted.\n"
-"                    "
-msgstr[0] ""
-msgstr[1] ""
-
-#: saleor/dashboard/templates/dashboard/category/category_confirm_delete.html:52
-#: saleor/dashboard/templates/dashboard/category/modal_delete.html:46
-#: saleor/dashboard/templates/dashboard/discount/sale_confirm_delete.html:28
-#: saleor/dashboard/templates/dashboard/discount/sale_modal_confirm_delete.html:14
-#: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_delete.html:14
-#: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_delete_group.html:14
-#: saleor/dashboard/templates/dashboard/product/attributes/confirm_delete.html:28
-#: saleor/dashboard/templates/dashboard/product/attributes/modal_confirm_delete.html:14
-#: saleor/dashboard/templates/dashboard/product/modal_product_confirm_delete.html:30
-#: saleor/dashboard/templates/dashboard/product/modal_product_image_confirm_delete.html:24
-#: saleor/dashboard/templates/dashboard/product/product_confirm_delete.html:6
-#: saleor/dashboard/templates/dashboard/product/product_confirm_delete.html:21
-#: saleor/dashboard/templates/dashboard/product/product_confirm_delete.html:43
-#: saleor/dashboard/templates/dashboard/product/product_form.html:127
-#: saleor/dashboard/templates/dashboard/product/product_form.html:140
-#: saleor/dashboard/templates/dashboard/product/product_form.html:209
-#: saleor/dashboard/templates/dashboard/product/product_form.html:222
-#: saleor/dashboard/templates/dashboard/product/product_form.html:310
-#: saleor/dashboard/templates/dashboard/product/product_form.html:356
-#: saleor/dashboard/templates/dashboard/product/product_image_confirm_delete.html:40
-#: saleor/dashboard/templates/dashboard/product/product_variant_confirm_delete.html:42
-#: saleor/dashboard/templates/dashboard/product/stock_confirm_delete.html:40
-#: saleor/dashboard/templates/dashboard/shipping/country_form.html:52
-#: saleor/dashboard/templates/dashboard/shipping/method_delete.html:5
-#: saleor/dashboard/templates/dashboard/shipping/method_delete.html:9
-#: saleor/dashboard/templates/dashboard/shipping/method_delete.html:23
-#: saleor/dashboard/templates/dashboard/shipping/method_delete.html:40
-#: saleor/dashboard/templates/dashboard/shipping/method_form.html:71
-#: saleor/userprofile/templates/userprofile/address-delete.html:30
-#: saleor/userprofile/templates/userprofile/details.html:57
-msgid "Delete"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/category/category_confirm_delete.html:53
-#: saleor/dashboard/templates/dashboard/category/detail.html:48
-#: saleor/dashboard/templates/dashboard/category/detail.html:50
-#: saleor/dashboard/templates/dashboard/category/modal_delete.html:47
-#: saleor/dashboard/templates/dashboard/category/modal_edit.html:23
-#: saleor/dashboard/templates/dashboard/discount/sale_confirm_delete.html:27
-#: saleor/dashboard/templates/dashboard/discount/sale_modal_confirm_delete.html:15
-#: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_delete.html:15
-#: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_delete_group.html:15
-#: saleor/dashboard/templates/dashboard/order/modal_add_note.html:16
-#: saleor/dashboard/templates/dashboard/order/modal_address_edit.html:21
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_delivery_group.html:18
-#: saleor/dashboard/templates/dashboard/order/modal_capture.html:26
-#: saleor/dashboard/templates/dashboard/order/modal_change_quantity.html:16
-#: saleor/dashboard/templates/dashboard/order/modal_refund.html:26
-#: saleor/dashboard/templates/dashboard/order/modal_release.html:16
-#: saleor/dashboard/templates/dashboard/order/modal_ship_delivery_group.html:18
-#: saleor/dashboard/templates/dashboard/order/modal_split_order_line.html:17
-#: saleor/dashboard/templates/dashboard/product/attributes/confirm_delete.html:27
-#: saleor/dashboard/templates/dashboard/product/attributes/modal_confirm_delete.html:15
-#: saleor/dashboard/templates/dashboard/product/modal_product_confirm_delete.html:31
-#: saleor/dashboard/templates/dashboard/product/modal_product_image_confirm_delete.html:25
-#: saleor/dashboard/templates/dashboard/product/product_form.html:141
-#: saleor/dashboard/templates/dashboard/product/product_form.html:223
-#: saleor/dashboard/templates/dashboard/product/product_image_confirm_delete.html:39
-#: saleor/dashboard/templates/dashboard/shipping/cities_form.html:40
-#: saleor/dashboard/templates/dashboard/shipping/country_form.html:56
-#: saleor/dashboard/templates/dashboard/shipping/country_form.html:62
-#: saleor/dashboard/templates/dashboard/shipping/method_form.html:75
-#: saleor/dashboard/templates/dashboard/shipping/method_form.html:81
-#: saleor/dashboard/templates/dashboard/shipping/offices_form.html:40
-#: saleor/userprofile/templates/userprofile/address-delete.html:31
-msgid "Cancel"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/category/detail.html:6
-#: saleor/dashboard/templates/dashboard/category/detail.html:10
-#: saleor/dashboard/templates/dashboard/category/detail.html:24
-msgid "Add new category"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/category/detail.html:55
-#: saleor/dashboard/templates/dashboard/discount/sale_form.html:64
-#: saleor/dashboard/templates/dashboard/discount/voucher_form.html:103
-#: saleor/dashboard/templates/dashboard/product/attributes/form.html:86
-#: saleor/dashboard/templates/dashboard/product/product_form.html:110
-#: saleor/dashboard/templates/dashboard/product/product_image_form.html:61
-#: saleor/dashboard/templates/dashboard/product/stock_form.html:57
-#: saleor/dashboard/templates/dashboard/product/variant_form.html:69
-#: saleor/dashboard/templates/dashboard/shipping/country_form.html:63
-#: saleor/dashboard/templates/dashboard/shipping/method_form.html:82
-msgid "Create"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/category/list.html:25
-msgid "Add category"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/category/list.html:38
-msgid "Edit category"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/category/list.html:44
-msgid "Remove category"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/category/list.html:111
-msgid "No subcategories."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/category/list.html:113
-msgid "No categories."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/category/modal_delete.html:37
-#, python-format
-msgid ""
-"\n"
-"                There is one product in this category that will be deleted.\n"
-"            "
-msgid_plural ""
-"\n"
-"                There are %(counter)s products in this category that will be "
-"deleted.\n"
-"            "
-msgstr[0] ""
-msgstr[1] ""
-
-#: saleor/dashboard/templates/dashboard/category/modal_edit.html:10
-#: saleor/dashboard/templates/dashboard/includes/address_short.html:11
-#: saleor/dashboard/templates/dashboard/product/product_form.html:305
-#: saleor/dashboard/templates/dashboard/product/product_form.html:352
-#: saleor/userprofile/templates/userprofile/details.html:56
-msgid "Edit"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/detail.html:29
-msgid "Order history"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/detail.html:37
-msgid "Number"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/detail.html:38
-#: saleor/dashboard/templates/dashboard/includes/_orders_table.html:13
-msgid "Placed on"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/detail.html:40
-#: saleor/dashboard/templates/dashboard/includes/_orders_table.html:10
-#: saleor/dashboard/templates/dashboard/order/detail.html:80
-msgid "Order status"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/detail.html:59
-msgid "No orders found."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/detail.html:69
-msgid "Default shipping address"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/detail.html:76
-msgid "No default shipping address."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/detail.html:86
-msgid "Default billing address"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/detail.html:93
-msgid "No default billing address."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/list.html:26
-#: saleor/dashboard/templates/dashboard/includes/_status_filters.html:8
-msgid "Filter"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/list.html:28
-msgid "Clear"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/list.html:47
-#: saleor/dashboard/templates/dashboard/product/product_form.html:238
-msgid "Location"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/list.html:48
-msgid "Number of orders"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/list.html:49
-msgid "Last order"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/customer/list.html:85
-msgid "No customers found."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/sale_confirm_delete.html:4
-#: saleor/dashboard/templates/dashboard/discount/sale_confirm_delete.html:9
-msgid "Delete sale"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/sale_confirm_delete.html:14
-msgid "Are you sure you want to delete the following sale?"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/sale_form.html:6
-#: saleor/dashboard/templates/dashboard/discount/sale_form.html:38
-msgid "Add new sale"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/sale_form.html:26
-msgid "Remove sale"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/sale_list.html:13
-msgid "Add sale"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/sale_list.html:35
-#: saleor/dashboard/templates/dashboard/discount/voucher_list.html:35
-msgid "Discount"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/sale_list.html:54
-msgid "No sales found."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/sale_modal_confirm_delete.html:6
-#: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_delete.html:6
 #: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_delete_group.html:6
-#: saleor/dashboard/templates/dashboard/product/attributes/modal_confirm_delete.html:6
-#: saleor/dashboard/templates/dashboard/product/modal_product_confirm_delete.html:10
-#: saleor/dashboard/templates/dashboard/product/modal_product_image_confirm_delete.html:10
-#: saleor/dashboard/templates/dashboard/product/product_form.html:132
-#: saleor/dashboard/templates/dashboard/product/product_form.html:214
+#: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_export_group.html:6
+#: templates/dashboard/discount/sale_modal_confirm_delete.html:6
+#: templates/dashboard/discount/voucher_modal_confirm_delete.html:6
+#: templates/dashboard/product/attributes/modal_confirm_delete.html:6
+#: templates/dashboard/product/modal_product_confirm_delete.html:10
+#: templates/dashboard/product/modal_product_image_confirm_delete.html:10
+#: templates/dashboard/product/product_form.html:136
+#: templates/dashboard/product/product_form.html:218
 msgid "Are you sure?"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/sale_modal_confirm_delete.html:9
-#, python-format
-msgid "You are about to delete <strong>%(sale)s</strong>."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/voucher_form.html:6
-#: saleor/dashboard/templates/dashboard/discount/voucher_form.html:44
-msgid "Add new voucher"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/voucher_form.html:25
-#: saleor/dashboard/templates/dashboard/order/detail.html:321
-#: saleor/dashboard/templates/dashboard/order/detail.html:322
-#: saleor/dashboard/templates/dashboard/order/modal_order_remove_voucher.html:16
-msgid "Remove voucher"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/voucher_form.html:31
-msgid "Remove group"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/voucher_list.html:13
-msgid "Add voucher"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/voucher_list.html:36
-msgid "Start date"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/voucher_list.html:37
-msgid "End date"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/voucher_list.html:38
-msgid "Used"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/voucher_list.html:39
-msgid "Apply to"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/voucher_list.html:40
-msgid "Limit"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/voucher_list.html:77
-msgid "No vouchers found."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_delete.html:9
-#, python-format
-msgid "You are about to delete <strong>%(voucher)s</strong>."
 msgstr ""
 
 #: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_delete_group.html:9
@@ -999,572 +399,89 @@ msgstr ""
 msgid "You are about to delete <strong>%(voucher)s</strong> group."
 msgstr ""
 
-#: saleor/dashboard/templates/dashboard/includes/_orders_table.html:11
-#: saleor/dashboard/templates/dashboard/order/detail.html:369
-#: saleor/dashboard/templates/dashboard/payments/detail.html:33
-msgid "Payment status"
+#: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_delete_group.html:14
+#: saleor/dashboard/templates/dashboard/shipping/country_form.html:52
+#: templates/dashboard/category/category_confirm_delete.html:52
+#: templates/dashboard/category/modal_delete.html:46
+#: templates/dashboard/discount/sale_confirm_delete.html:28
+#: templates/dashboard/discount/sale_modal_confirm_delete.html:14
+#: templates/dashboard/discount/voucher_modal_confirm_delete.html:14
+#: templates/dashboard/product/attributes/confirm_delete.html:28
+#: templates/dashboard/product/attributes/modal_confirm_delete.html:14
+#: templates/dashboard/product/modal_product_confirm_delete.html:30
+#: templates/dashboard/product/modal_product_image_confirm_delete.html:24
+#: templates/dashboard/product/product_confirm_delete.html:6
+#: templates/dashboard/product/product_confirm_delete.html:21
+#: templates/dashboard/product/product_confirm_delete.html:43
+#: templates/dashboard/product/product_form.html:131
+#: templates/dashboard/product/product_form.html:144
+#: templates/dashboard/product/product_form.html:213
+#: templates/dashboard/product/product_form.html:226
+#: templates/dashboard/product/product_form.html:314
+#: templates/dashboard/product/product_form.html:360
+#: templates/dashboard/product/product_image_confirm_delete.html:40
+#: templates/dashboard/product/product_variant_confirm_delete.html:42
+#: templates/dashboard/product/stock_confirm_delete.html:40
+#: templates/dashboard/shipping/method_delete.html:5
+#: templates/dashboard/shipping/method_delete.html:9
+#: templates/dashboard/shipping/method_delete.html:23
+#: templates/dashboard/shipping/method_delete.html:40
+#: templates/dashboard/shipping/method_form.html:71
+#: templates/userprofile/address-delete.html:30
+#: templates/userprofile/details.html:57
+msgid "Delete"
 msgstr ""
 
-#: saleor/dashboard/templates/dashboard/includes/_orders_table.html:12
-#: saleor/dashboard/templates/dashboard/index.html:22
-#: saleor/dashboard/templates/dashboard/payments/detail.html:62
-msgid "Customer"
+#: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_delete_group.html:15
+#: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_export_group.html:15
+#: saleor/dashboard/templates/dashboard/shipping/cities_form.html:40
+#: saleor/dashboard/templates/dashboard/shipping/country_form.html:56
+#: saleor/dashboard/templates/dashboard/shipping/country_form.html:62
+#: saleor/dashboard/templates/dashboard/shipping/offices_form.html:40
+#: templates/dashboard/category/category_confirm_delete.html:53
+#: templates/dashboard/category/detail.html:52
+#: templates/dashboard/category/detail.html:54
+#: templates/dashboard/category/modal_delete.html:47
+#: templates/dashboard/category/modal_edit.html:27
+#: templates/dashboard/discount/sale_confirm_delete.html:27
+#: templates/dashboard/discount/sale_modal_confirm_delete.html:15
+#: templates/dashboard/discount/voucher_modal_confirm_delete.html:15
+#: templates/dashboard/order/modal_add_note.html:16
+#: templates/dashboard/order/modal_address_edit.html:21
+#: templates/dashboard/order/modal_cancel_delivery_group.html:18
+#: templates/dashboard/order/modal_capture.html:26
+#: templates/dashboard/order/modal_change_quantity.html:16
+#: templates/dashboard/order/modal_refund.html:26
+#: templates/dashboard/order/modal_release.html:16
+#: templates/dashboard/order/modal_ship_delivery_group.html:18
+#: templates/dashboard/order/modal_split_order_line.html:17
+#: templates/dashboard/product/attributes/confirm_delete.html:27
+#: templates/dashboard/product/attributes/modal_confirm_delete.html:15
+#: templates/dashboard/product/modal_product_confirm_delete.html:31
+#: templates/dashboard/product/modal_product_image_confirm_delete.html:25
+#: templates/dashboard/product/product_form.html:145
+#: templates/dashboard/product/product_form.html:227
+#: templates/dashboard/product/product_image_confirm_delete.html:39
+#: templates/dashboard/shipping/method_form.html:75
+#: templates/dashboard/shipping/method_form.html:81
+#: templates/userprofile/address-delete.html:31
+msgid "Cancel"
 msgstr ""
 
-#: saleor/dashboard/templates/dashboard/includes/_orders_table.html:25
-#: saleor/dashboard/templates/dashboard/index.html:31
-#: saleor/dashboard/templates/dashboard/order/detail.html:75
-#: saleor/dashboard/templates/dashboard/payments/detail.html:68
-msgid "Guest"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/index.html:12
-msgid "Preauthorized payments"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/index.html:20
-msgid "Order number"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/index.html:21
-#: saleor/dashboard/templates/dashboard/order/detail.html:368
-#: saleor/dashboard/templates/dashboard/payments/list.html:28
-#: saleor/userprofile/templates/userprofile/orders.html:20
-msgid "Date"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/index.html:23
-#: saleor/dashboard/templates/dashboard/payments/detail.html:35
-#: saleor/dashboard/templates/dashboard/payments/list.html:30
-msgid "Amount"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/index.html:40
-msgid "No preauthorized payments."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/index.html:47
-msgid "Orders ready for shipment"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/index.html:54
-msgid "No orders are ready for shipment."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/index.html:61
-msgid "Products with low stock"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/index.html:74
-msgid "No products are low in stock."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:26
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_order.html:16
-msgid "Cancel Order"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:47
-#: saleor/dashboard/templates/dashboard/product/product_form.html:54
-msgid "Details"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:55
-msgid "History"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:70
-#: saleor/dashboard/templates/dashboard/payments/detail.html:66
-#: saleor/dashboard/templates/dashboard/payments/detail.html:68
-msgid "Account"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:84
-msgid "Payment status:"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:85
-#: saleor/dashboard/templates/dashboard/order/detail.html:93
-msgid "N/A"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:88
-msgid "Order total"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:92
-msgid "Preauthorized amount"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:96
-#: saleor/dashboard/templates/dashboard/payments/detail.html:36
-msgid "Captured amount"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:100
-msgid "Outstanding balance"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:111
-#: saleor/dashboard/templates/dashboard/order/modal_capture.html:25
-msgid "Capture"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:114
-#: saleor/dashboard/templates/dashboard/order/modal_refund.html:25
-msgid "Refund"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:118
-#: saleor/dashboard/templates/dashboard/order/modal_release.html:15
-msgid "Release"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:175
+#: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_export_group.html:9
 #, python-format
-msgid "Shipment #%(shipment)s"
+msgid "You are about to export <strong>%(voucher)s</strong> group."
 msgstr ""
 
-#: saleor/dashboard/templates/dashboard/order/detail.html:186
-#: saleor/dashboard/templates/dashboard/order/detail.html:187
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_delivery_group.html:17
-msgid "Cancel group"
+#: saleor/dashboard/templates/dashboard/discount/voucher_modal_confirm_export_group.html:14
+msgid "Export"
 msgstr ""
 
-#: saleor/dashboard/templates/dashboard/order/detail.html:197
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_line.html:18
-msgid "Item"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:198
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_line.html:19
-#: saleor/dashboard/templates/dashboard/product/product_form.html:155
-#: saleor/dashboard/templates/dashboard/product/product_form.html:237
-msgid "SKU"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:238
-#: saleor/dashboard/templates/dashboard/order/detail.html:239
-#: saleor/dashboard/templates/dashboard/order/modal_change_quantity.html:7
-msgid "Change quantity"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:244
-msgid "Split line"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:245
-msgid "Split order line"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:250
-#: saleor/dashboard/templates/dashboard/order/detail.html:251
-msgid "Cancel line"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:266
-#: saleor/dashboard/templates/dashboard/order/modal_ship_delivery_group.html:17
-msgid "Ship"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:279
-msgid "Grand total"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:308
-#, python-format
-msgid "Voucher %(voucher)s"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:336
-msgid "Order notes"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:348
-msgid "There are no notes associated with this order."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:354
-#: saleor/dashboard/templates/dashboard/order/modal_add_note.html:7
-msgid "Add note"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/detail.html:386
-msgid "No payments made for this order."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/list.html:30
-msgid "No orders."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_add_note.html:15
-msgid "Save note"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_address_edit.html:9
-msgid "Edit shipping address"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_address_edit.html:11
-msgid "Edit billing address"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_delivery_group.html:8
-msgid "Cancel delivery group?"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_delivery_group.html:10
-#, python-format
-msgid ""
-"\n"
-"                After this action, %(group)s will be cancelled. Ordered "
-"items will be returned to stock.\n"
-"            "
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_line.html:8
-msgid "Cancer order line?"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_line.html:10
-msgid ""
-"\n"
-"                Are you sure, you want cancel this order line?\n"
-"            "
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_line.html:40
-msgid "Cancel Line"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_line.html:41
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_order.html:17
-#: saleor/dashboard/templates/dashboard/order/modal_order_remove_voucher.html:17
-msgid "Abort"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_order.html:5
-msgid "Cancer order?"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_cancel_order.html:7
-#, python-format
-msgid ""
-"\n"
-"            Are you sure, you want cancel order %(order)s?\n"
-"        "
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_capture.html:10
-msgid "Capture payment"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_capture.html:16
-#: saleor/dashboard/templates/dashboard/order/modal_refund.html:16
-msgid "Before this action"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_capture.html:19
-#: saleor/dashboard/templates/dashboard/order/modal_refund.html:19
-msgid "Order total: "
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_capture.html:20
-#: saleor/dashboard/templates/dashboard/order/modal_refund.html:20
-msgid "Captured amount: "
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_order_remove_voucher.html:5
-msgid "Remove voucher?"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_order_remove_voucher.html:7
-#, python-format
-msgid ""
-"\n"
-"            Are you sure, you want remove voucher discount from %(order)s?\n"
-"        "
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_refund.html:10
-msgid "Refund payment"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_release.html:5
-msgid "Release payment"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_release.html:7
-msgid "Do you want to release the payment?"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_ship_delivery_group.html:8
-msgid "Ship delivery group "
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_ship_delivery_group.html:9
-msgid "Ship selected delivery group to the following address:"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_split_order_line.html:8
-msgid "Split order line "
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/order/modal_split_order_line.html:16
-msgid "Split"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/payments/detail.html:34
-msgid "Fraud status"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/payments/detail.html:37
-#: saleor/dashboard/templates/dashboard/payments/list.html:40
-msgid "Gateway"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/payments/detail.html:38
-msgid "Transaction ID"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/payments/detail.html:39
-msgid "Payment date"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/payments/detail.html:46
-msgid "Gateway response"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/payments/detail.html:51
-msgid "No response available."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/payments/list.html:31
-#: saleor/userprofile/templates/userprofile/orders.html:26
-msgid "Status"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/payments/list.html:41
-msgid "Order "
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/payments/list.html:54
-msgid "No payments found."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/attributes/confirm_delete.html:4
-#: saleor/dashboard/templates/dashboard/product/attributes/confirm_delete.html:9
-msgid "Delete attribute"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/attributes/confirm_delete.html:14
-msgid "Are you sure you want to delete the following attribute?"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/attributes/form.html:6
-#: saleor/dashboard/templates/dashboard/product/attributes/form.html:34
-msgid "Add new attribute"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/attributes/form.html:24
-msgid "Remove attribute"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/attributes/form.html:50
-msgid "Attribute values"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/attributes/list.html:12
-msgid "Add attribute"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/attributes/list.html:44
-msgid "No attributes found."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/attributes/modal_confirm_delete.html:9
-#, python-format
-msgid "You are about to delete an attribute <strong>%(attribute)s</strong>."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/list.html:15
-#: saleor/dashboard/templates/dashboard/product/list.html:26
-msgid "Add product"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/list.html:63
-msgid "No products found."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/list.html:78
-msgid "Create new"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/modal_product_confirm_delete.html:25
-#, python-format
-msgid ""
-"If you remove <strong>%(product)s</strong> you will lose all data related to "
-"this product."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/modal_product_image_confirm_delete.html:19
-msgid "You are about to delete this image."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_confirm_delete.html:20
-msgid "Delete product"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:8
-#: saleor/dashboard/templates/dashboard/product/product_form.html:41
-msgid "Add new product"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:25
-msgid "View on site"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:31
-msgid "Remove product"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:61
-msgid "Variants"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:68
-#: saleor/dashboard/templates/dashboard/product/stock_form.html:8
-#: saleor/dashboard/templates/dashboard/product/stock_form.html:26
-msgid "Stock"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:75
-msgid "Images"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:123
-#: saleor/dashboard/templates/dashboard/product/product_form.html:205
-msgid "Add"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:135
-msgid "You are about to delete variants of this product."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:159
-msgid "Variant name"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:171
-#: saleor/dashboard/templates/dashboard/product/product_form.html:251
-msgid "Edit variant"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:189
-msgid "There are no variants for this product"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:217
-msgid "You are about to delete stock for this product variant."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:240
-msgid "Allocated"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:265
-msgid "There is no stock for this product."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:297
-#: saleor/dashboard/templates/dashboard/product/product_form.html:343
-msgid "No description"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:319
-msgid "Drop images here to upload"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:328
-msgid "This product has no images yet."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_form.html:367
-#: saleor/dashboard/templates/dashboard/product/product_image_form.html:10
-#: saleor/dashboard/templates/dashboard/product/product_image_form.html:29
-msgid "Add image"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_image_confirm_delete.html:4
-#: saleor/dashboard/templates/dashboard/product/product_image_confirm_delete.html:17
-msgid "Delete image"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_image_confirm_delete.html:26
-msgid "Are you sure you want to delete the following image?"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_image_form.html:30
-#, python-format
-msgid "Add image for %(product)s"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_image_form.html:45
-msgid "Pick the most relevant part of the image using the red circle."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_variant_confirm_delete.html:4
-#: saleor/dashboard/templates/dashboard/product/product_variant_confirm_delete.html:18
-msgid "Delete variant"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_variant_confirm_delete.html:19
-#, python-format
-msgid "Delete variant for %(product)s"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/product_variant_confirm_delete.html:35
-msgid ""
-"This is the only variant. Deleting it will make the product unavailable for "
-"your customers."
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/stock_confirm_delete.html:4
-#: saleor/dashboard/templates/dashboard/product/stock_confirm_delete.html:18
-msgid "Delete stock"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/stock_confirm_delete.html:19
-#, python-format
-msgid "Delete stock for %(product)s"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/stock_form.html:10
-#: saleor/dashboard/templates/dashboard/product/stock_form.html:29
-msgid "Add stock"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/stock_form.html:30
-#, python-format
-msgid "Add stock for %(product)s"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/variant_form.html:10
-#: saleor/dashboard/templates/dashboard/product/variant_form.html:28
-msgid "Add variant"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/variant_form.html:25
-msgid "Variant"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/variant_form.html:29
-#, python-format
-msgid "Add variant for %(product)s"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/product/variant_form.html:50
-msgid "This product has no attributes."
+#: saleor/dashboard/templates/dashboard/shipping/cities_form.html:8
+#: saleor/dashboard/templates/dashboard/shipping/cities_form.html:24
+#: saleor/dashboard/templates/dashboard/shipping/cities_list.html:6
+#: templates/dashboard/base.html:108
+msgid "Cities"
 msgstr ""
 
 #: saleor/dashboard/templates/dashboard/shipping/cities_form.html:9
@@ -1576,6 +493,18 @@ msgstr ""
 #: saleor/dashboard/templates/dashboard/shipping/offices_form.html:41
 msgid "Load"
 msgstr ""
+
+#: saleor/dashboard/templates/dashboard/shipping/cities_list.html:14
+#: saleor/dashboard/templates/dashboard/shipping/countries_list.html:15
+#: saleor/dashboard/templates/dashboard/shipping/offices_list.html:14
+#: templates/checkout/details.html:93 templates/dashboard/base.html:103
+#: templates/dashboard/order/detail.html:210
+#: templates/dashboard/order/detail.html:299
+#: templates/dashboard/shipping/method_list.html:15
+#: templates/order/details.html:102 templates/order/payment.html:127
+#: templates/userprofile/details.html:25
+msgid "Shipping"
+msgstr "Транспорт"
 
 #: saleor/dashboard/templates/dashboard/shipping/cities_list.html:15
 msgid "cities"
@@ -1606,13 +535,19 @@ msgstr ""
 msgid "No cities found."
 msgstr ""
 
+#: saleor/dashboard/templates/dashboard/shipping/countries_list.html:6
+#: templates/dashboard/base.html:107
+#: templates/dashboard/shipping/method_list.html:39
+msgid "Countries"
+msgstr ""
+
 #: saleor/dashboard/templates/dashboard/shipping/countries_list.html:16
-#: saleor/dashboard/templates/dashboard/shipping/method_list.html:16
+#: templates/dashboard/shipping/method_list.html:16
 msgid "methods"
 msgstr ""
 
 #: saleor/dashboard/templates/dashboard/shipping/countries_list.html:23
-#: saleor/dashboard/templates/dashboard/shipping/method_list.html:23
+#: templates/dashboard/shipping/method_list.html:23
 msgid "Add method"
 msgstr ""
 
@@ -1639,35 +574,40 @@ msgstr ""
 msgid "Add new country"
 msgstr ""
 
-#: saleor/dashboard/templates/dashboard/shipping/method_delete.html:17
-msgid "Subscription methods"
+#: saleor/dashboard/templates/dashboard/shipping/country_form.html:57
+#: templates/cart/index.html:67 templates/dashboard/category/detail.html:57
+#: templates/dashboard/category/modal_edit.html:26
+#: templates/dashboard/discount/sale_form.html:62
+#: templates/dashboard/discount/voucher_form.html:108
+#: templates/dashboard/order/modal_address_edit.html:20
+#: templates/dashboard/order/modal_change_quantity.html:15
+#: templates/dashboard/product/attributes/form.html:84
+#: templates/dashboard/product/product_form.html:112
+#: templates/dashboard/product/product_image_form.html:59
+#: templates/dashboard/product/stock_form.html:55
+#: templates/dashboard/product/variant_form.html:71
+#: templates/dashboard/shipping/method_form.html:76
+msgid "Update"
 msgstr ""
 
-#: saleor/dashboard/templates/dashboard/shipping/method_delete.html:32
-#, python-format
-msgid ""
-"\n"
-"              Are you sure you want to delete the %(shipping_method_name)s "
-"method?\n"
-"              "
+#: saleor/dashboard/templates/dashboard/shipping/country_form.html:63
+#: templates/dashboard/category/detail.html:59
+#: templates/dashboard/discount/sale_form.html:64
+#: templates/dashboard/discount/voucher_form.html:110
+#: templates/dashboard/product/attributes/form.html:86
+#: templates/dashboard/product/product_form.html:114
+#: templates/dashboard/product/product_image_form.html:61
+#: templates/dashboard/product/stock_form.html:57
+#: templates/dashboard/product/variant_form.html:73
+#: templates/dashboard/shipping/method_form.html:82
+msgid "Create"
 msgstr ""
 
-#: saleor/dashboard/templates/dashboard/shipping/method_form.html:12
-#: saleor/dashboard/templates/dashboard/shipping/method_form.html:23
-#: saleor/dashboard/templates/dashboard/shipping/method_form.html:35
-msgid "Add new method"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/shipping/method_form.html:48
-msgid "Price per country"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/shipping/method_list.html:38
-msgid "Price range"
-msgstr ""
-
-#: saleor/dashboard/templates/dashboard/shipping/method_list.html:68
-msgid "No shipping methods found."
+#: saleor/dashboard/templates/dashboard/shipping/offices_form.html:8
+#: saleor/dashboard/templates/dashboard/shipping/offices_form.html:24
+#: saleor/dashboard/templates/dashboard/shipping/offices_list.html:6
+#: templates/dashboard/base.html:109
+msgid "Offices"
 msgstr ""
 
 #: saleor/dashboard/templates/dashboard/shipping/offices_form.html:9
@@ -1692,7 +632,7 @@ msgid "ID"
 msgstr ""
 
 #: saleor/dashboard/templates/dashboard/shipping/offices_list.html:40
-#: saleor/userprofile/templates/userprofile/address-edit.html:22
+#: templates/userprofile/address-edit.html:22
 msgid "Address"
 msgstr ""
 
@@ -1707,12 +647,12 @@ msgstr ""
 #: saleor/discount/forms.py:12
 msgctxt "voucher"
 msgid "Discount code incorrect or expired"
-msgstr ""
+msgstr "Неправилен или изтекъл код за намаление"
 
 #: saleor/discount/forms.py:20
 msgctxt "voucher"
 msgid "Gift card or discount code"
-msgstr ""
+msgstr "Ваучер или код за намаление"
 
 #: saleor/discount/models.py:51
 msgctxt "voucher"
@@ -1895,7 +835,7 @@ msgstr ""
 msgid "Payment does not exist"
 msgstr ""
 
-#: saleor/order/models.py:50 saleor/order/models.py:412
+#: saleor/order/models.py:50 saleor/order/models.py:415
 msgctxt "Order field"
 msgid "order status"
 msgstr ""
@@ -1923,187 +863,67 @@ msgstr ""
 #: saleor/order/models.py:72 saleor/order/models.py:76
 msgctxt "Order field"
 msgid "total"
-msgstr ""
+msgstr "крайна сума"
 
 #: saleor/order/models.py:86 saleor/shipping/models.py:69
 msgctxt "Shipping method region field"
 msgid "price"
-msgstr ""
+msgstr "цена"
 
-#: saleor/order/models.py:205
+#: saleor/order/models.py:208
 msgctxt "Delivery group field"
 msgid "delivery status"
 msgstr ""
 
-#: saleor/order/models.py:209
+#: saleor/order/models.py:212
 msgctxt "Delivery group field"
 msgid "shipping price"
 msgstr ""
 
-#: saleor/order/models.py:219
+#: saleor/order/models.py:222
 #, python-format
 msgctxt "Delivery group str"
 msgid "Shipment #%s"
 msgstr ""
 
-#: saleor/order/models.py:313
+#: saleor/order/models.py:316
 msgctxt "OrderedItem field"
 msgid "product"
-msgstr ""
+msgstr "продукт"
 
-#: saleor/order/models.py:315
+#: saleor/order/models.py:318
 msgctxt "OrderedItem field"
 msgid "product name"
 msgstr ""
 
-#: saleor/order/models.py:316
+#: saleor/order/models.py:319
 msgctxt "OrderedItem field"
 msgid "sku"
 msgstr ""
 
-#: saleor/order/models.py:319
+#: saleor/order/models.py:322
 msgctxt "OrderedItem field"
 msgid "stock location"
 msgstr ""
 
-#: saleor/order/models.py:324
+#: saleor/order/models.py:327
 msgctxt "OrderedItem field"
 msgid "quantity"
-msgstr ""
+msgstr "количество"
 
-#: saleor/order/models.py:327
+#: saleor/order/models.py:330
 msgctxt "OrderedItem field"
 msgid "unit price (net)"
 msgstr ""
 
-#: saleor/order/models.py:330
+#: saleor/order/models.py:333
 msgctxt "OrderedItem field"
 msgid "unit price (gross)"
 msgstr ""
 
-#: saleor/order/models.py:408
+#: saleor/order/models.py:411
 msgctxt "Order field"
 msgid "last history change"
-msgstr ""
-
-#: saleor/order/templates/order/details.html:8
-msgid "Order"
-msgstr ""
-
-#: saleor/order/templates/order/details.html:14
-#: saleor/order/templates/order/payment.html:15
-#: saleor/userprofile/templates/userprofile/orders.html:5
-#: saleor/userprofile/templates/userprofile/orders.html:9
-#: templates/base.html:72
-msgid "Your orders"
-msgstr ""
-
-#: saleor/order/templates/order/details.html:28
-#, python-format
-msgid "Order %(order)s: "
-msgstr ""
-
-#: saleor/order/templates/order/details.html:72
-#: saleor/order/templates/order/payment.html:100
-#, python-format
-msgid "Shipment #%(number)s"
-msgstr ""
-
-#: saleor/order/templates/order/emails/confirm_email.body.txt:3
-#, python-format
-msgid ""
-"Hi!\n"
-"\n"
-"Thank you for your order. To see your payment details please visit:\n"
-"%(payment_url)s\n"
-"\n"
-"Sincerely,\n"
-"Saleor Team"
-msgstr ""
-
-#: saleor/order/templates/order/emails/confirm_email.subject.txt:2
-msgid "Order details"
-msgstr ""
-
-#: saleor/order/templates/order/payment.html:9
-#: saleor/order/templates/order/payment.html:43
-msgid "Pay for order"
-msgstr ""
-
-#: saleor/order/templates/order/payment.html:29
-msgid "Payment pending"
-msgstr ""
-
-#: saleor/order/templates/order/payment.html:34
-msgid ""
-"We are currently waiting for an external service to authorize your payment "
-"for this order."
-msgstr ""
-
-#: saleor/order/templates/order/payment.html:35
-msgid "Current status"
-msgstr ""
-
-#: saleor/order/templates/order/payment.html:36
-msgid ""
-"Unless you are absolutely sure that the process will not complete (for "
-"example you have closed the browser window before paying), you should wait "
-"before attempting a new payment. Please be warned that if you try again and "
-"the previous transaction succeeds you might end up being charged twice."
-msgstr ""
-
-#: saleor/order/templates/order/payment.html:38
-msgid "I understand, allow me to pay again"
-msgstr ""
-
-#: saleor/order/templates/order/payment.html:52
-msgid "Confirm order"
-msgstr ""
-
-#: saleor/order/templates/order/payment.html:60
-msgid "You've authorized transaction. Order is in processing"
-msgstr ""
-
-#: saleor/order/templates/order/payment/default.html:16
-#: saleor/order/templates/order/payment/paypal-card.html:14
-#: saleor/userprofile/templates/userprofile/address-edit.html:26
-msgid "Save changes"
-msgstr ""
-
-#: saleor/order/templates/order/payment/emails/confirm_email.body.txt:3
-#, python-format
-msgid ""
-"Hi!\n"
-"\n"
-"Thank you for your payment. To see your payment details please visit:\n"
-"%(order_url)s\n"
-"\n"
-"Sincerely,\n"
-"Saleor Team"
-msgstr ""
-
-#: saleor/order/templates/order/payment/emails/confirm_email.subject.txt:2
-msgid "Payment details"
-msgstr ""
-
-#: saleor/order/templates/order/payment/stripe.html:11
-msgid "Change payment method"
-msgstr ""
-
-#: saleor/order/templates/order/success.html:5
-msgid "Order complete!"
-msgstr ""
-
-#: saleor/order/templates/order/success.html:9
-msgid "Your order is now complete"
-msgstr ""
-
-#: saleor/order/templates/order/success.html:10
-msgid "Thank you for your purchase!"
-msgstr ""
-
-#: saleor/order/templates/order/success.html:12
-msgid "Your order number is"
 msgstr ""
 
 #: saleor/order/views.py:79
@@ -2169,7 +989,7 @@ msgstr ""
 #: saleor/product/models/base.py:84
 msgctxt "Product field"
 msgid "price"
-msgstr ""
+msgstr "цена"
 
 #: saleor/product/models/base.py:87
 msgctxt "Product field"
@@ -2214,7 +1034,7 @@ msgstr ""
 #: saleor/product/models/base.py:250
 msgctxt "Stock item field"
 msgid "variant"
-msgstr ""
+msgstr "Вариант"
 
 #: saleor/product/models/base.py:252
 msgctxt "Stock item field"
@@ -2224,7 +1044,7 @@ msgstr ""
 #: saleor/product/models/base.py:254
 msgctxt "Stock item field"
 msgid "quantity"
-msgstr ""
+msgstr "количество"
 
 #: saleor/product/models/base.py:257
 msgctxt "Stock item field"
@@ -2266,152 +1086,13 @@ msgctxt "Product image field"
 msgid "short description"
 msgstr ""
 
-#: saleor/product/templates/category/_items.html:26
-msgid "Discount!"
-msgstr ""
-
-#: saleor/product/templates/product/_price_range.html:8
-msgid "Starting from"
-msgstr ""
-
-#: saleor/product/templates/product/details.html:40
-msgid "You save"
-msgstr ""
-
-#: saleor/product/templates/product/details.html:69
-msgid "Add to cart"
-msgstr "Добави в количка"
-
-#: saleor/product/templates/product/details.html:75
-msgid "This product is currently <strong>unavailable</strong>."
-msgstr ""
-
 #: saleor/registration/forms.py:18
 msgctxt "Form field"
 msgid "Email"
-msgstr ""
+msgstr "Електронна поща"
 
 #: saleor/registration/forms.py:81
 msgid "Account with this email already exists"
-msgstr ""
-
-#: saleor/registration/templates/registration/change_password.html:5
-#: saleor/registration/templates/registration/change_password.html:10
-#: saleor/registration/templates/registration/change_password.html:21
-msgid "Change password"
-msgstr ""
-
-#: saleor/registration/templates/registration/change_password.html:9
-#: saleor/userprofile/templates/userprofile/address-delete.html:8
-#: saleor/userprofile/templates/userprofile/address-edit.html:9
-#: saleor/userprofile/templates/userprofile/details.html:4
-#: saleor/userprofile/templates/userprofile/details.html:8
-#: templates/base.html:71
-msgid "Your profile"
-msgstr ""
-
-#: saleor/registration/templates/registration/change_password.html:28
-msgid "Update password"
-msgstr ""
-
-#: saleor/registration/templates/registration/emails/change_email.body.txt:3
-#, python-format
-msgid ""
-"Hi!\n"
-"\n"
-"You have requested email change in saleor project. To continue visit the "
-"link below.\n"
-"\n"
-"%(confirmation_url)s\n"
-"\n"
-"If you didn't mean to change your email please ignore this message. We "
-"apologise for inconvenience.\n"
-"\n"
-"Sincerely,\n"
-"Saleor Team"
-msgstr ""
-
-#: saleor/registration/templates/registration/emails/change_email.subject.txt:2
-#: saleor/registration/templates/registration/emails/confirm_email.subject.txt:2
-msgid "Confirm your email address"
-msgstr ""
-
-#: saleor/registration/templates/registration/emails/confirm_email.body.txt:3
-#, python-format
-msgid ""
-"Hi!\n"
-"\n"
-"You have requested login access to saleor project. To continue visit the "
-"link below.\n"
-"\n"
-"%(confirmation_url)s\n"
-"\n"
-"If you didn't try to login to saleor please ignore this message. We "
-"apologise for inconvenience.\n"
-"\n"
-"Sincerely,\n"
-"Saleor Team"
-msgstr ""
-
-#: saleor/registration/templates/registration/invalid_token.html:4
-msgid "Invalid token"
-msgstr ""
-
-#: saleor/registration/templates/registration/login.html:5
-msgid "Login"
-msgstr ""
-
-#: saleor/registration/templates/registration/login.html:15
-#: saleor/registration/templates/registration/login.html:23
-msgid "Log in"
-msgstr ""
-
-#: saleor/registration/templates/registration/login.html:21
-msgid "I don't know my password"
-msgstr ""
-
-#: saleor/registration/templates/registration/login.html:28
-msgid "Want to use your social profile?"
-msgstr ""
-
-#: saleor/registration/templates/registration/login.html:32
-msgid "Log in using Facebook"
-msgstr ""
-
-#: saleor/registration/templates/registration/login.html:36
-msgid "Log in using Google"
-msgstr ""
-
-#: saleor/registration/templates/registration/login.html:42
-msgid "Don't have an account yet?"
-msgstr ""
-
-#: saleor/registration/templates/registration/login.html:42
-msgid "Register"
-msgstr ""
-
-#: saleor/registration/templates/registration/logout.html:4
-msgid "Logged out"
-msgstr ""
-
-#: saleor/registration/templates/registration/request_email_confirmation.html:5
-#: saleor/registration/templates/registration/request_email_confirmation.html:9
-#: saleor/registration/templates/registration/request_email_confirmation.html:20
-msgid "Register or reset your password"
-msgstr ""
-
-#: saleor/registration/templates/registration/request_email_confirmation.html:26
-msgid "Continue"
-msgstr ""
-
-#: saleor/registration/templates/registration/set_password.html:5
-#: saleor/registration/templates/registration/set_password.html:11
-#: saleor/registration/templates/registration/set_password.html:17
-msgid "Set password"
-msgstr ""
-
-#: saleor/registration/templates/registration/set_password.html:27
-msgid "I don't want a password"
 msgstr ""
 
 #: saleor/registration/views.py:37
@@ -2428,7 +1109,7 @@ msgstr ""
 
 #: saleor/registration/views.py:113
 msgid "Password has been successfully changed."
-msgstr ""
+msgstr "Паролата Ви беше сменена успешно"
 
 #: saleor/registration/views.py:144
 msgid "Your email has been successfully changed"
@@ -2438,58 +1119,58 @@ msgstr ""
 msgid "Any country"
 msgstr ""
 
-#: saleor/userprofile/forms.py:68
+#: saleor/userprofile/forms.py:65
 msgid "Invalid value"
-msgstr ""
+msgstr "Невалидна стойност"
 
-#: saleor/userprofile/forms.py:94
+#: saleor/userprofile/forms.py:91
 #, python-format
 msgid "Invalid postal code. Please follow the format: %(example)s"
-msgstr ""
+msgstr "Невалиден пощенски код. Моля следвайте формата: %(example)s"
 
-#: saleor/userprofile/forms.py:97
+#: saleor/userprofile/forms.py:94
 msgid "Invalid postal code."
-msgstr ""
+msgstr "Невалиден пощенски код"
 
 #: saleor/userprofile/models.py:43
 msgctxt "Address field"
 msgid "first name"
-msgstr ""
+msgstr "Първо име"
 
 #: saleor/userprofile/models.py:46
 msgctxt "Address field"
 msgid "last name"
-msgstr ""
+msgstr "Фамилия"
 
 #: saleor/userprofile/models.py:49
 msgctxt "Address field"
 msgid "company or organization"
-msgstr ""
+msgstr "Фирма или организация"
 
 #: saleor/userprofile/models.py:52 saleor/userprofile/models.py:55
 msgctxt "Address field"
 msgid "address"
-msgstr ""
+msgstr "Адрес"
 
 #: saleor/userprofile/models.py:58
 msgctxt "Address field"
 msgid "city"
-msgstr ""
+msgstr "Град"
 
 #: saleor/userprofile/models.py:60
 msgctxt "Address field"
 msgid "district"
-msgstr ""
+msgstr "Квартал"
 
 #: saleor/userprofile/models.py:63
 msgctxt "Address field"
 msgid "postal code"
-msgstr ""
+msgstr "Пощенски код"
 
 #: saleor/userprofile/models.py:66
 msgctxt "Address field"
 msgid "country"
-msgstr ""
+msgstr "Страна"
 
 #: saleor/userprofile/models.py:68
 msgctxt "Address field"
@@ -2499,17 +1180,25 @@ msgstr ""
 #: saleor/userprofile/models.py:71
 msgctxt "Address field"
 msgid "Invalid phone number"
-msgstr ""
+msgstr "Невалиден телефонен номер"
 
 #: saleor/userprofile/models.py:72
 msgctxt "Address field"
 msgid "phone number"
-msgstr ""
+msgstr "Телефонен номер"
+
+#: saleor/userprofile/models.py:74
+#, fuzzy
+#| msgctxt "Postage office field"
+#| msgid "office"
+msgctxt "Address field"
+msgid "To office"
+msgstr "До офис"
 
 #: saleor/userprofile/models.py:76
 msgctxt "Postage office field"
 msgid "office"
-msgstr ""
+msgstr "Офис"
 
 #: saleor/userprofile/models.py:135
 msgctxt "User field"
@@ -2546,73 +1235,6 @@ msgctxt "User field"
 msgid "default billing address"
 msgstr ""
 
-#: saleor/userprofile/templates/userprofile/address-delete.html:4
-#: saleor/userprofile/templates/userprofile/address-delete.html:9
-msgid "Delete address"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/address-delete.html:13
-msgid "Are you sure you want to delete the following address?"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/address-edit.html:5
-msgid "Edit Address"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/address-edit.html:11
-msgid "Edit address"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/address-edit.html:13
-msgid "New address"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/details.html:12
-msgid "Profile"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/details.html:14
-msgid "Change your password"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/details.html:15
-msgid "Change your email address"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/details.html:19
-msgid "Your address book"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/details.html:23
-msgid "Addressee"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/details.html:24
-msgid "Billing"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/details.html:37
-#: saleor/userprofile/templates/userprofile/details.html:47
-msgid "Default"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/details.html:41
-#: saleor/userprofile/templates/userprofile/details.html:51
-msgid "Make default"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/details.html:65
-msgid "Add new address"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/orders.html:17
-msgid "Order #"
-msgstr ""
-
-#: saleor/userprofile/templates/userprofile/orders.html:29
-msgid "Last status change"
-msgstr ""
-
 #: saleor/userprofile/views.py:32
 msgid "Address successfully updated."
 msgstr ""
@@ -2625,11 +1247,1429 @@ msgstr ""
 msgid "Address successfully deleted."
 msgstr ""
 
-#: templates/base.html:12
+#: templates/base.html:13
 msgid "AP1 Software"
 msgstr ""
 
-#: templates/base.html:69
+#: templates/base.html:64
+msgid "Language"
+msgstr ""
+
+#: templates/base.html:84 templates/cart/index.html:11
+#: templates/checkout/details.html:40
+#: templates/checkout/shipping_address.html:8
+#: templates/checkout/shipping_method.html:10
+#: templates/checkout/summary.html:8
+msgid "Cart"
+msgstr "Количка"
+
+#: templates/base.html:89
 #, python-format
-msgid "Hello, %(user)s"
+msgid ""
+"Hello,\n"
+"                                %(user)s"
+msgstr ""
+
+#: templates/base.html:92 templates/registration/change_password.html:9
+#: templates/userprofile/address-delete.html:8
+#: templates/userprofile/address-edit.html:9
+#: templates/userprofile/details.html:4 templates/userprofile/details.html:8
+msgid "Your profile"
+msgstr ""
+
+#: templates/base.html:93 templates/order/details.html:14
+#: templates/order/payment.html:15 templates/userprofile/orders.html:5
+#: templates/userprofile/orders.html:9
+msgid "Your orders"
+msgstr ""
+
+#: templates/base.html:96 templates/dashboard/base.html:30
+msgid "Dashboard"
+msgstr ""
+
+#: templates/base.html:99 templates/dashboard/base.html:46
+msgid "Log out"
+msgstr ""
+
+#: templates/base.html:104 templates/checkout/details.html:29
+msgid "Sign in"
+msgstr "Вход"
+
+#: templates/base.html:127 templates/dashboard/base.html:57
+#: templates/order/details.html:13 templates/order/payment.html:14
+msgid "Home"
+msgstr "Начало"
+
+#: templates/base.html:153
+msgid "About us"
+msgstr "За нас"
+
+#: templates/base.html:154
+msgid "Contacts"
+msgstr "Контакти"
+
+#: templates/cart/index.html:7
+msgid "Your cart"
+msgstr ""
+
+#: templates/cart/index.html:29
+msgid "Product"
+msgstr "Продукт"
+
+#: templates/cart/index.html:32 templates/dashboard/order/detail.html:199
+#: templates/dashboard/order/modal_cancel_line.html:20
+#: templates/dashboard/product/product_form.html:164
+#: templates/order/details.html:81 templates/order/payment.html:106
+#: templates/userprofile/orders.html:23
+msgid "Price"
+msgstr "Цена"
+
+#: templates/cart/index.html:33 templates/checkout/details.html:82
+#: templates/dashboard/order/detail.html:291 templates/order/details.html:82
+#: templates/order/payment.html:107
+msgid "Subtotal"
+msgstr "Междинна сума"
+
+#: templates/cart/index.html:39 templates/checkout/details.html:105
+#: templates/dashboard/customer/detail.html:41
+#: templates/dashboard/includes/_orders_table.html:14
+#: templates/dashboard/order/detail.html:201
+#: templates/dashboard/order/modal_cancel_line.html:22
+#: templates/order/details.html:87 templates/order/details.html:125
+#: templates/order/payment.html:112 templates/order/payment.html:150
+msgid "Total"
+msgstr "Крайна сума"
+
+#: templates/cart/index.html:79
+msgid "Remove from cart"
+msgstr ""
+
+#: templates/cart/index.html:94
+msgid "Proceed to checkout"
+msgstr "Продължи с поръчката"
+
+#: templates/cart/index.html:99
+msgid "Your cart is empty"
+msgstr ""
+
+#: templates/category/_items.html:26
+msgid "Discount!"
+msgstr ""
+
+#: templates/checkout/details.html:7
+msgid "Checkout"
+msgstr ""
+
+#: templates/checkout/details.html:27
+msgid "Already have an account?"
+msgstr ""
+
+#: templates/checkout/details.html:45
+#: templates/checkout/shipping_address.html:14
+#: templates/checkout/shipping_address.html:35
+#: templates/checkout/shipping_method.html:16
+#: templates/checkout/shipping_method.html:35
+#: templates/checkout/summary.html:14
+#: templates/dashboard/order/detail.html:130 templates/order/details.html:58
+#: templates/order/payment.html:86
+msgid "Shipping address"
+msgstr "Адрес за доставкa"
+
+#: templates/checkout/details.html:55 templates/checkout/summary.html:26
+msgid "Summary"
+msgstr ""
+
+#: templates/checkout/payment.html:9
+#: templates/dashboard/customer/detail.html:39
+#: templates/dashboard/payments/detail.html:7
+#: templates/dashboard/payments/list.html:29
+#: templates/order/payment/details.html:4
+msgid "Payment"
+msgstr ""
+
+#: templates/checkout/payment.html:15 templates/checkout/summary.html:41
+#: templates/checkout/summary_without_shipping.html:22
+msgid "Place order"
+msgstr ""
+
+#: templates/checkout/shipping_address.html:45
+msgid "Continue to shipping method"
+msgstr "Продължи към метод за доставка"
+
+#: templates/checkout/shipping_method.html:47
+msgid "Make order"
+msgstr "Направи поръчка"
+
+#: templates/checkout/snippets/voucher-form.html:17
+msgid "Remove"
+msgstr "Премахни"
+
+#: templates/checkout/snippets/voucher-form.html:30
+msgid "Apply"
+msgstr "Приложи"
+
+#: templates/checkout/summary.html:35
+#: templates/checkout/summary_without_shipping.html:12
+#: templates/dashboard/order/detail.html:151
+#: templates/dashboard/payments/detail.html:80 templates/order/details.html:47
+#: templates/order/payment.html:74
+msgid "Billing address"
+msgstr ""
+
+#: templates/dashboard/base.html:10
+msgid "Dashboard - Saleor"
+msgstr ""
+
+#: templates/dashboard/base.html:45
+msgid "Visit storefront"
+msgstr ""
+
+#: templates/dashboard/base.html:61
+msgid "Catalogue"
+msgstr ""
+
+#: templates/dashboard/base.html:64 templates/dashboard/product/list.html:7
+#: templates/dashboard/product/list.html:36
+#: templates/dashboard/product/product_confirm_delete.html:17
+#: templates/dashboard/product/product_form.html:8
+#: templates/dashboard/product/product_form.html:40
+#: templates/dashboard/product/product_image_confirm_delete.html:15
+#: templates/dashboard/product/product_image_form.html:23
+#: templates/dashboard/product/product_variant_confirm_delete.html:15
+#: templates/dashboard/product/stock_confirm_delete.html:15
+#: templates/dashboard/product/stock_form.html:23
+#: templates/dashboard/product/variant_form.html:22
+msgid "Products"
+msgstr ""
+
+#: templates/dashboard/base.html:65
+#: templates/dashboard/product/attributes/confirm_delete.html:8
+#: templates/dashboard/product/attributes/form.html:6
+#: templates/dashboard/product/attributes/form.html:33
+#: templates/dashboard/product/attributes/list.html:5
+#: templates/dashboard/product/attributes/list.html:20
+msgid "Attributes"
+msgstr ""
+
+#: templates/dashboard/base.html:66 templates/dashboard/category/detail.html:6
+#: templates/dashboard/category/detail.html:14
+#: templates/dashboard/category/list.html:6
+#: templates/dashboard/category/list.html:56
+#: templates/dashboard/category/list.html:59
+msgid "Categories"
+msgstr ""
+
+#: templates/dashboard/base.html:74
+#: templates/dashboard/discount/sale_confirm_delete.html:8
+msgid "Discounts"
+msgstr ""
+
+#: templates/dashboard/base.html:77 templates/dashboard/base.html:86
+#: templates/dashboard/discount/sale_form.html:7
+#: templates/dashboard/discount/sale_form.html:36
+#: templates/dashboard/discount/sale_list.html:6
+#: templates/dashboard/discount/sale_list.html:21
+msgid "Sales"
+msgstr ""
+
+#: templates/dashboard/base.html:78
+#: templates/dashboard/discount/voucher_form.html:7
+#: templates/dashboard/discount/voucher_form.html:49
+#: templates/dashboard/discount/voucher_list.html:6
+#: templates/dashboard/discount/voucher_list.html:21
+msgid "Vouchers"
+msgstr ""
+
+#: templates/dashboard/base.html:89 templates/dashboard/order/detail.html:8
+#: templates/dashboard/order/detail.html:35
+#: templates/dashboard/order/list.html:6
+#: templates/dashboard/order/list.html:12
+msgid "Orders"
+msgstr ""
+
+#: templates/dashboard/base.html:90 templates/dashboard/customer/detail.html:6
+#: templates/dashboard/customer/detail.html:17
+#: templates/dashboard/customer/list.html:6
+#: templates/dashboard/customer/list.html:12
+msgid "Customers"
+msgstr ""
+
+#: templates/dashboard/base.html:91 templates/dashboard/order/detail.html:51
+#: templates/dashboard/payments/detail.html:7
+#: templates/dashboard/payments/detail.html:18
+#: templates/dashboard/payments/list.html:6
+#: templates/dashboard/payments/list.html:12
+msgid "Payments"
+msgstr ""
+
+#: templates/dashboard/base.html:106
+#: templates/dashboard/shipping/method_form.html:8
+#: templates/dashboard/shipping/method_form.html:29
+#: templates/dashboard/shipping/method_list.html:6
+msgid "Shipping methods"
+msgstr "Начин на доставка"
+
+#: templates/dashboard/category/category_confirm_delete.html:5
+msgid "Delete category"
+msgstr ""
+
+#: templates/dashboard/category/category_confirm_delete.html:16
+#: templates/dashboard/category/modal_delete.html:10
+#, python-format
+msgid ""
+"\n"
+"                        Are you sure you want to delete the category "
+"%(category)s?\n"
+"                    "
+msgstr ""
+
+#: templates/dashboard/category/category_confirm_delete.html:26
+#: templates/dashboard/category/modal_delete.html:20
+msgid "The following child categories will be deleted:"
+msgstr ""
+
+#: templates/dashboard/category/category_confirm_delete.html:41
+#, python-format
+msgid ""
+"\n"
+"                        There is one product in this category that will be "
+"deleted.\n"
+"                    "
+msgid_plural ""
+"\n"
+"                        There are %(counter)s products in this category that "
+"will be deleted.\n"
+"                    "
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/dashboard/category/detail.html:6
+#: templates/dashboard/category/detail.html:10
+#: templates/dashboard/category/detail.html:24
+msgid "Add new category"
+msgstr ""
+
+#: templates/dashboard/category/list.html:25
+msgid "Add category"
+msgstr ""
+
+#: templates/dashboard/category/list.html:38
+msgid "Edit category"
+msgstr ""
+
+#: templates/dashboard/category/list.html:44
+msgid "Remove category"
+msgstr ""
+
+#: templates/dashboard/category/list.html:111
+msgid "No subcategories."
+msgstr ""
+
+#: templates/dashboard/category/list.html:113
+msgid "No categories."
+msgstr ""
+
+#: templates/dashboard/category/modal_delete.html:37
+#, python-format
+msgid ""
+"\n"
+"                There is one product in this category that will be deleted.\n"
+"            "
+msgid_plural ""
+"\n"
+"                There are %(counter)s products in this category that will be "
+"deleted.\n"
+"            "
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/dashboard/category/modal_edit.html:10
+#: templates/dashboard/includes/address_short.html:11
+#: templates/dashboard/product/product_form.html:309
+#: templates/dashboard/product/product_form.html:356
+#: templates/userprofile/details.html:56
+msgid "Edit"
+msgstr ""
+
+#: templates/dashboard/customer/detail.html:29
+msgid "Order history"
+msgstr ""
+
+#: templates/dashboard/customer/detail.html:37
+msgid "Number"
+msgstr ""
+
+#: templates/dashboard/customer/detail.html:38
+#: templates/dashboard/includes/_orders_table.html:13
+msgid "Placed on"
+msgstr ""
+
+#: templates/dashboard/customer/detail.html:40
+#: templates/dashboard/includes/_orders_table.html:10
+#: templates/dashboard/order/detail.html:80
+msgid "Order status"
+msgstr ""
+
+#: templates/dashboard/customer/detail.html:59
+msgid "No orders found."
+msgstr ""
+
+#: templates/dashboard/customer/detail.html:69
+msgid "Default shipping address"
+msgstr ""
+
+#: templates/dashboard/customer/detail.html:76
+msgid "No default shipping address."
+msgstr ""
+
+#: templates/dashboard/customer/detail.html:86
+msgid "Default billing address"
+msgstr ""
+
+#: templates/dashboard/customer/detail.html:93
+msgid "No default billing address."
+msgstr ""
+
+#: templates/dashboard/customer/list.html:26
+#: templates/dashboard/includes/_status_filters.html:8
+msgid "Filter"
+msgstr ""
+
+#: templates/dashboard/customer/list.html:28
+msgid "Clear"
+msgstr ""
+
+#: templates/dashboard/customer/list.html:47
+#: templates/dashboard/product/product_form.html:242
+msgid "Location"
+msgstr ""
+
+#: templates/dashboard/customer/list.html:48
+msgid "Number of orders"
+msgstr ""
+
+#: templates/dashboard/customer/list.html:49
+msgid "Last order"
+msgstr ""
+
+#: templates/dashboard/customer/list.html:85
+msgid "No customers found."
+msgstr ""
+
+#: templates/dashboard/discount/sale_confirm_delete.html:4
+#: templates/dashboard/discount/sale_confirm_delete.html:9
+msgid "Delete sale"
+msgstr ""
+
+#: templates/dashboard/discount/sale_confirm_delete.html:14
+msgid "Are you sure you want to delete the following sale?"
+msgstr ""
+
+#: templates/dashboard/discount/sale_form.html:6
+#: templates/dashboard/discount/sale_form.html:38
+msgid "Add new sale"
+msgstr ""
+
+#: templates/dashboard/discount/sale_form.html:26
+msgid "Remove sale"
+msgstr ""
+
+#: templates/dashboard/discount/sale_list.html:13
+msgid "Add sale"
+msgstr ""
+
+#: templates/dashboard/discount/sale_list.html:35
+#: templates/dashboard/discount/voucher_list.html:35
+msgid "Discount"
+msgstr ""
+
+#: templates/dashboard/discount/sale_list.html:54
+msgid "No sales found."
+msgstr ""
+
+#: templates/dashboard/discount/sale_modal_confirm_delete.html:9
+#, python-format
+msgid "You are about to delete <strong>%(sale)s</strong>."
+msgstr ""
+
+#: templates/dashboard/discount/voucher_form.html:6
+#: templates/dashboard/discount/voucher_form.html:51
+msgid "Add new voucher"
+msgstr ""
+
+#: templates/dashboard/discount/voucher_form.html:25
+#: templates/dashboard/order/detail.html:321
+#: templates/dashboard/order/detail.html:322
+#: templates/dashboard/order/modal_order_remove_voucher.html:16
+msgid "Remove voucher"
+msgstr ""
+
+#: templates/dashboard/discount/voucher_form.html:31
+msgid "Delete group"
+msgstr ""
+
+#: templates/dashboard/discount/voucher_form.html:38
+msgid "Export group"
+msgstr ""
+
+#: templates/dashboard/discount/voucher_list.html:13
+msgid "Add voucher"
+msgstr ""
+
+#: templates/dashboard/discount/voucher_list.html:36
+msgid "Start date"
+msgstr ""
+
+#: templates/dashboard/discount/voucher_list.html:37
+msgid "End date"
+msgstr ""
+
+#: templates/dashboard/discount/voucher_list.html:38
+msgid "Used"
+msgstr ""
+
+#: templates/dashboard/discount/voucher_list.html:39
+msgid "Apply to"
+msgstr ""
+
+#: templates/dashboard/discount/voucher_list.html:40
+msgid "Limit"
+msgstr ""
+
+#: templates/dashboard/discount/voucher_list.html:41
+msgid "Group"
+msgstr ""
+
+#: templates/dashboard/discount/voucher_list.html:79
+msgid "No vouchers found."
+msgstr ""
+
+#: templates/dashboard/discount/voucher_modal_confirm_delete.html:9
+#, python-format
+msgid "You are about to delete <strong>%(voucher)s</strong>."
+msgstr ""
+
+#: templates/dashboard/includes/_orders_table.html:11
+#: templates/dashboard/order/detail.html:369
+#: templates/dashboard/payments/detail.html:33
+msgid "Payment status"
+msgstr ""
+
+#: templates/dashboard/includes/_orders_table.html:12
+#: templates/dashboard/index.html:22
+#: templates/dashboard/payments/detail.html:62
+msgid "Customer"
+msgstr ""
+
+#: templates/dashboard/includes/_orders_table.html:25
+#: templates/dashboard/index.html:31 templates/dashboard/order/detail.html:75
+#: templates/dashboard/payments/detail.html:68
+msgid "Guest"
+msgstr ""
+
+#: templates/dashboard/index.html:12
+msgid "Preauthorized payments"
+msgstr ""
+
+#: templates/dashboard/index.html:20
+msgid "Order number"
+msgstr ""
+
+#: templates/dashboard/index.html:21 templates/dashboard/order/detail.html:368
+#: templates/dashboard/payments/list.html:28
+#: templates/userprofile/orders.html:20
+msgid "Date"
+msgstr ""
+
+#: templates/dashboard/index.html:23
+#: templates/dashboard/payments/detail.html:35
+#: templates/dashboard/payments/list.html:30
+msgid "Amount"
+msgstr ""
+
+#: templates/dashboard/index.html:40
+msgid "No preauthorized payments."
+msgstr ""
+
+#: templates/dashboard/index.html:47
+msgid "Orders ready for shipment"
+msgstr ""
+
+#: templates/dashboard/index.html:54
+msgid "No orders are ready for shipment."
+msgstr ""
+
+#: templates/dashboard/index.html:61
+msgid "Products with low stock"
+msgstr ""
+
+#: templates/dashboard/index.html:74
+msgid "No products are low in stock."
+msgstr ""
+
+#: templates/dashboard/order/detail.html:26
+#: templates/dashboard/order/modal_cancel_order.html:16
+msgid "Cancel Order"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:47
+#: templates/dashboard/product/product_form.html:54
+msgid "Details"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:55
+msgid "History"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:70
+#: templates/dashboard/payments/detail.html:66
+#: templates/dashboard/payments/detail.html:68
+msgid "Account"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:84
+msgid "Payment status:"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:85
+#: templates/dashboard/order/detail.html:93
+msgid "N/A"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:88
+msgid "Order total"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:92
+msgid "Preauthorized amount"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:96
+#: templates/dashboard/payments/detail.html:36
+msgid "Captured amount"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:100
+msgid "Outstanding balance"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:111
+#: templates/dashboard/order/modal_capture.html:25
+msgid "Capture"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:114
+#: templates/dashboard/order/modal_refund.html:25
+msgid "Refund"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:118
+#: templates/dashboard/order/modal_release.html:15
+msgid "Release"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:175
+#, python-format
+msgid "Shipment #%(shipment)s"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:186
+#: templates/dashboard/order/detail.html:187
+#: templates/dashboard/order/modal_cancel_delivery_group.html:17
+msgid "Cancel group"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:197
+#: templates/dashboard/order/modal_cancel_line.html:18
+msgid "Item"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:198
+#: templates/dashboard/order/modal_cancel_line.html:19
+#: templates/dashboard/product/product_form.html:159
+#: templates/dashboard/product/product_form.html:241
+msgid "SKU"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:238
+#: templates/dashboard/order/detail.html:239
+#: templates/dashboard/order/modal_change_quantity.html:7
+msgid "Change quantity"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:244
+msgid "Split line"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:245
+msgid "Split order line"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:250
+#: templates/dashboard/order/detail.html:251
+msgid "Cancel line"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:266
+#: templates/dashboard/order/modal_ship_delivery_group.html:17
+msgid "Ship"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:279
+msgid "Grand total"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:308
+#, python-format
+msgid "Voucher %(voucher)s"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:336
+msgid "Order notes"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:348
+msgid "There are no notes associated with this order."
+msgstr ""
+
+#: templates/dashboard/order/detail.html:354
+#: templates/dashboard/order/modal_add_note.html:7
+msgid "Add note"
+msgstr ""
+
+#: templates/dashboard/order/detail.html:386
+msgid "No payments made for this order."
+msgstr ""
+
+#: templates/dashboard/order/list.html:30
+msgid "No orders."
+msgstr ""
+
+#: templates/dashboard/order/modal_add_note.html:15
+msgid "Save note"
+msgstr ""
+
+#: templates/dashboard/order/modal_address_edit.html:9
+msgid "Edit shipping address"
+msgstr ""
+
+#: templates/dashboard/order/modal_address_edit.html:11
+msgid "Edit billing address"
+msgstr ""
+
+#: templates/dashboard/order/modal_cancel_delivery_group.html:8
+msgid "Cancel delivery group?"
+msgstr ""
+
+#: templates/dashboard/order/modal_cancel_delivery_group.html:10
+#, python-format
+msgid ""
+"\n"
+"                After this action, %(group)s will be cancelled. Ordered "
+"items will be returned to stock.\n"
+"            "
+msgstr ""
+
+#: templates/dashboard/order/modal_cancel_line.html:8
+msgid "Cancer order line?"
+msgstr ""
+
+#: templates/dashboard/order/modal_cancel_line.html:10
+msgid ""
+"\n"
+"                Are you sure, you want cancel this order line?\n"
+"            "
+msgstr ""
+
+#: templates/dashboard/order/modal_cancel_line.html:40
+msgid "Cancel Line"
+msgstr ""
+
+#: templates/dashboard/order/modal_cancel_line.html:41
+#: templates/dashboard/order/modal_cancel_order.html:17
+#: templates/dashboard/order/modal_order_remove_voucher.html:17
+msgid "Abort"
+msgstr ""
+
+#: templates/dashboard/order/modal_cancel_order.html:5
+msgid "Cancer order?"
+msgstr ""
+
+#: templates/dashboard/order/modal_cancel_order.html:7
+#, python-format
+msgid ""
+"\n"
+"            Are you sure, you want cancel order %(order)s?\n"
+"        "
+msgstr ""
+
+#: templates/dashboard/order/modal_capture.html:10
+msgid "Capture payment"
+msgstr ""
+
+#: templates/dashboard/order/modal_capture.html:16
+#: templates/dashboard/order/modal_refund.html:16
+msgid "Before this action"
+msgstr ""
+
+#: templates/dashboard/order/modal_capture.html:19
+#: templates/dashboard/order/modal_refund.html:19
+msgid "Order total: "
+msgstr ""
+
+#: templates/dashboard/order/modal_capture.html:20
+#: templates/dashboard/order/modal_refund.html:20
+msgid "Captured amount: "
+msgstr ""
+
+#: templates/dashboard/order/modal_order_remove_voucher.html:5
+msgid "Remove voucher?"
+msgstr ""
+
+#: templates/dashboard/order/modal_order_remove_voucher.html:7
+#, python-format
+msgid ""
+"\n"
+"            Are you sure, you want remove voucher discount from %(order)s?\n"
+"        "
+msgstr ""
+
+#: templates/dashboard/order/modal_refund.html:10
+msgid "Refund payment"
+msgstr ""
+
+#: templates/dashboard/order/modal_release.html:5
+msgid "Release payment"
+msgstr ""
+
+#: templates/dashboard/order/modal_release.html:7
+msgid "Do you want to release the payment?"
+msgstr ""
+
+#: templates/dashboard/order/modal_ship_delivery_group.html:8
+msgid "Ship delivery group "
+msgstr ""
+
+#: templates/dashboard/order/modal_ship_delivery_group.html:9
+msgid "Ship selected delivery group to the following address:"
+msgstr ""
+
+#: templates/dashboard/order/modal_split_order_line.html:8
+msgid "Split order line "
+msgstr ""
+
+#: templates/dashboard/order/modal_split_order_line.html:16
+msgid "Split"
+msgstr ""
+
+#: templates/dashboard/payments/detail.html:34
+msgid "Fraud status"
+msgstr ""
+
+#: templates/dashboard/payments/detail.html:37
+#: templates/dashboard/payments/list.html:40
+msgid "Gateway"
+msgstr ""
+
+#: templates/dashboard/payments/detail.html:38
+msgid "Transaction ID"
+msgstr ""
+
+#: templates/dashboard/payments/detail.html:39
+msgid "Payment date"
+msgstr ""
+
+#: templates/dashboard/payments/detail.html:46
+msgid "Gateway response"
+msgstr ""
+
+#: templates/dashboard/payments/detail.html:51
+msgid "No response available."
+msgstr ""
+
+#: templates/dashboard/payments/list.html:31
+#: templates/userprofile/orders.html:26
+msgid "Status"
+msgstr ""
+
+#: templates/dashboard/payments/list.html:41
+msgid "Order "
+msgstr ""
+
+#: templates/dashboard/payments/list.html:54
+msgid "No payments found."
+msgstr ""
+
+#: templates/dashboard/product/attributes/confirm_delete.html:4
+#: templates/dashboard/product/attributes/confirm_delete.html:9
+msgid "Delete attribute"
+msgstr ""
+
+#: templates/dashboard/product/attributes/confirm_delete.html:14
+msgid "Are you sure you want to delete the following attribute?"
+msgstr ""
+
+#: templates/dashboard/product/attributes/form.html:6
+#: templates/dashboard/product/attributes/form.html:34
+msgid "Add new attribute"
+msgstr ""
+
+#: templates/dashboard/product/attributes/form.html:24
+msgid "Remove attribute"
+msgstr ""
+
+#: templates/dashboard/product/attributes/form.html:50
+msgid "Attribute values"
+msgstr ""
+
+#: templates/dashboard/product/attributes/list.html:12
+msgid "Add attribute"
+msgstr ""
+
+#: templates/dashboard/product/attributes/list.html:44
+msgid "No attributes found."
+msgstr ""
+
+#: templates/dashboard/product/attributes/modal_confirm_delete.html:9
+#, python-format
+msgid "You are about to delete an attribute <strong>%(attribute)s</strong>."
+msgstr ""
+
+#: templates/dashboard/product/list.html:15
+#: templates/dashboard/product/list.html:26
+msgid "Add product"
+msgstr ""
+
+#: templates/dashboard/product/list.html:63
+msgid "No products found."
+msgstr ""
+
+#: templates/dashboard/product/list.html:78
+msgid "Create new"
+msgstr ""
+
+#: templates/dashboard/product/modal_product_confirm_delete.html:25
+#, python-format
+msgid ""
+"If you remove <strong>%(product)s</strong> you will lose all data related to "
+"this product."
+msgstr ""
+
+#: templates/dashboard/product/modal_product_image_confirm_delete.html:19
+msgid "You are about to delete this image."
+msgstr ""
+
+#: templates/dashboard/product/product_confirm_delete.html:20
+msgid "Delete product"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:8
+#: templates/dashboard/product/product_form.html:41
+msgid "Add new product"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:25
+msgid "View on site"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:31
+msgid "Remove product"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:61
+msgid "Variants"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:68
+#: templates/dashboard/product/stock_form.html:8
+#: templates/dashboard/product/stock_form.html:26
+msgid "Stock"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:75
+msgid "Images"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:127
+#: templates/dashboard/product/product_form.html:209
+msgid "Add"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:139
+msgid "You are about to delete variants of this product."
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:163
+msgid "Variant name"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:175
+#: templates/dashboard/product/product_form.html:255
+msgid "Edit variant"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:193
+msgid "There are no variants for this product"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:221
+msgid "You are about to delete stock for this product variant."
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:244
+msgid "Allocated"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:269
+msgid "There is no stock for this product."
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:301
+#: templates/dashboard/product/product_form.html:347
+msgid "No description"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:323
+msgid "Drop images here to upload"
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:332
+msgid "This product has no images yet."
+msgstr ""
+
+#: templates/dashboard/product/product_form.html:371
+#: templates/dashboard/product/product_image_form.html:10
+#: templates/dashboard/product/product_image_form.html:29
+msgid "Add image"
+msgstr ""
+
+#: templates/dashboard/product/product_image_confirm_delete.html:4
+#: templates/dashboard/product/product_image_confirm_delete.html:17
+msgid "Delete image"
+msgstr ""
+
+#: templates/dashboard/product/product_image_confirm_delete.html:26
+msgid "Are you sure you want to delete the following image?"
+msgstr ""
+
+#: templates/dashboard/product/product_image_form.html:30
+#, python-format
+msgid "Add image for %(product)s"
+msgstr ""
+
+#: templates/dashboard/product/product_image_form.html:45
+msgid "Pick the most relevant part of the image using the red circle."
+msgstr ""
+
+#: templates/dashboard/product/product_variant_confirm_delete.html:4
+#: templates/dashboard/product/product_variant_confirm_delete.html:18
+msgid "Delete variant"
+msgstr ""
+
+#: templates/dashboard/product/product_variant_confirm_delete.html:19
+#, python-format
+msgid "Delete variant for %(product)s"
+msgstr ""
+
+#: templates/dashboard/product/product_variant_confirm_delete.html:35
+msgid ""
+"This is the only variant. Deleting it will make the product unavailable for "
+"your customers."
+msgstr ""
+
+#: templates/dashboard/product/stock_confirm_delete.html:4
+#: templates/dashboard/product/stock_confirm_delete.html:18
+msgid "Delete stock"
+msgstr ""
+
+#: templates/dashboard/product/stock_confirm_delete.html:19
+#, python-format
+msgid "Delete stock for %(product)s"
+msgstr ""
+
+#: templates/dashboard/product/stock_form.html:10
+#: templates/dashboard/product/stock_form.html:29
+msgid "Add stock"
+msgstr ""
+
+#: templates/dashboard/product/stock_form.html:30
+#, python-format
+msgid "Add stock for %(product)s"
+msgstr ""
+
+#: templates/dashboard/product/variant_form.html:10
+#: templates/dashboard/product/variant_form.html:28
+msgid "Add variant"
+msgstr ""
+
+#: templates/dashboard/product/variant_form.html:25
+msgid "Variant"
+msgstr "Вариант"
+
+#: templates/dashboard/product/variant_form.html:29
+#, python-format
+msgid "Add variant for %(product)s"
+msgstr ""
+
+#: templates/dashboard/product/variant_form.html:50
+msgid "This product has no attributes."
+msgstr ""
+
+#: templates/dashboard/shipping/method_delete.html:17
+msgid "Subscription methods"
+msgstr ""
+
+#: templates/dashboard/shipping/method_delete.html:32
+#, python-format
+msgid ""
+"\n"
+"              Are you sure you want to delete the %(shipping_method_name)s "
+"method?\n"
+"              "
+msgstr ""
+
+#: templates/dashboard/shipping/method_form.html:12
+#: templates/dashboard/shipping/method_form.html:23
+#: templates/dashboard/shipping/method_form.html:35
+msgid "Add new method"
+msgstr ""
+
+#: templates/dashboard/shipping/method_form.html:48
+msgid "Price per country"
+msgstr ""
+
+#: templates/dashboard/shipping/method_list.html:38
+msgid "Price range"
+msgstr ""
+
+#: templates/dashboard/shipping/method_list.html:68
+msgid "No shipping methods found."
+msgstr ""
+
+#: templates/order/details.html:8
+msgid "Order"
+msgstr ""
+
+#: templates/order/details.html:28
+#, python-format
+msgid "Order %(order)s: "
+msgstr ""
+
+#: templates/order/details.html:72 templates/order/payment.html:100
+#, python-format
+msgid "Shipment #%(number)s"
+msgstr ""
+
+#: templates/order/emails/confirm_email.body.html:5
+msgid ""
+"\n"
+"    Hi!\n"
+"\n"
+"    Thank you for your order."
+msgstr ""
+
+#: templates/order/emails/confirm_email.body.html:35
+msgid "You can see order details on our "
+msgstr ""
+
+#: templates/order/emails/confirm_email.body.html:36
+msgid "website"
+msgstr ""
+
+#: templates/order/emails/confirm_email.body.html:37
+msgid ""
+"\n"
+"\n"
+"        <br/><br/>\n"
+"        Sincerely,<br/>\n"
+"        AP1 Ltd. Team\n"
+"    "
+msgstr ""
+
+#: templates/order/emails/confirm_email.body.txt:5
+msgid ""
+"Hi!\n"
+"\n"
+"Thank you for your order."
+msgstr ""
+
+#: templates/order/emails/confirm_email.body.txt:17
+msgid ""
+"\n"
+"Sincerely,\n"
+"AP1 Ltd. Team\n"
+msgstr ""
+
+#: templates/order/emails/confirm_email.subject.txt:2
+msgid "AP1shop order details"
+msgstr ""
+
+#: templates/order/payment.html:9 templates/order/payment.html:43
+msgid "Pay for order"
+msgstr ""
+
+#: templates/order/payment.html:29
+msgid "Payment pending"
+msgstr ""
+
+#: templates/order/payment.html:34
+msgid ""
+"We are currently waiting for an external service to authorize your payment "
+"for this order."
+msgstr ""
+
+#: templates/order/payment.html:35
+msgid "Current status"
+msgstr ""
+
+#: templates/order/payment.html:36
+msgid ""
+"Unless you are absolutely sure that the process will not complete (for "
+"example you have closed the browser window before paying), you should wait "
+"before attempting a new payment. Please be warned that if you try again and "
+"the previous transaction succeeds you might end up being charged twice."
+msgstr ""
+
+#: templates/order/payment.html:38
+msgid "I understand, allow me to pay again"
+msgstr ""
+
+#: templates/order/payment.html:52
+msgid "Confirm order"
+msgstr ""
+
+#: templates/order/payment.html:60
+msgid "You've authorized transaction. Order is in processing"
+msgstr ""
+
+#: templates/order/payment/default.html:16
+#: templates/order/payment/paypal-card.html:14
+#: templates/userprofile/address-edit.html:26
+msgid "Save changes"
+msgstr ""
+
+#: templates/order/payment/emails/confirm_email.body.txt:3
+#, python-format
+msgid ""
+"Hi!\n"
+"\n"
+"Thank you for your payment. To see your payment details please visit:\n"
+"%(order_url)s\n"
+"\n"
+"Sincerely,\n"
+"Saleor Team"
+msgstr ""
+
+#: templates/order/payment/emails/confirm_email.subject.txt:2
+msgid "Payment details"
+msgstr ""
+
+#: templates/order/payment/stripe.html:11
+msgid "Change payment method"
+msgstr ""
+
+#: templates/order/success.html:5
+msgid "Order complete!"
+msgstr ""
+
+#: templates/order/success.html:9
+msgid "Your order is now complete"
+msgstr ""
+
+#: templates/order/success.html:10
+msgid "Thank you for your purchase!"
+msgstr ""
+
+#: templates/order/success.html:12
+msgid "Your order number is"
+msgstr ""
+
+#: templates/product/_price_range.html:8
+msgid "Starting from"
+msgstr ""
+
+#: templates/product/details.html:40
+msgid "You save"
+msgstr ""
+
+#: templates/product/details.html:69
+msgid "Add to cart"
+msgstr "Добави в количка"
+
+#: templates/product/details.html:75
+msgid "This product is currently <strong>unavailable</strong>."
+msgstr ""
+
+#: templates/registration/change_password.html:5
+#: templates/registration/change_password.html:10
+#: templates/registration/change_password.html:21
+msgid "Change password"
+msgstr ""
+
+#: templates/registration/change_password.html:28
+msgid "Update password"
+msgstr ""
+
+#: templates/registration/emails/change_email.body.txt:3
+#, python-format
+msgid ""
+"Hi!\n"
+"\n"
+"You have requested email change in AP1shop. To continue visit the link "
+"below.\n"
+"\n"
+"%(confirmation_url)s\n"
+"\n"
+"If you didn't mean to change your email please ignore this message. We "
+"apologise for inconvenience.\n"
+"\n"
+"Sincerely,\n"
+"AP1 Ltd."
+msgstr ""
+
+#: templates/registration/emails/change_email.subject.txt:2
+#: templates/registration/emails/confirm_email.subject.txt:2
+msgid "Confirm your email address"
+msgstr ""
+
+#: templates/registration/emails/confirm_email.body.txt:3
+#, python-format
+msgid ""
+"Hi!\n"
+"\n"
+"You have requested login access to AP1shop. To continue visit the link "
+"below.\n"
+"\n"
+"%(confirmation_url)s\n"
+"\n"
+"If you didn't try to login to AP1shop please ignore this message. We "
+"apologise for inconvenience.\n"
+"\n"
+"Sincerely,\n"
+"AP1 Ltd."
+msgstr ""
+
+#: templates/registration/invalid_token.html:4
+msgid "Invalid token"
+msgstr ""
+
+#: templates/registration/login.html:5
+msgid "Login"
+msgstr ""
+
+#: templates/registration/login.html:15 templates/registration/login.html:23
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/login.html:21
+msgid "I don't know my password"
+msgstr ""
+
+#: templates/registration/login.html:28
+msgid "Want to use your social profile?"
+msgstr ""
+
+#: templates/registration/login.html:32
+msgid "Log in using Facebook"
+msgstr ""
+
+#: templates/registration/login.html:36
+msgid "Log in using Google"
+msgstr ""
+
+#: templates/registration/login.html:42
+msgid "Don't have an account yet?"
+msgstr ""
+
+#: templates/registration/login.html:42
+msgid "Register"
+msgstr ""
+
+#: templates/registration/logout.html:4
+msgid "Logged out"
+msgstr ""
+
+#: templates/registration/request_email_confirmation.html:5
+#: templates/registration/request_email_confirmation.html:9
+#: templates/registration/request_email_confirmation.html:20
+msgid "Register or reset your password"
+msgstr ""
+
+#: templates/registration/request_email_confirmation.html:26
+msgid "Continue"
+msgstr ""
+
+#: templates/registration/set_password.html:5
+#: templates/registration/set_password.html:11
+#: templates/registration/set_password.html:17
+msgid "Set password"
+msgstr ""
+
+#: templates/registration/set_password.html:27
+msgid "I don't want a password"
+msgstr ""
+
+#: templates/userprofile/address-delete.html:4
+#: templates/userprofile/address-delete.html:9
+msgid "Delete address"
+msgstr ""
+
+#: templates/userprofile/address-delete.html:13
+msgid "Are you sure you want to delete the following address?"
+msgstr ""
+
+#: templates/userprofile/address-edit.html:5
+msgid "Edit Address"
+msgstr ""
+
+#: templates/userprofile/address-edit.html:11
+msgid "Edit address"
+msgstr ""
+
+#: templates/userprofile/address-edit.html:13
+msgid "New address"
+msgstr ""
+
+#: templates/userprofile/details.html:12
+msgid "Profile"
+msgstr ""
+
+#: templates/userprofile/details.html:14
+msgid "Change your password"
+msgstr ""
+
+#: templates/userprofile/details.html:15
+msgid "Change your email address"
+msgstr ""
+
+#: templates/userprofile/details.html:19
+msgid "Your address book"
+msgstr ""
+
+#: templates/userprofile/details.html:23
+msgid "Addressee"
+msgstr ""
+
+#: templates/userprofile/details.html:24
+msgid "Billing"
+msgstr ""
+
+#: templates/userprofile/details.html:37 templates/userprofile/details.html:47
+msgid "Default"
+msgstr ""
+
+#: templates/userprofile/details.html:41 templates/userprofile/details.html:51
+msgid "Make default"
+msgstr ""
+
+#: templates/userprofile/details.html:65
+msgid "Add new address"
+msgstr ""
+
+#: templates/userprofile/orders.html:17
+msgid "Order #"
+msgstr ""
+
+#: templates/userprofile/orders.html:29
+msgid "Last status change"
 msgstr ""
