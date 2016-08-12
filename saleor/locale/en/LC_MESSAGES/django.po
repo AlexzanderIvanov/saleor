@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-12 06:43-0500\n"
+"POT-Creation-Date: 2016-08-12 08:39-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -830,7 +830,11 @@ msgctxt "order status"
 msgid "Fully paid"
 msgstr ""
 
-#: saleor/order/forms.py:29
+#: saleor/order/forms.py:11
+msgid "Method:"
+msgstr ""
+
+#: saleor/order/forms.py:31
 msgid "Payment does not exist"
 msgstr ""
 
@@ -1114,20 +1118,32 @@ msgstr ""
 msgid "Your email has been successfully changed"
 msgstr ""
 
+#: saleor/settings.py:57
+msgid "English"
+msgstr ""
+
+#: saleor/settings.py:58
+msgid "Bulgarian"
+msgstr ""
+
+#: saleor/settings.py:268
+msgid "Cash on delivery"
+msgstr ""
+
 #: saleor/shipping/models.py:64 saleor/shipping/models.py:93
 msgid "Any country"
 msgstr ""
 
-#: saleor/userprofile/forms.py:65
+#: saleor/userprofile/forms.py:69
 msgid "Invalid value"
 msgstr ""
 
-#: saleor/userprofile/forms.py:91
+#: saleor/userprofile/forms.py:95
 #, python-format
 msgid "Invalid postal code. Please follow the format: %(example)s"
 msgstr ""
 
-#: saleor/userprofile/forms.py:94
+#: saleor/userprofile/forms.py:98
 msgid "Invalid postal code."
 msgstr ""
 

@@ -8,6 +8,7 @@ import dj_email_url
 import django_cache_url
 from django.contrib.messages import constants as messages
 from django.utils.translation import gettext
+from django.utils.translation import ugettext_lazy as _
 
 DEBUG = ast.literal_eval(os.environ.get('DEBUG', 'True'))
 
@@ -51,10 +52,10 @@ USE_TZ = True
 LOCALE_PATHS = (
     os.path.join(PROJECT_ROOT, 'saleor/locale'),
 )
-LANGUAGE_CODE = 'en-us' 'bg'
+LANGUAGE_CODE = 'bg' # default language
 LANGUAGES = [
-    ('en-us', 'English'),
-    ('bg', 'Bulgarian')
+    ('en-us', _('English')),
+    ('bg', _('Bulgarian'))
 ]
 
 EMAIL_URL = 'smtp://orders@ap1shop.com:ap1forthewin@mail.ap1shop.com:25' #os.environ.get('EMAIL_URL', 'console://')
@@ -264,7 +265,7 @@ SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 CHECKOUT_PAYMENT_CHOICES = [
-    ('default', 'Cash on delivery')
+    ('default', _('Cash on delivery'))
 ]
 
 MESSAGE_TAGS = {

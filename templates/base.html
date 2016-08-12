@@ -74,7 +74,7 @@
 
                                 <li data-code="{{ language.code }}"
                                     class="language_change{% if language.code == current_language.code %} active{% endif %}">
-                                    <a href="#">{{ language.name_local }}</a>
+                                    <a href="#">{{ language.name_local|title }}</a>
                                 </li>
 
                             {% endfor %}

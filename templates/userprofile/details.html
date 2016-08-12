@@ -20,16 +20,16 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th class="col-sm-6">{% trans "Addressee" %}</th>
+                <th class="col-sm-5">{% trans "Addressee" %}</th>
                 <th class="col-sm-2">{% trans "Billing" %}</th>
                 <th class="col-sm-2">{% trans "Shipping" %}</th>
-                <th class="col-sm-2"></th>
+                <th class="col-sm-4"></th>
             </tr>
         </thead>
         <tbody>
             {% for address in addresses %}
             <tr>
-                <th class="col-sm-6">
+                <th class="col-sm-5">
                     {{ address }}
                 </th>
                 <td class="col-sm-2">
@@ -52,7 +52,7 @@
                     </form>
                     {% endif %}
                 </td>
-                <td class="col-sm-2">
+                <td class="col-sm-4">
                     <a href="{% url 'profile:address-edit' pk=address.pk %}" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-edit"></i> {% trans "Edit" %}</a>
                     <a href="{% url 'profile:address-delete' pk=address.pk %}" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove"></i> {% trans "Delete" %}</a>
                 </td>

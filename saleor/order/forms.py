@@ -6,7 +6,9 @@ from .models import Payment
 
 
 class PaymentMethodsForm(forms.Form):
+
     method = forms.ChoiceField(
+        label=_("Method:"),
         choices=settings.CHECKOUT_PAYMENT_CHOICES, widget=forms.RadioSelect,
         initial=settings.CHECKOUT_PAYMENT_CHOICES[0][0])
 
