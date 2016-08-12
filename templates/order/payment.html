@@ -20,7 +20,7 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-sm-8 next-to-logo">
+        <div class="col-sm-8">
             {% if order.user == user or not order.is_fully_paid %}
                 {% if not order.is_fully_paid %}
                     <div class="panel panel-info">

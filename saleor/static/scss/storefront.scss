@@ -21,15 +21,8 @@ $fa-font-path: "~font-awesome/fonts";
   border-color: $gray-lighter;
 }
 
-.breadcrumb, .alert, .nav-justified, .next-to-logo {
-  @media (min-width: 768px) {
-    margin-left: 140px;
-    width: auto;
-  }
-}
-
 .navbar-brand-img {
-	padding-top: 0px;
+	padding-top: 2px;
 }
 
 .footer {
