@@ -52,7 +52,7 @@ USE_TZ = True
 LOCALE_PATHS = (
     os.path.join(PROJECT_ROOT, 'saleor/locale'),
 )
-LANGUAGE_CODE = 'en-us' 'bg'
+LANGUAGE_CODE = 'bg' # default language
 LANGUAGES = [
     ('en-us', _('English')),
     ('bg', _('Bulgarian'))

@@ -1604,7 +1604,7 @@ msgstr[1] ""
 #: templates/dashboard/product/product_form.html:356
 #: templates/userprofile/details.html:56
 msgid "Edit"
-msgstr ""
+msgstr "Редактирай"
 
 #: templates/dashboard/customer/detail.html:29
 msgid "Order history"
@@ -2635,15 +2635,15 @@ msgstr ""
 
 #: templates/userprofile/address-edit.html:5
 msgid "Edit Address"
-msgstr ""
+msgstr "Редактирай адрес"
 
 #: templates/userprofile/address-edit.html:11
 msgid "Edit address"
-msgstr ""
+msgstr "Редактирай адрес"
 
 #: templates/userprofile/address-edit.html:13
 msgid "New address"
-msgstr ""
+msgstr "Нов адрес"
 
 #: templates/userprofile/details.html:12
 msgid "Profile"
