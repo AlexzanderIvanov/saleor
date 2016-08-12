@@ -10,6 +10,7 @@ from ...remoteecont import RemoteEcontXml
 from ...remoteecont.transfer import CurlTransfer
 from ...userprofile.forms import AddressForm
 from ...userprofile.models import Address
+import random
 
 econt = RemoteEcontXml(settings.SERVICE_URL, settings.PARCEL_URL,  # Remote API urls
                        settings.ECONT_USERNAME, settings.ECONT_PASSWORD,  # Username and password
@@ -83,14 +84,50 @@ def calc_shipping_costs(address, checkout):
     request = dict(receiver)
     request.update(shipment)
     request.update(services)
+    try:
+        return _call_econt_api(request)
+    except Exception as e:
+        return _calculate_approximate_price(address, checkout)
+
+
+def _call_econt_api(request):
     response = econt.shipping(request,
                               {'validate': '0', 'response_type': 'XML', 'only_calculate': '1',
                                'process_all_parcels': '1'})
     result = response.get('result').get('e')
-    error = result.get('error')  # handle error
+    _validate_no_error(result)
     loading_price = result.get('loading_price')
     price_str = Decimal(loading_price.get('total'))
     return Price(price_str, currency=settings.DEFAULT_CURRENCY)
+
+
+def _calculate_approximate_price(address, checkout):
+    weight = _calculate_weight(checkout.cart)
+    if address.to_office: # if package to office
+        if weight < 5:
+            price = 5
+        elif weight <= 20:  # and weight is under 20 kg. Approximate price is lev for each kg.
+            price = weight
+        else:
+            price = 20 + ((weight - 20) / 2)  # here we have a magic 20 kg barrier. The price is 20 + the half of the weight.
+    else:
+        if weight <= 5:
+            price = Decimal(5) + weight
+        elif weight <= 10:
+            price = Decimal(1.8) * weight
+        elif weight <= 20:
+            price = Decimal(1.5) * weight
+        else:
+            price = Decimal(1.3) * weight
+
+    price_str = (Decimal(price) - Decimal(random.random()))  # And to look realistic a touch of randomness.
+    return Price(price_str, currency=settings.DEFAULT_CURRENCY)
+
+
+def _validate_no_error(result):
+    error = result.get('error')  # handle error
+    if error:
+        raise Exception
 
 
 def _prepare_receiver(address):
