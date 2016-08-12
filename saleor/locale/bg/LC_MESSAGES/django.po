@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-12 06:43-0500\n"
+"POT-Creation-Date: 2016-08-12 08:39-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgstr ""
 #: saleor/checkout/forms.py:18 saleor/checkout/forms.py:37
 #: templates/checkout/snippets/addresses-form.html:9
 msgid "Enter a new address"
-msgstr ""
+msgstr "Въведете нов адрес"
 
 #: saleor/checkout/forms.py:38
 #: templates/checkout/snippets/addresses-form.html:3
@@ -90,7 +90,7 @@ msgstr "Електронна поща"
 #: templates/dashboard/shipping/method_list.html:37
 #: templates/order/details.html:80 templates/order/payment.html:105
 msgid "Name"
-msgstr ""
+msgstr "Име"
 
 #: saleor/dashboard/customer/forms.py:12
 msgid "With open orders"
@@ -504,7 +504,7 @@ msgstr ""
 #: templates/order/details.html:102 templates/order/payment.html:127
 #: templates/userprofile/details.html:25
 msgid "Shipping"
-msgstr "Транспорт"
+msgstr "Доставка"
 
 #: saleor/dashboard/templates/dashboard/shipping/cities_list.html:15
 msgid "cities"
@@ -588,7 +588,7 @@ msgstr ""
 #: templates/dashboard/product/variant_form.html:71
 #: templates/dashboard/shipping/method_form.html:76
 msgid "Update"
-msgstr ""
+msgstr "Обнови"
 
 #: saleor/dashboard/templates/dashboard/shipping/country_form.html:63
 #: templates/dashboard/category/detail.html:59
@@ -601,14 +601,14 @@ msgstr ""
 #: templates/dashboard/product/variant_form.html:73
 #: templates/dashboard/shipping/method_form.html:82
 msgid "Create"
-msgstr ""
+msgstr "Създай"
 
 #: saleor/dashboard/templates/dashboard/shipping/offices_form.html:8
 #: saleor/dashboard/templates/dashboard/shipping/offices_form.html:24
 #: saleor/dashboard/templates/dashboard/shipping/offices_list.html:6
 #: templates/dashboard/base.html:109
 msgid "Offices"
-msgstr ""
+msgstr "Офиси"
 
 #: saleor/dashboard/templates/dashboard/shipping/offices_form.html:9
 #: saleor/dashboard/templates/dashboard/shipping/offices_form.html:18
@@ -697,7 +697,7 @@ msgstr ""
 #: saleor/discount/models.py:78
 msgctxt "voucher"
 msgid "name"
-msgstr ""
+msgstr "Име"
 
 #: saleor/discount/models.py:81
 msgctxt "voucher"
@@ -809,17 +809,17 @@ msgstr ""
 #: saleor/order/__init__.py:12
 msgctxt "order status"
 msgid "Processing"
-msgstr ""
+msgstr "Обработва се"
 
 #: saleor/order/__init__.py:13
 msgctxt "order status"
 msgid "Cancelled"
-msgstr ""
+msgstr "Отказана"
 
 #: saleor/order/__init__.py:14
 msgctxt "order status"
 msgid "Shipped"
-msgstr ""
+msgstr "Изпратена"
 
 #: saleor/order/__init__.py:15
 msgctxt "order status"
@@ -831,7 +831,11 @@ msgctxt "order status"
 msgid "Fully paid"
 msgstr ""
 
-#: saleor/order/forms.py:29
+#: saleor/order/forms.py:11
+msgid "Method:"
+msgstr "Метод:"
+
+#: saleor/order/forms.py:31
 msgid "Payment does not exist"
 msgstr ""
 
@@ -949,7 +953,7 @@ msgstr ""
 #: saleor/product/models/base.py:31
 msgctxt "Category field"
 msgid "name"
-msgstr ""
+msgstr "Име"
 
 #: saleor/product/models/base.py:33
 msgctxt "Category field"
@@ -1097,7 +1101,7 @@ msgstr ""
 
 #: saleor/registration/views.py:37
 msgid "You have been successfully logged out."
-msgstr ""
+msgstr "Вие излязохне успешно"
 
 #: saleor/registration/views.py:52 saleor/registration/views.py:107
 msgid "You are now logged in."
@@ -1115,20 +1119,34 @@ msgstr "Паролата Ви беше сменена успешно"
 msgid "Your email has been successfully changed"
 msgstr ""
 
+#: saleor/settings.py:57
+msgid "English"
+msgstr ""
+
+#: saleor/settings.py:58
+#, fuzzy
+#| msgid "Variant"
+msgid "Bulgarian"
+msgstr "Български"
+
+#: saleor/settings.py:268
+msgid "Cash on delivery"
+msgstr "Наложен платеж"
+
 #: saleor/shipping/models.py:64 saleor/shipping/models.py:93
 msgid "Any country"
 msgstr ""
 
-#: saleor/userprofile/forms.py:65
+#: saleor/userprofile/forms.py:69
 msgid "Invalid value"
 msgstr "Невалидна стойност"
 
-#: saleor/userprofile/forms.py:91
+#: saleor/userprofile/forms.py:95
 #, python-format
 msgid "Invalid postal code. Please follow the format: %(example)s"
 msgstr "Невалиден пощенски код. Моля следвайте формата: %(example)s"
 
-#: saleor/userprofile/forms.py:94
+#: saleor/userprofile/forms.py:98
 msgid "Invalid postal code."
 msgstr "Невалиден пощенски код"
 
@@ -1188,9 +1206,6 @@ msgid "phone number"
 msgstr "Телефонен номер"
 
 #: saleor/userprofile/models.py:74
-#, fuzzy
-#| msgctxt "Postage office field"
-#| msgid "office"
 msgctxt "Address field"
 msgid "To office"
 msgstr "До офис"
@@ -1253,7 +1268,7 @@ msgstr ""
 
 #: templates/base.html:64
 msgid "Language"
-msgstr ""
+msgstr "Език"
 
 #: templates/base.html:84 templates/cart/index.html:11
 #: templates/checkout/details.html:40
@@ -1275,13 +1290,13 @@ msgstr ""
 #: templates/userprofile/address-edit.html:9
 #: templates/userprofile/details.html:4 templates/userprofile/details.html:8
 msgid "Your profile"
-msgstr ""
+msgstr "Вашият профил"
 
 #: templates/base.html:93 templates/order/details.html:14
 #: templates/order/payment.html:15 templates/userprofile/orders.html:5
 #: templates/userprofile/orders.html:9
 msgid "Your orders"
-msgstr ""
+msgstr "Вашите поръчки"
 
 #: templates/base.html:96 templates/dashboard/base.html:30
 msgid "Dashboard"
@@ -1342,7 +1357,7 @@ msgstr "Крайна сума"
 
 #: templates/cart/index.html:79
 msgid "Remove from cart"
-msgstr ""
+msgstr "Извади от количка"
 
 #: templates/cart/index.html:94
 msgid "Proceed to checkout"
@@ -1350,7 +1365,7 @@ msgstr "Продължи с поръчката"
 
 #: templates/cart/index.html:99
 msgid "Your cart is empty"
-msgstr ""
+msgstr "Вашата количка е празна"
 
 #: templates/category/_items.html:26
 msgid "Discount!"
@@ -1362,7 +1377,7 @@ msgstr ""
 
 #: templates/checkout/details.html:27
 msgid "Already have an account?"
-msgstr ""
+msgstr "Имаш акаунт?"
 
 #: templates/checkout/details.html:45
 #: templates/checkout/shipping_address.html:14
@@ -1779,7 +1794,7 @@ msgstr ""
 #: templates/dashboard/payments/list.html:28
 #: templates/userprofile/orders.html:20
 msgid "Date"
-msgstr ""
+msgstr "Дата"
 
 #: templates/dashboard/index.html:23
 #: templates/dashboard/payments/detail.html:35
@@ -2090,7 +2105,7 @@ msgstr ""
 #: templates/dashboard/payments/list.html:31
 #: templates/userprofile/orders.html:26
 msgid "Status"
-msgstr ""
+msgstr "Статус"
 
 #: templates/dashboard/payments/list.html:41
 msgid "Order "
@@ -2348,17 +2363,17 @@ msgstr ""
 
 #: templates/order/details.html:8
 msgid "Order"
-msgstr ""
+msgstr "Поръчка"
 
 #: templates/order/details.html:28
 #, python-format
 msgid "Order %(order)s: "
-msgstr ""
+msgstr "Поръчка %(order)s: "
 
 #: templates/order/details.html:72 templates/order/payment.html:100
 #, python-format
 msgid "Shipment #%(number)s"
-msgstr ""
+msgstr "Пратка #%(number)s "
 
 #: templates/order/emails/confirm_email.body.html:5
 msgid ""
@@ -2436,7 +2451,7 @@ msgstr ""
 
 #: templates/order/payment.html:52
 msgid "Confirm order"
-msgstr ""
+msgstr "Потвърди поръчката"
 
 #: templates/order/payment.html:60
 msgid "You've authorized transaction. Order is in processing"
@@ -2551,19 +2566,19 @@ msgstr ""
 
 #: templates/registration/invalid_token.html:4
 msgid "Invalid token"
-msgstr ""
+msgstr "Невалиден токен"
 
 #: templates/registration/login.html:5
 msgid "Login"
-msgstr ""
+msgstr "Вход"
 
 #: templates/registration/login.html:15 templates/registration/login.html:23
 msgid "Log in"
-msgstr ""
+msgstr "Вход"
 
 #: templates/registration/login.html:21
 msgid "I don't know my password"
-msgstr ""
+msgstr "Забравена парола"
 
 #: templates/registration/login.html:28
 msgid "Want to use your social profile?"
@@ -2579,11 +2594,11 @@ msgstr ""
 
 #: templates/registration/login.html:42
 msgid "Don't have an account yet?"
-msgstr ""
+msgstr "Нямаш регистрация?"
 
 #: templates/registration/login.html:42
 msgid "Register"
-msgstr ""
+msgstr "Регистрирай се"
 
 #: templates/registration/logout.html:4
 msgid "Logged out"
@@ -2632,44 +2647,44 @@ msgstr ""
 
 #: templates/userprofile/details.html:12
 msgid "Profile"
-msgstr ""
+msgstr "Профил"
 
 #: templates/userprofile/details.html:14
 msgid "Change your password"
-msgstr ""
+msgstr "Промяна на парола"
 
 #: templates/userprofile/details.html:15
 msgid "Change your email address"
-msgstr ""
+msgstr "Промяна на електронна поща"
 
 #: templates/userprofile/details.html:19
 msgid "Your address book"
-msgstr ""
+msgstr "Твоите адреси"
 
 #: templates/userprofile/details.html:23
 msgid "Addressee"
-msgstr ""
+msgstr "Адреси"
 
 #: templates/userprofile/details.html:24
 msgid "Billing"
-msgstr ""
+msgstr "Фактура"
 
 #: templates/userprofile/details.html:37 templates/userprofile/details.html:47
 msgid "Default"
-msgstr ""
+msgstr "Главен"
 
 #: templates/userprofile/details.html:41 templates/userprofile/details.html:51
 msgid "Make default"
-msgstr ""
+msgstr "Направи главен"
 
 #: templates/userprofile/details.html:65
 msgid "Add new address"
-msgstr ""
+msgstr "Добави нов адрес"
 
 #: templates/userprofile/orders.html:17
 msgid "Order #"
-msgstr ""
+msgstr "Поръчка #"
 
 #: templates/userprofile/orders.html:29
 msgid "Last status change"
-msgstr ""
+msgstr "Последна промяна на статуса"

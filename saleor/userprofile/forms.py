@@ -5,6 +5,7 @@ from collections import defaultdict
 
 from django import forms
 from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy
 from i18naddress import validate_areas
 
 from saleor.shipping.models import ShippingOffice
@@ -24,7 +25,8 @@ class AddressForm(forms.ModelForm):
         ('city_area', 'address-level3'),
         ('phone', 'tel'),
         ('email', 'email'),
-        ('office', 'office')
+        ('office', 'office'),
+        ('to_office', 'to_office'),
     )
 
     class Meta:
@@ -35,6 +37,8 @@ class AddressForm(forms.ModelForm):
         autocomplete_type = kwargs.pop('autocomplete_type', None)
         super(AddressForm, self).__init__(*args, **kwargs)
         self.fields['city'].label_from_instance = lambda obj: "%s" % obj.name
+
+        self.fields['office'].label_from_instance = lambda obj: "%s" % obj.name
 
         if hasattr(self.instance, 'city'):
             self.fields['office'].queryset = ShippingOffice.objects.filter(city=self.instance.city)
