@@ -36,36 +36,35 @@
     {% endif %}
     {% block step_info %}{% endblock %}
 
-    {% block steps_menu %}
-        <ul class="nav nav-pills nav-justified nav-wizard">
-            <li>
-                <a href="{% url "cart:index" %}">{% trans "Cart" %}</a>
-                <div class="nav-arrow"></div>
-            </li>
-            <li>
-                <div class="nav-wedge"></div>
-                <a href="{% url "checkout:shipping-address" %}">{% trans "Shipping address" %}</a>
-                <div class="nav-arrow"></div>
-            </li>
-            <li>
-                <div class="nav-wedge"></div>
-                <a href="{% url "checkout:shipping-method" %}">{% trans "Shipping method" %}</a>
-                <div class="nav-arrow"></div>
-            </li>
-            <li>
-                <div class="nav-wedge"></div>
-                <a href="{% url "checkout:summary" %}">{% trans "Summary" %}</a>
-            </li>
-        </ul>
-    {% endblock steps_menu %}
-
     <div class="row">
         <div class="col-sm-8">
+            {% block steps_menu %}
+                <ul class="nav nav-pills nav-justified nav-wizard">
+                    <li>
+                        <a href="{% url "cart:index" %}">{% trans "Cart" %}</a>
+                        <div class="nav-arrow"></div>
+                    </li>
+                    <li>
+                        <div class="nav-wedge"></div>
+                        <a href="{% url "checkout:shipping-address" %}">{% trans "Shipping address" %}</a>
+                        <div class="nav-arrow"></div>
+                    </li>
+                    <li>
+                        <div class="nav-wedge"></div>
+                        <a href="{% url "checkout:shipping-method" %}">{% trans "Shipping method" %}</a>
+                        <div class="nav-arrow"></div>
+                    </li>
+                    <li>
+                        <div class="nav-wedge"></div>
+                        <a href="{% url "checkout:summary" %}">{% trans "Summary" %}</a>
+                    </li>
+                </ul>
+            {% endblock steps_menu %}
+
             {% block forms %}{% endblock %}
         </div>
 
         <div class="col-sm-4">
-            <h3>{% trans "Order" %}</h3>
             {% with total=checkout.get_total %}
                 <table class="table table-condensed">
                     <tbody>
