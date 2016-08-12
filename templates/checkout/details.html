@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load i18n %}
+{% load staticfiles %}
 {% load gross net tax from prices_i18n %}
 
 
@@ -12,7 +13,10 @@
     <header class="navbar navbar-default navbar-static-top" role="navigation">
         <nav class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">Saleor</a>
+                <a class="navbar-brand navbar-brand-img hidden-xs" href="/">
+                    <img src="{% static 'images/logo.png' %}" alt="">
+                </a>
+                <a class="navbar-brand visible-xs-block" href="/">AP1 Ltd.</a>
             </div>
         </nav>
     </header>
@@ -32,43 +36,45 @@
     {% endif %}
     {% block step_info %}{% endblock %}
 
+    {% block steps_menu %}
+        <ul class="nav nav-pills nav-justified nav-wizard">
+            <li>
+                <a href="{% url "cart:index" %}">{% trans "Cart" %}</a>
+                <div class="nav-arrow"></div>
+            </li>
+            <li>
+                <div class="nav-wedge"></div>
+                <a href="{% url "checkout:shipping-address" %}">{% trans "Shipping address" %}</a>
+                <div class="nav-arrow"></div>
+            </li>
+            <li>
+                <div class="nav-wedge"></div>
+                <a href="{% url "checkout:shipping-method" %}">{% trans "Shipping method" %}</a>
+                <div class="nav-arrow"></div>
+            </li>
+            <li>
+                <div class="nav-wedge"></div>
+                <a href="{% url "checkout:summary" %}">{% trans "Summary" %}</a>
+            </li>
+        </ul>
+    {% endblock steps_menu %}
+
     <div class="row">
         <div class="col-sm-8">
-            {% block steps_menu %}
-            <ul class="nav nav-pills nav-justified nav-wizard">
-                <li>
-                    <a href="{% url "cart:index" %}">{% trans "Cart" %}</a>
-                    <div class="nav-arrow"></div>
-                </li>
-                <li>
-                    <div class="nav-wedge"></div>
-                    <a href="{% url "checkout:shipping-address" %}">{% trans "Shipping address" %}</a>
-                    <div class="nav-arrow"></div>
-                </li>
-                <li>
-                    <div class="nav-wedge"></div>
-                    <a href="{% url "checkout:shipping-method" %}">{% trans "Shipping method" %}</a>
-                    <div class="nav-arrow"></div>
-                </li>
-                <li>
-                    <div class="nav-wedge"></div>
-                    <a href="{% url "checkout:summary" %}">{% trans "Summary" %}</a>
-                </li>
-            </ul>
-            {% endblock steps_menu %}
-
             {% block forms %}{% endblock %}
         </div>
 
         <div class="col-sm-4">
-        {% with total=checkout.get_total %}
-            <table class="table table-condensed">
-                <tbody>
+            <h3>{% trans "Order" %}</h3>
+            {% with total=checkout.get_total %}
+                <table class="table table-condensed">
+                    <tbody>
                     {% for delivery, delivery_cost, total_with_delivery in checkout.deliveries %}
                         {% for item in delivery %}
                             <tr>
                                 <td class="noborder">
-                                    {{ item.product.product }}{% if item.quantity != 1 %} <span class="badge">×{{ item.quantity }}</span>{% endif %}
+                                    {{ item.product.product }}{% if item.quantity != 1 %}
+                                        <span class="badge">×{{ item.quantity }}</span>{% endif %}
                                     <br>
                                     <small>{{ item.product }}</small>
                                 </td>
@@ -108,9 +114,9 @@
                             <strong>{% gross total %}</strong>
                         </td>
                     </tr>
-                </tbody>
-            </table>
-        {% endwith %}
+                    </tbody>
+                </table>
+            {% endwith %}
         </div>
     </div>
 {% endblock content %}
