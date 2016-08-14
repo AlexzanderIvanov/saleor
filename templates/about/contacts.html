@@ -1,9 +1,10 @@
-{% extends "admin/base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
 
 {% block title %}{{ title }} | Saleor{% endblock %}
 
 {% block branding %}
-<h1 id="site-name"><a href="{% url 'admin:index' %}">Saleor Admin</a></h1>
+<h1 id="site-name" xmlns="http://www.w3.org/1999/html"><a href="{% url 'admin:index' %}">Saleor Admin</a></h1>
 {% endblock %}
 
 {% block nav-global %}{% endblock %}
@@ -12,4 +13,54 @@
     {% load selectable_tags %}
     {% include_ui_theme %}
     {% include_jquery_libs %}
+{% endblock %}
+
+
+{% block content %}
+<div class="row">
+    <h2>{%  trans 'Contacts' %}</h2>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        {% trans 'Phone number' %}
+    </div>
+    <div class="col-sm-4">
+        <span class="glyphicon glyphicon-phone"></span>{{ '0876 00 15 65' }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        {% trans 'Phone number' %}
+    </div>
+    <div class="col-sm-4">
+        <span class="glyphicon glyphicon-phone"></span>{{ '0876 00 15 66' }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        {% trans 'Email' %}
+    </div>
+    <div class="col-sm-4">
+        <span class="glyphicon glyphicon-envelope"></span>{{ 'contact@ap1shop.com' }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        {% trans 'Facebook' %}
+    </div>
+    <div class="col-sm-4">
+        <a href="{% url 'facebook' %}">Facebook</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        {% trans 'Address' %}
+    </div>
+    <div class="col-sm-4">
+        {% blocktrans  %}str. Pop Gruio No 18{% endblocktrans %}<br/>
+        {% blocktrans  %}Qr. Poduiane{% endblocktrans %}<br/>
+        {% blocktrans  %}1517 Sofia{% endblocktrans %}<br/>
+        {% blocktrans  %}Bulgaria{% endblocktrans %}<br/>
+    </div>
+</div>
 {% endblock %}
