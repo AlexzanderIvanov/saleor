@@ -2,6 +2,7 @@ import logging
 
 from django.conf import settings
 from django.utils.translation import get_language
+from django.utils import translation
 
 from . import analytics, get_country_by_ip, get_currency_for_country
 from ..discount.models import Sale
@@ -46,3 +47,11 @@ class CurrencyMiddleware(object):
             request.currency = get_currency_for_country(request.country)
         else:
             request.currency = settings.DEFAULT_CURRENCY
+
+
+class ForceLangMiddleware:
+
+    def process_request(self, request):
+        request.LANG = getattr(settings, 'LANGUAGE_CODE', settings.LANGUAGE_CODE)
+        translation.activate(request.LANG)
+        request.LANGUAGE_CODE = request.LANG

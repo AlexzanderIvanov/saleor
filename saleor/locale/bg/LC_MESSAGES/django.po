@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-12 08:39-0500\n"
+"POT-Creation-Date: 2016-08-14 01:36-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,7 @@ msgstr "Въведете нов адрес"
 msgid "Same as shipping"
 msgstr ""
 
-#: saleor/checkout/forms.py:65 templates/checkout/details.html:50
+#: saleor/checkout/forms.py:65 templates/checkout/details.html:54
 #: templates/checkout/shipping_address.html:20
 #: templates/checkout/shipping_method.html:22
 #: templates/checkout/shipping_method.html:41
@@ -76,7 +76,7 @@ msgstr ""
 msgid "Deleted category %s"
 msgstr ""
 
-#: saleor/dashboard/customer/forms.py:9
+#: saleor/dashboard/customer/forms.py:9 templates/about/contacts.html:41
 #: templates/dashboard/customer/list.html:45
 msgid "Email"
 msgstr "Електронна поща"
@@ -497,7 +497,7 @@ msgstr ""
 #: saleor/dashboard/templates/dashboard/shipping/cities_list.html:14
 #: saleor/dashboard/templates/dashboard/shipping/countries_list.html:15
 #: saleor/dashboard/templates/dashboard/shipping/offices_list.html:14
-#: templates/checkout/details.html:93 templates/dashboard/base.html:103
+#: templates/checkout/details.html:98 templates/dashboard/base.html:103
 #: templates/dashboard/order/detail.html:210
 #: templates/dashboard/order/detail.html:299
 #: templates/dashboard/shipping/method_list.html:15
@@ -632,9 +632,9 @@ msgid "ID"
 msgstr ""
 
 #: saleor/dashboard/templates/dashboard/shipping/offices_list.html:40
-#: templates/userprofile/address-edit.html:22
+#: templates/about/contacts.html:57 templates/userprofile/address-edit.html:22
 msgid "Address"
-msgstr ""
+msgstr "Адрес"
 
 #: saleor/dashboard/templates/dashboard/shipping/offices_list.html:41
 msgid "City"
@@ -1262,66 +1262,90 @@ msgstr ""
 msgid "Address successfully deleted."
 msgstr ""
 
+#: templates/about/contacts.html:21 templates/base.html:155
+msgid "Contacts"
+msgstr "Контакти"
+
+#: templates/about/contacts.html:25 templates/about/contacts.html:33
+msgid "Phone number"
+msgstr "Телефонен номер"
+
+#: templates/about/contacts.html:49
+msgid "Facebook"
+msgstr ""
+
+#: templates/about/contacts.html:60
+msgid "str. Pop Gruio No 18"
+msgstr "ул. Поп Груйо No 18"
+
+#: templates/about/contacts.html:61
+msgid "Qr. Poduiane"
+msgstr "р-н Подуяне"
+
+#: templates/about/contacts.html:62
+msgid "1517 Sofia"
+msgstr "гр. София 1517"
+
+#: templates/about/contacts.html:63
+msgid "Bulgaria"
+msgstr "България"
+
 #: templates/base.html:13
 msgid "AP1 Software"
 msgstr ""
 
-#: templates/base.html:64
+#: templates/base.html:65
 msgid "Language"
 msgstr "Език"
 
-#: templates/base.html:84 templates/cart/index.html:11
-#: templates/checkout/details.html:40
+#: templates/base.html:85 templates/cart/index.html:11
+#: templates/checkout/details.html:44
 #: templates/checkout/shipping_address.html:8
 #: templates/checkout/shipping_method.html:10
 #: templates/checkout/summary.html:8
 msgid "Cart"
 msgstr "Количка"
 
-#: templates/base.html:89
+#: templates/base.html:90
 #, python-format
 msgid ""
 "Hello,\n"
 "                                %(user)s"
 msgstr ""
 
-#: templates/base.html:92 templates/registration/change_password.html:9
+#: templates/base.html:93 templates/registration/change_password.html:9
 #: templates/userprofile/address-delete.html:8
 #: templates/userprofile/address-edit.html:9
 #: templates/userprofile/details.html:4 templates/userprofile/details.html:8
 msgid "Your profile"
 msgstr "Вашият профил"
 
-#: templates/base.html:93 templates/order/details.html:14
+#: templates/base.html:94 templates/order/details.html:14
 #: templates/order/payment.html:15 templates/userprofile/orders.html:5
 #: templates/userprofile/orders.html:9
 msgid "Your orders"
 msgstr "Вашите поръчки"
 
-#: templates/base.html:96 templates/dashboard/base.html:30
+#: templates/base.html:97 templates/dashboard/base.html:30
 msgid "Dashboard"
 msgstr ""
 
-#: templates/base.html:99 templates/dashboard/base.html:46
+#: templates/base.html:100 templates/dashboard/base.html:46
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:104 templates/checkout/details.html:29
+#: templates/base.html:105 templates/checkout/details.html:33
 msgid "Sign in"
 msgstr "Вход"
 
-#: templates/base.html:127 templates/dashboard/base.html:57
+#: templates/base.html:128 templates/dashboard/base.html:57
 #: templates/order/details.html:13 templates/order/payment.html:14
 msgid "Home"
 msgstr "Начало"
 
-#: templates/base.html:153
+#: templates/base.html:154
 msgid "About us"
 msgstr "За нас"
-
-#: templates/base.html:154
-msgid "Contacts"
-msgstr "Контакти"
 
 #: templates/cart/index.html:7
 msgid "Your cart"
@@ -1339,13 +1363,13 @@ msgstr "Продукт"
 msgid "Price"
 msgstr "Цена"
 
-#: templates/cart/index.html:33 templates/checkout/details.html:82
+#: templates/cart/index.html:33 templates/checkout/details.html:87
 #: templates/dashboard/order/detail.html:291 templates/order/details.html:82
 #: templates/order/payment.html:107
 msgid "Subtotal"
 msgstr "Междинна сума"
 
-#: templates/cart/index.html:39 templates/checkout/details.html:105
+#: templates/cart/index.html:39 templates/checkout/details.html:110
 #: templates/dashboard/customer/detail.html:41
 #: templates/dashboard/includes/_orders_table.html:14
 #: templates/dashboard/order/detail.html:201
@@ -1371,15 +1395,15 @@ msgstr "Вашата количка е празна"
 msgid "Discount!"
 msgstr ""
 
-#: templates/checkout/details.html:7
+#: templates/checkout/details.html:8
 msgid "Checkout"
 msgstr ""
 
-#: templates/checkout/details.html:27
+#: templates/checkout/details.html:31
 msgid "Already have an account?"
 msgstr "Имаш акаунт?"
 
-#: templates/checkout/details.html:45
+#: templates/checkout/details.html:49
 #: templates/checkout/shipping_address.html:14
 #: templates/checkout/shipping_address.html:35
 #: templates/checkout/shipping_method.html:16
@@ -1390,7 +1414,7 @@ msgstr "Имаш акаунт?"
 msgid "Shipping address"
 msgstr "Адрес за доставкa"
 
-#: templates/checkout/details.html:55 templates/checkout/summary.html:26
+#: templates/checkout/details.html:59 templates/checkout/summary.html:26
 msgid "Summary"
 msgstr ""
 
