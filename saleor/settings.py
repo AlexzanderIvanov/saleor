@@ -38,12 +38,11 @@ DATABASES = {
         'NAME': 'ap1shop_saleor',
         'USER': 'ap1shop_saleor',
         'PASSWORD': 'Ap1forthewin!',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'HOST': 'localhost',  # Or an IP Address that your DB is hosted on
         'PORT': '3306',
         'default-character-set': 'utf8',
     }
 }
-
 
 TIME_ZONE = 'America/Chicago'
 USE_I18N = True
@@ -52,13 +51,13 @@ USE_TZ = True
 LOCALE_PATHS = (
     os.path.join(PROJECT_ROOT, 'saleor/locale'),
 )
-LANGUAGE_CODE = 'bg' # default language
+LANGUAGE_CODE = 'bg'  # default language
 LANGUAGES = [
     ('en-us', _('English')),
     ('bg', _('Bulgarian'))
 ]
 
-EMAIL_URL = 'smtp://orders@ap1shop.com:ap1forthewin@mail.ap1shop.com:25' #os.environ.get('EMAIL_URL', 'console://')
+EMAIL_URL = 'smtp://orders@ap1shop.com:ap1forthewin@mail.ap1shop.com:25'  # os.environ.get('EMAIL_URL', 'console://')
 email_config = dj_email_url.parse(EMAIL_URL)
 
 EMAIL_FILE_PATH = email_config['EMAIL_FILE_PATH']
@@ -68,8 +67,8 @@ EMAIL_HOST = email_config['EMAIL_HOST']
 EMAIL_PORT = email_config['EMAIL_PORT']
 EMAIL_BACKEND = email_config['EMAIL_BACKEND']
 EMAIL_USE_TLS = email_config['EMAIL_USE_TLS']
-DEFAULT_FROM_EMAIL = 'orders@ap1shop.com' #os.environ.get('DEFAULT_FROM_EMAIL')
-REPORT_EMAIL = 'orders@ap1shop.com' #os.environ.get('DEFAULT_FROM_EMAIL')
+DEFAULT_FROM_EMAIL = 'orders@ap1shop.com'  # os.environ.get('DEFAULT_FROM_EMAIL')
+REPORT_EMAIL = 'orders@ap1shop.com'  # os.environ.get('DEFAULT_FROM_EMAIL')
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
@@ -209,10 +208,10 @@ LOGGING = {
             'formatter': 'simple'
         },
         'applogfile': {
-            'level':'DEBUG',
-            'class':'logging.handlers.RotatingFileHandler',
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(PROJECT_ROOT, 'saleor.log'),
-            'maxBytes': 1024*1024*15, # 15MB
+            'maxBytes': 1024 * 1024 * 15,  # 15MB
             'backupCount': 10,
         },
     },
