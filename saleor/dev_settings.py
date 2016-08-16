@@ -1,7 +1,5 @@
 from .settings import *
 import os.path
-import dj_database_url
-
 
 DATABASES = {
     'default': {

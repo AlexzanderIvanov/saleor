@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-15 15:55-0500\n"
+"POT-Creation-Date: 2016-08-16 02:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1276,10 +1276,8 @@ msgid "Facebook"
 msgstr ""
 
 #: templates/about/contacts.html:61
-#, fuzzy
-#| msgid "Shipping address"
-msgid "Mailing address "
-msgstr "Адрес за кореспонденция"
+msgid "Mailing address"
+msgstr "Адрес кореспонденция"
 
 #: templates/about/contacts.html:64
 msgid "str. Pop Gruio No 18"
