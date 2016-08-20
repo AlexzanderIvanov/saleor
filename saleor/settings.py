@@ -53,7 +53,7 @@ LOCALE_PATHS = (
 )
 LANGUAGE_CODE = 'bg'  # default language
 LANGUAGES = [
-    ('en-us', _('English')),
+    ('en', _('English')),
     ('bg', _('Bulgarian'))
 ]
 
@@ -123,6 +123,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'saleor.core.middleware.ForceDefaultLanguageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'babeldjango.middleware.LocaleMiddleware',
     'saleor.cart.middleware.CartMiddleware',
@@ -130,7 +131,6 @@ MIDDLEWARE_CLASSES = [
     'saleor.core.middleware.GoogleAnalytics',
     'saleor.core.middleware.CountryMiddleware',
     'saleor.core.middleware.CurrencyMiddleware',
-    'saleor.core.middleware.ForceLangMiddleware',
 ]
 
 INSTALLED_APPS = [
