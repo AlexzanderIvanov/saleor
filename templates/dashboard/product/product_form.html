@@ -86,14 +86,14 @@
             {% csrf_token %}
             {{ product_form.name|materializecss:"s12 m8" }}
             {{ product_form.name_bg|materializecss:"s12 m8" }}
-            {{ product_form.name_en_us|materializecss:"s12 m8" }}
+            {{ product_form.name_en|materializecss:"s12 m8" }}
             {{ product_form.price|materializecss:"s12 m4" }}
 
             <div class="col s12 l8" >
                 <div class="row">
                     {{ product_form.description|materializecss }}
                     {{ product_form.description_bg|materializecss }}
-                    {{ product_form.description_en_us|materializecss }}
+                    {{ product_form.description_en|materializecss }}
                 </div>
             </div>
 
