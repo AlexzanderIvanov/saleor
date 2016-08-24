@@ -75,10 +75,12 @@ function filterOffices() {
       success: function (json) {
 
         $('#id_office option').remove();
-        $("#id_office").append('<option value="" selected="selected">---------</option>');
+
         for (var i = json.length - 1; i >= 0; i--) {
-          $("#id_office").append('<option value="' + json[i].id + '">' + json[i].name + ' (' + json[i].address + ')' + '</option>');
+          $("#id_office").prepend('<option value="' + json[i].id + '">' + json[i].name + ' (' + json[i].address + ')' + '</option>');
         }
+
+        $("#id_office").prepend('<option value="" selected="selected">---------</option>');
       }
     });
   });
