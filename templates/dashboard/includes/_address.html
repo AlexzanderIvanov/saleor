@@ -1,11 +1,19 @@
+{% load i18n %}
 <div class="address">
     <strong>{{ address }}</strong>
-    <div>{{ address.street_address_1 }}</div>
-    {% if address.street_address_2 %}
-        <div>{{ address.street_address_2 }}</div>
+    {% if not address.to_office %}
+        <div>{% trans "To address" %}</div>
+        <div>{{ address.street_address_1 }}</div>
+        {% if address.street_address_2 %}
+            <div>{{ address.street_address_2 }}</div>
+        {% endif %}
+    {%  else %}
+        <div>{% trans "To office" %}</div>
+        <div>{{ address.office.name }}</div>
+        <div>{{ address.office.address }}</div>
     {% endif %}
     <div>{{ address.postal_code }}</div>
-    <div>{{ address.city }}, {{ address.get_country_display }}</div>
+    <div>{{ address.city.name }}, {{ address.get_country_display }}</div>
     {% if address.phone %}
         <div><span class="mdi-hardware-phone-android"></span> <a href="tel:{{ address.phone }}">{{ address.phone }}</a></div>
     {% endif %}
