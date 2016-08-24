@@ -12,4 +12,4 @@ def get_offices(request, city):
 
 
 def to_reference(T):
-    return {'name': T.name, 'id': T.external_id}
+    return {'name': T.name, 'address': T.address, 'id': T.external_id}

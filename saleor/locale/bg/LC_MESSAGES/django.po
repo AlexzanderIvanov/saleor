@@ -1313,6 +1313,8 @@ msgid ""
 "Hello,\n"
 "                                %(user)s"
 msgstr ""
+"Здравейте,\n"
+"                                %(user)s"
 
 #: templates/base.html:93 templates/registration/change_password.html:9
 #: templates/userprofile/address-delete.html:8
@@ -1350,7 +1352,7 @@ msgstr "За нас"
 
 #: templates/cart/index.html:7
 msgid "Your cart"
-msgstr ""
+msgstr "Вашата количка"
 
 #: templates/cart/index.html:29
 msgid "Product"

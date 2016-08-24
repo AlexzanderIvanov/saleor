@@ -38,7 +38,7 @@ class AddressForm(forms.ModelForm):
         super(AddressForm, self).__init__(*args, **kwargs)
         self.fields['city'].label_from_instance = lambda obj: "%s" % obj.name
 
-        self.fields['office'].label_from_instance = lambda obj: "%s" % obj.name
+        self.fields['office'].label_from_instance = lambda obj: "%s ( %s )" % (obj.name, obj.address)
 
         if hasattr(self.instance, 'city'):
             self.fields['office'].queryset = ShippingOffice.objects.filter(city=self.instance.city)
