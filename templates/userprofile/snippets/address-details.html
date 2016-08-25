@@ -1,6 +1,9 @@
 {% load i18n %}
 
 <strong>{{ address.first_name }} {{ address.last_name }}</strong><br>
+
+{{ address.phone }}<br>
+
 {% if address.street_address_1 %}
     {{ address.street_address_1 }}<br>
 {% endif %}
@@ -15,5 +18,4 @@
     {% trans "To office" %} - {{ address.office.name }} ({{ address.office.address }})<br>
 {% endif %}
 
-{% if address.country_area %}{{ address.country_area }}, {% endif %}{{ address.get_country_display }}<br>
-{{ address.phone }}
+{% if address.country_area %}{{ address.country_area }}, {% endif %}{{ address.get_country_display }}
