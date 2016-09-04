@@ -319,6 +319,9 @@ WEBPACK_LOADER = {
 
 COUNTRIES_ONLY = ['BG']
 
+# ECONT_USERNAME = 'itpartner'
+# ECONT_PASSWORD = 'itpartner'
+#
 # SERVICE_URL = b'http://demo.econt.com/e-econt/xml_service_tool.php'
 # PARCEL_URL = b'http://demo.econt.com/e-econt/xml_parcel_import.php'
 

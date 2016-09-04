@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-24 11:52-0500\n"
+"POT-Creation-Date: 2016-09-04 07:48-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -939,12 +939,17 @@ msgid ""
 "Oops, it looks like we were unable to contact the selected payment service"
 msgstr ""
 
-#: saleor/product/forms.py:42
+#: saleor/product/forms.py:31
+msgctxt "Form field"
+msgid "Variant"
+msgstr ""
+
+#: saleor/product/forms.py:43
 msgctxt "Product admin error"
 msgid "You have to create at least one variant"
 msgstr ""
 
-#: saleor/product/forms.py:55
+#: saleor/product/forms.py:56
 msgctxt "Product admin error"
 msgid "You have to add at least one image"
 msgstr ""
@@ -1260,7 +1265,7 @@ msgid "Address successfully deleted."
 msgstr ""
 
 #: templates/about/contacts.html:4 templates/about/contacts.html:8
-#: templates/about/contacts.html:26 templates/base.html:155
+#: templates/about/contacts.html:26 templates/base.html:154
 msgid "Contacts"
 msgstr ""
 
@@ -1272,31 +1277,15 @@ msgstr ""
 msgid "Facebook"
 msgstr ""
 
-#: templates/about/contacts.html:61
-msgid "Mailing address"
-msgstr ""
-
-#: templates/about/contacts.html:64
-msgid "str. Pop Gruio No 18"
-msgstr ""
-
-#: templates/about/contacts.html:65
-msgid "1517 Sofia"
-msgstr ""
-
-#: templates/about/contacts.html:66
-msgid "Bulgaria"
-msgstr ""
-
 #: templates/base.html:13
 msgid "AP1 Software"
 msgstr ""
 
-#: templates/base.html:65
+#: templates/base.html:64
 msgid "Language"
 msgstr ""
 
-#: templates/base.html:85 templates/cart/index.html:11
+#: templates/base.html:84 templates/cart/index.html:11
 #: templates/checkout/details.html:44
 #: templates/checkout/shipping_address.html:8
 #: templates/checkout/shipping_method.html:10
@@ -1304,44 +1293,44 @@ msgstr ""
 msgid "Cart"
 msgstr ""
 
-#: templates/base.html:90
+#: templates/base.html:89
 #, python-format
 msgid ""
 "Hello,\n"
 "                                %(user)s"
 msgstr ""
 
-#: templates/base.html:93 templates/registration/change_password.html:9
+#: templates/base.html:92 templates/registration/change_password.html:9
 #: templates/userprofile/address-delete.html:8
 #: templates/userprofile/address-edit.html:9
 #: templates/userprofile/details.html:4 templates/userprofile/details.html:8
 msgid "Your profile"
 msgstr ""
 
-#: templates/base.html:94 templates/order/details.html:14
+#: templates/base.html:93 templates/order/details.html:14
 #: templates/order/payment.html:15 templates/userprofile/orders.html:5
 #: templates/userprofile/orders.html:9
 msgid "Your orders"
 msgstr ""
 
-#: templates/base.html:97 templates/dashboard/base.html:30
+#: templates/base.html:96 templates/dashboard/base.html:30
 msgid "Dashboard"
 msgstr ""
 
-#: templates/base.html:100 templates/dashboard/base.html:46
+#: templates/base.html:99 templates/dashboard/base.html:46
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:105 templates/checkout/details.html:33
+#: templates/base.html:104 templates/checkout/details.html:33
 msgid "Sign in"
 msgstr ""
 
-#: templates/base.html:128 templates/dashboard/base.html:57
+#: templates/base.html:127 templates/dashboard/base.html:57
 #: templates/order/details.html:13 templates/order/payment.html:14
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:154
+#: templates/base.html:153
 msgid "About us"
 msgstr ""
 
@@ -1791,6 +1780,7 @@ msgid "To address"
 msgstr ""
 
 #: templates/dashboard/includes/_address.html:11
+#: templates/userprofile/snippets/address-details.html:18
 msgid "To office"
 msgstr ""
 

@@ -7,6 +7,7 @@ import copy
 import datetime
 from collections import Sequence
 
+from saleor import settings
 from saleor.remoteecont import xmlutils
 from saleor.remoteecont.transfer import CurlTransfer
 
@@ -410,7 +411,7 @@ class RemoteEcontXml(RemoteEcont):
             'sender': {
                 'city': 'София',  # град на изпращача
                 'post_code': '1000',  # пощенски код
-                'office_code': '10168',  # офис код, ако се пр от офс
+                'office_code': '',  # офис код, ако се пр от офс 10168
                 'name': 'Александър',  # име на фирма подател
                 'name_person': 'Иванов',  # име на човек подател
                 'quarter': '',  # квартал
@@ -421,7 +422,8 @@ class RemoteEcontXml(RemoteEcont):
                 'street_et': '',  # етаж
                 'street_ap': '',  # № апартамент
                 'street_other': '',  # доп. информация
-                'phone_num': '0885878007'  # телефонен номер
+                'phone_num': '0885878007',  # телефонен номер
+                'email_on_delivery': settings.REPORT_EMAIL  # известир при получаване на пратката
             },
 
             'receiver': {
@@ -454,7 +456,8 @@ class RemoteEcontXml(RemoteEcont):
                 'tariff_code': '',  # МИСТИКА!
                 'tariff_sub_code': 'OFFICE_OFFICE',  # DOOR_OFFICE, D_D, O_D, O_O
                 'pay_after_accept': '1',  # плащане след получаване?
-                'pay_after_test': '',  # плащане след проба
+                'invoice_before_pay_CD': '1',  # пратката да се прегледа от получателя и да плати наложения платеж само ако приеме стоката ми.
+                'pay_after_test': '1',  # плащане след проба
                 'delivery_day': ''  # ЗАГАДКА!
             },
 

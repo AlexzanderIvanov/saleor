@@ -28,6 +28,7 @@ class ProductForm(AddToCartForm):
         variant_field = self.fields['variant']
         variant_field.queryset = self.product.variants
         variant_field.empty_label = None
+        variant_field.label = pgettext_lazy('Form field', 'Variant')
         images_map = {variant.pk: [vi.image.image.url
                                    for vi in variant.variant_images.all()]
                       for variant in self.product.variants.all()}
