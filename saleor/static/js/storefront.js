@@ -64,26 +64,38 @@ function onToOfficeChange() {
 $("#id_to_office").click(onToOfficeChange).change(onToOfficeChange);
 
 function filterOffices() {
-    $("#id_city").change(function () {
+
+  var onChange = function () {
     var optionSelected = $(this).find("option:selected");
     var valueSelected = optionSelected.val();
 
-    $.ajax({
-      type: 'GET',
-      url: '/shipping/cities/' + valueSelected + '/offices/',
-      dataType: 'json',
-      success: function (json) {
+    if (valueSelected == '') {
 
-        $('#id_office option').remove();
+      $("#id_office").html('<option value="" selected="selected">---------</option>');
 
-        for (var i = json.length - 1; i >= 0; i--) {
-          $("#id_office").prepend('<option value="' + json[i].id + '">' + json[i].name + ' (' + json[i].address + ')' + '</option>');
+    } else {
+
+      $.ajax({
+        type: 'GET',
+        url: '/shipping/cities/' + valueSelected + '/offices/',
+        dataType: 'json',
+        success: function (json) {
+
+          $('#id_office option').remove();
+
+          for (var i = json.length - 1; i >= 0; i--) {
+            $("#id_office").prepend('<option value="' + json[i].id + '">' + json[i].name + ' (' + json[i].address + ')' + '</option>');
+          }
+
+          $("#id_office").prepend('<option value="" selected="selected">---------</option>');
         }
+      });
 
-        $("#id_office").prepend('<option value="" selected="selected">---------</option>');
-      }
-    });
-  });
+    }
+  };
+
+  $("#id_city").change(onChange);
+  onChange();
 }
 
 filterOffices();
