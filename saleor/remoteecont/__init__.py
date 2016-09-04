@@ -412,36 +412,36 @@ class RemoteEcontXml(RemoteEcont):
                 'city': 'София',  # град на изпращача
                 'post_code': '1000',  # пощенски код
                 'office_code': '',  # офис код, ако се пр от офс 10168
-                'name': 'Александър',  # име на фирма подател
-                'name_person': 'Иванов',  # име на човек подател
-                'quarter': '',  # квартал
-                'street': '',  # улица
-                'street_num': '',  # уличен №
+                'name': 'ЕЙ ПИ 1 ООД',  # име на фирма подател
+                'name_person': 'Павел Пантелеев Александров',  # име на човек подател
+                'quarter': 'кв. Васил Левски',  # квартал
+                'street': 'ул. Поп Груйо',  # улица
+                'street_num': '18',  # уличен №
                 'street_bl': '',  # блок
                 'street_vh': '',  # вход
                 'street_et': '',  # етаж
                 'street_ap': '',  # № апартамент
                 'street_other': '',  # доп. информация
-                'phone_num': '0885878007',  # телефонен номер
-                'email_on_delivery': settings.REPORT_EMAIL  # известир при получаване на пратката
+                'phone_num': '0876001565',  # телефонен номер
+                'email_on_delivery': ''  # известир при получаване на пратката
             },
 
             'receiver': {
-                'city': 'Пазарджик',  # Абсолютно същото като
-                'post_code': '4400',  # за подателя
+                'city': '',  # Абсолютно същото като
+                'post_code': '',  # за подателя
                 'office_code': '',
-                'name': 'Стоян',
-                'name_person': 'Иванов',
+                'name': '',
+                'name_person': '',
                 'receiver_email': '',
                 'quarter': '',
-                'street': 'адсадсд',
-                'street_num': '2',
+                'street': '',
+                'street_num': '',
                 'street_bl': '',
                 'street_vh': '',
                 'street_et': '',
                 'street_ap': '',
                 'street_other': '',
-                'phone_num': '0889281940'},
+                'phone_num': ''},
 
             'shipment': {
                 'envelope_num': '',  # номер опаковка?!
@@ -451,8 +451,8 @@ class RemoteEcontXml(RemoteEcont):
                 # DOCUMENTPALLET
                 'shipment_type': 'PACK',
                 'description': '',  # описание
-                'pack_count': '10',  # брой пакети?!
-                'weight': '12',  # тегло (В КИЛОГРАМИ)
+                'pack_count': '',  # брой пакети?!
+                'weight': '',  # тегло (В КИЛОГРАМИ)
                 'tariff_code': '',  # МИСТИКА!
                 'tariff_sub_code': 'OFFICE_OFFICE',  # DOOR_OFFICE, D_D, O_D, O_O
                 'pay_after_accept': '1',  # плащане след получаване?

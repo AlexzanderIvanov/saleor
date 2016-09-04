@@ -97,7 +97,7 @@ def calc_shipping_costs(address, checkout):
 
 def _call_econt_api(request):
     response = econt.shipping(request,
-                              {'validate': '0', 'response_type': 'XML', 'only_calculate': '1',
+                              {'validate': '1', 'response_type': 'XML', 'only_calculate': '1',
                                'process_all_parcels': '1'})
     result = response.get('result').get('e')
     _validate_no_error(result)
@@ -146,8 +146,8 @@ def _prepare_receiver(address):
         'city': address.city.name,  # Абсолютно същото като
         'post_code': address.postal_code,  # за подателя
         'office_code': office_code,
-        'name': address.first_name,
-        'name_person': address.last_name,
+        'name': address.first_name + ' ' + address.last_name,
+        'name_person': '',
         'receiver_email': '',
         'quarter': '',
         'street': street,
@@ -171,10 +171,10 @@ def _prepare_shipment(address, checkout):
         # PACK, DOCUMENT, PALLET, CARGO,
         # DOCUMENTPALLET
         'shipment_type': 'PACK',
-        'description': '',  # описание
+        'description': 'Моторно масло',  # описание
         'pack_count': '1',  # брой пакети?!
         'weight': weight,  # тегло (В КИЛОГРАМИ)
-        'tariff_code': '',  # МИСТИКА!
+        'tariff_code': '2',  # МИСТИКА!
         'tariff_sub_code': tariff_sub_code,  # DOOR_OFFICE, D_D, O_D, O_O
         'pay_after_accept': '1',  # плащане след получаване?
         'pay_after_test': '1',  # плащане след проба
