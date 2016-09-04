@@ -66,7 +66,7 @@ $("#id_to_office").click(onToOfficeChange).change(onToOfficeChange);
 function filterOffices() {
 
   var onChange = function () {
-    var optionSelected = $(this).find("option:selected");
+    var optionSelected = $("#id_city option:selected");
     var valueSelected = optionSelected.val();
 
     if (valueSelected == '') {
@@ -94,6 +94,7 @@ function filterOffices() {
     }
   };
 
+  $("")
   $("#id_city").change(onChange);
   onChange();
 }
