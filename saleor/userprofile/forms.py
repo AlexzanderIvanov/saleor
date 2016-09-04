@@ -42,8 +42,6 @@ class AddressForm(forms.ModelForm):
 
         if hasattr(self.instance, 'city'):
             self.fields['office'].queryset = ShippingOffice.objects.filter(city=self.instance.city)
-        else:
-            self.fields['office'].queryset = ShippingOffice.objects.none()
 
         autocomplete_dict = defaultdict(
             lambda: 'off', self.AUTOCOMPLETE_MAPPING)
