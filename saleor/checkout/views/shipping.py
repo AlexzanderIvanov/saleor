@@ -65,17 +65,22 @@ def user_shipping_address_view(request, checkout):
         if addresses_form.cleaned_data['address'] != ShippingAddressesForm.NEW_ADDRESS:
             address_id = addresses_form.cleaned_data['address']
             checkout.shipping_address = Address.objects.get(id=address_id)
+            return _calculate_price_and_redirect(checkout)
         elif address_form.is_valid():
             checkout.shipping_address = address_form.instance
-        shipping_price = calc_shipping_costs(checkout.shipping_address, checkout)
-        checkout.shipping_price = shipping_price
-        checkout.get_total()
-        return redirect('checkout:shipping-method')
+            return _calculate_price_and_redirect(checkout)
+
     return TemplateResponse(
         request, 'checkout/shipping_address.html', context={
             'address_form': address_form, 'user_form': addresses_form,
             'checkout': checkout, 'additional_addresses': additional_addresses})
 
+
+def _calculate_price_and_redirect(checkout):
+    shipping_price = calc_shipping_costs(checkout.shipping_address, checkout)
+    checkout.shipping_price = shipping_price
+    checkout.get_total()
+    return redirect('checkout:shipping-method')
 
 def calc_shipping_costs(address, checkout):
     receiver = _prepare_receiver(address)
