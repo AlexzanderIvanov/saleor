@@ -38,6 +38,7 @@ class Category(MPTTModel):
         verbose_name=pgettext_lazy('Category field', 'parent'))
     hidden = models.BooleanField(
         pgettext_lazy('Category field', 'hidden'), default=False)
+    order = models.IntegerField(default=10000)
 
     objects = Manager()
     tree = TreeManager()
@@ -59,6 +60,9 @@ class Category(MPTTModel):
     class Meta:
         verbose_name_plural = 'categories'
         app_label = 'product'
+
+    class MPTTMeta:
+        order_insertion_by = ['order']
 
     def set_hidden_descendants(self, hidden):
         self.get_descendants().update(hidden=hidden)

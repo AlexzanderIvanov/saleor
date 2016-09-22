@@ -30,8 +30,6 @@ CACHE_URL = os.environ.get('CACHE_URL',
                            os.environ.get('REDIS_URL', 'locmem://'))
 CACHES = {'default': django_cache_url.parse(CACHE_URL)}
 
-# SQLITE_DB_URL = 'sqlite:///' + os.path.join(PROJECT_ROOT, 'dev.sqlite')
-# DATABASES = {'default': dj_database_url.config(default=SQLITE_DB_URL)}
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
