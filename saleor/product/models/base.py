@@ -96,11 +96,13 @@ class Product(models.Model, ItemRange):
         'ProductAttribute', related_name='products', blank=True)
     updated_at = models.DateTimeField(
         pgettext_lazy('Product field', 'updated at'), auto_now=True, null=True)
+    order = models.IntegerField(default=10000)
 
     objects = ProductManager()
 
     class Meta:
         app_label = 'product'
+        ordering = ['order', 'id']
 
     def __iter__(self):
         if not hasattr(self, '__variants'):
