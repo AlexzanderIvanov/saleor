@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.contrib.staticfiles.views import serve
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.http import HttpResponse
 
 from .cart.urls import urlpatterns as cart_urls
 from .checkout.urls import urlpatterns as checkout_urls
@@ -35,6 +36,8 @@ urlpatterns = [
     url(r'', include('payments.urls')),
     url(r'^shipping/', include(shipping_urls, namespace='shipping')),
     url(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^googlef5823f21fc347e8a\.html$', lambda r: HttpResponse("google-site-verification: googlef5823f21fc347e8a.html", content_type="text/plain")),
+
 ]
 urlpatterns += staticfiles_urlpatterns()
 
