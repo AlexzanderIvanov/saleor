@@ -36,10 +36,8 @@ urlpatterns = [
     url(r'', include('payments.urls')),
     url(r'^shipping/', include(shipping_urls, namespace='shipping')),
     url(r'^i18n/', include('django.conf.urls.i18n')),
-    url(r'^googlef5823f21fc347e8a\.html$',
-        lambda r: HttpResponse("google-site-verification: googlef5823f21fc347e8a.html", content_type="text/plain")),
-    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
-        name='django.contrib.sitemaps.views.sitemap')
+    url(r'^googlefb7eef15028e0635\.html$',
+        lambda r: HttpResponse("google-site-verification: googlefb7eef15028e0635.html", content_type="text/plain")),
 
 ]
 urlpatterns += staticfiles_urlpatterns()
