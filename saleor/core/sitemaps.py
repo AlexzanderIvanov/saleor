@@ -13,7 +13,7 @@ class ProductSitemap(Sitemap):
 
 
 class CategorySitemap(Sitemap):
-    changefreq = 'weekly'
+    changefreq = 'daily'
     priority = 0.6
 
     def items(self):

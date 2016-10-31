@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-29 23:45-0500\n"
+"POT-Creation-Date: 2016-10-31 02:27-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1279,8 +1279,8 @@ msgstr ""
 
 #: templates/base.html:14
 msgid ""
-"AP1shop.com is the Bulgarian supplier of AMSOIL lubricants, additives and "
-"filters."
+"AP1shop.com is the Bulgarian supplier of AMSOIL engine and transmission "
+"lubricants, additives and filters."
 msgstr ""
 
 #: templates/base.html:15
