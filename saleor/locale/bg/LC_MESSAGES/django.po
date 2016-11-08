@@ -1348,7 +1348,7 @@ msgstr "Начало"
 
 #: templates/base.html:151
 msgid "2016 - AP1 Ltd. - The Bulgarian AMSOIL dealer."
-msgstr "2016 - Ей Пи 1 ООД - Българският АМСОЙЛ дилър"
+msgstr "2016 - Ей Пи 1 ООД - Българският AMSOIL дилър"
 
 #: templates/base.html:155
 msgid "About us"
