@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-31 02:27-0500\n"
+"POT-Creation-Date: 2016-11-08 07:02-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1333,6 +1333,10 @@ msgstr ""
 #: templates/base.html:129 templates/dashboard/base.html:57
 #: templates/order/details.html:13 templates/order/payment.html:14
 msgid "Home"
+msgstr ""
+
+#: templates/base.html:151
+msgid "2016 - AP1 Ltd. - The Bulgarian AMSOIL dealer."
 msgstr ""
 
 #: templates/base.html:155
