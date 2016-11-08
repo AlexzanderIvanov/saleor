@@ -1347,8 +1347,6 @@ msgid "Home"
 msgstr "Начало"
 
 #: templates/base.html:151
-#, fuzzy
-#| msgid "2016 AP1 Ltd. - The Bulgarian AMSOIL dealer."
 msgid "2016 - AP1 Ltd. - The Bulgarian AMSOIL dealer."
 msgstr "2016 - Ей Пи 1 ООД - Българският АМСОЙЛ дилър"
 
