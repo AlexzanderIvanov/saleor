@@ -69,7 +69,7 @@ function filterOffices() {
     var optionSelected = $("#id_city option:selected");
     var valueSelected = optionSelected.val();
 
-    if (valueSelected == '') {
+    if (valueSelected == '' || typeof valueSelected == "undefined") {
 
       $("#id_office").html('<option value="" selected="selected">---------</option>');
 

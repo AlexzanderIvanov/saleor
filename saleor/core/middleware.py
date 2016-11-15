@@ -2,7 +2,6 @@ import logging
 
 from django.conf import settings
 from django.utils.translation import get_language
-from django.utils import translation
 
 from . import analytics, get_country_by_ip, get_currency_for_country
 from ..discount.models import Sale
@@ -14,6 +13,10 @@ class GoogleAnalytics(object):
     def process_request(self, request):
         client_id = analytics.get_client_id(request)
         path = request.path
+
+        if path.startswith(settings.MEDIA_URL) or path.startswith(settings.STATIC_URL) or path.startswith("/favicon.ico"):
+            return
+
         language = get_language()
         headers = request.META
         # FIXME: on production you might want to run this in background
