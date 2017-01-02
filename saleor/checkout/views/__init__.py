@@ -49,7 +49,12 @@ def shipping_method_view(request, checkout):
         checkout.shipping_method = shipping_method_form.cleaned_data['method']
         # return redirect('checkout:summary')
         order = create_order(checkout)
-        return redirect('order:payment', token=order.token)
+
+        # commented by Pavel - we don't need the payment screen - only cash on delivery for now
+        # redirecting to order:details instead
+        # return redirect('order:payment', token=order.token)
+
+        return redirect('order:details', token=order.token)
     return TemplateResponse(request, 'checkout/shipping_method.html', context={
         'shipping_method_form': shipping_method_form, 'checkout': checkout})
 

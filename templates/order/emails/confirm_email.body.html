@@ -11,7 +11,7 @@
         <table>
             {% for item in group %}
                 <tr>
-                    <td>{{ item.product }}{% if item.quantity != 1 %}×{{ item.quantity }}{% endif %}  </td>
+                    <td>{{ item.product }}{% if item.quantity != 1 %} × {{ item.quantity }}{% endif %}  </td>
                     <td>{% gross item.get_total %}</td>
                 </tr>
             {% endfor %}

@@ -221,7 +221,7 @@
                                 {% for item in group.items.all %}
                                     <tr>
                                         <td>
-                                            {{ item.product_name }}<br>
+                                            <span title="{{ item.product }}">{{ item.product_name }}</span><br>
                                         </td>
                                         <td>{{ item.product_sku }}</td>
                                         <td class="right-align">{% gross item.get_price_per_item %}</td>

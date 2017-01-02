@@ -3135,7 +3135,7 @@ msgstr ""
 
 #: venv/lib/python3.5/site-packages/django/forms/fields.py:65
 msgid "This field is required."
-msgstr ""
+msgstr "Полето е задължително."
 
 #: venv/lib/python3.5/site-packages/django/forms/fields.py:255
 #, fuzzy

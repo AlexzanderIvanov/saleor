@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.conf.urls import url, include
+from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
@@ -20,7 +21,7 @@ from .userprofile.urls import urlpatterns as userprofile_urls
 
 admin.autodiscover()
 
-urlpatterns = [
+urlpatterns = i18n_patterns(
     url(r'^', include(core_urls)),
     url(r'^account/', include(registration_urls, namespace='registration')),
     url(r'^admin/', include(admin.site.urls)),
@@ -37,9 +38,9 @@ urlpatterns = [
     url(r'^shipping/', include(shipping_urls, namespace='shipping')),
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^googlefb7eef15028e0635\.html$',
-        lambda r: HttpResponse("google-site-verification: googlefb7eef15028e0635.html", content_type="text/plain")),
+        lambda r: HttpResponse("google-site-verification: googlefb7eef15028e0635.html", content_type="text/plain"))
+)
 
-]
 urlpatterns += staticfiles_urlpatterns()
 
 if settings.DEBUG:

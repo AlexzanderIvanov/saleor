@@ -28,6 +28,12 @@
 
 <body itemscope itemtype="http://schema.org/WebPage">
 {% block header %}
+
+    {% get_current_language as CURRENT_LANGUAGE_CODE %}
+    {% get_language_info for CURRENT_LANGUAGE_CODE as current_language %}
+    {% get_available_languages as LANGUAGES %}
+    {% get_language_info_list for LANGUAGES as languages %}
+
     <header class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
         <nav class="container">
             <div class="navbar-header">
@@ -37,7 +43,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand navbar-brand-img" href="/">
+                <a class="navbar-brand navbar-brand-img" href="/{{ CURRENT_LANGUAGE_CODE }}">
                     <img src="{% static 'images/logo.png' %}" alt="">
                 </a>
             </div>
@@ -56,11 +62,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
 
-                        {% get_current_language as CURRENT_LANGUAGE_CODE %}
-                        {% get_language_info for CURRENT_LANGUAGE_CODE as current_language %}
 
-                        {% get_available_languages as LANGUAGES %}
-                        {% get_language_info_list for LANGUAGES as languages %}
 
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">{% trans "Language" %} <span class="caret"></span></a>

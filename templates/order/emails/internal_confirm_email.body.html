@@ -1,0 +1,83 @@
+{% load i18n %}
+{% load gross from prices_i18n %}
+{% load discount_amount_for from prices %}
+
+{% block content %}{% blocktrans %}
+    Hi!
+
+    There is a new order!{% endblocktrans %}
+
+    <div>
+        {% for group in groups %}
+            <table>
+                {% for item in group %}
+                    <tr>
+                        <td>{{ item.product }}{% if item.quantity != 1 %} × {{ item.quantity }}{% endif %}  </td>
+                        <td>{% gross item.get_total %}</td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td>Shipping</td>
+                    <td>{% gross group.shipping_price %}</td>
+                </tr>
+                {% if order.discount_amount %}
+                    <tr>
+                        <td>{{ order.discount_name }}</td>
+                        <td>{% gross order.discount|discount_amount_for:order.total %}</td>
+                    </tr>
+                {% endif %}
+                <tr>
+                    <td>Total</td>
+                    <td>{% gross order.total %}</td>
+                </tr>
+            </table>
+        {% endfor %}
+        <br/>
+
+        {% with order.shipping_address as address %}
+            <span>{% trans "Shipping address" %}</span>
+
+            <br />
+            <br />
+
+            <div>
+                <strong>{{ address }}</strong>
+                <div>{{ address.city.name }}, {{ address.get_country_display }}</div>
+                <div>{{ address.postal_code }}</div>
+
+                <br />
+
+                {% if not address.to_office %}
+                    <div>{% trans "To address" %}</div>
+                    <div>{{ address.street_address_1 }}</div>
+                    {% if address.street_address_2 %}
+                        <div>{{ address.street_address_2 }}</div>
+                    {% endif %}
+                {%  else %}
+                    <div>{% trans "To office" %}</div>
+                    <div>{{ address.office.name }} ({{ address.office.address }})</div>
+                {% endif %}
+
+                <br />
+
+                {% if address.phone %}
+                    <div><a href="tel:{{ address.phone }}">{{ address.phone }}</a></div>
+                {% endif %}
+                <a href="mailto:{{ order.get_user_email }}">{{ order.get_user_email }}</a>
+            </div>
+        {% endwith %}
+    </div>
+
+    <br/>
+
+    {% blocktrans %}Order details in dashboard: {% endblocktrans %}
+    <a href="https://ap1shop.com/dashboard/orders/{{ order.pk }}/">{% trans "website" %}</a>
+
+    {% blocktrans %}
+
+        <br/><br/>
+        Sincerely,<br/>
+        AP1 Ltd. Team
+
+    {% endblocktrans %}
+{% endblock %}
