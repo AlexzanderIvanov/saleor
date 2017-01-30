@@ -170,7 +170,8 @@ INSTALLED_APPS = [
     'materializecssform',
     'rest_framework',
     'webpack_loader',
-    'modeltranslation'
+    'modeltranslation',
+    'hreflang'
 ]
 
 LOGGING = {

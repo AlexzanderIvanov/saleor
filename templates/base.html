@@ -2,10 +2,16 @@
 {% load i18n %}
 {% load staticfiles %}
 {% load render_bundle from webpack_loader %}
+{% load hreflang %}
 
 <html lang="en" class="no-js">
 <head>
     <title>{% block title %}AP1shop.com - AMSOIL engine and transmission lubricants, additives and filters{% endblock %}</title>
+
+    {% autoescape off %}
+        {% hreflang_tags %}
+    {% endautoescape %}
+
     {% block meta %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
