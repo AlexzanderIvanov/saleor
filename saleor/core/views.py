@@ -15,3 +15,7 @@ def home(request):
 def contacts(request):
     return TemplateResponse(
         request, 'about/contacts.html')
+
+def about(request):
+    return TemplateResponse(
+        request, 'about/about.html')

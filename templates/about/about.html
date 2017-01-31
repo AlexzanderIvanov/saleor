@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "About us" %} — {{ block.super }}{% endblock %}
+
+{% block breadcrumb %}
+    {{ block.super }}
+    <li><a href="{% url 'about' %}">{% trans "About us" %}</a></li>
+{% endblock breadcrumb %}
+
+{% block branding %}
+    <h1 id="site-name" xmlns="http://www.w3.org/1999/html"><a href="{% url 'admin:index' %}">Saleor Admin</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block extrahead %}
+    {% load selectable_tags %}
+    {% include_ui_theme %}
+    {% include_jquery_libs %}
+{% endblock %}
+
+
+{% block content %}
+    <div class="row">
+        <h2>{% trans "About us" %}</h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            {% blocktrans %}
+                AP1 Ltd. is established in the year 2017 and specializes in importing the boutique automotive and
+                motorcycle oils and additives of the American company AMSOIL in Bulgaria.
+                <br><br>
+                Our biggest priority is offering a quality service. This includes a big assortment of products, as well
+                as a direct contact with our customers, so that we can consult and share our experience in choosing
+                the best for their needs.
+                <br><br>
+                We, the founders of the company, are automotive enthusiast and in the search of the best for our cars,
+                we decided to also offer it to the Bulgarian market.
+                <h3>Payment</h3>
+                Payment is on delivery of the product. All prices include VAT!
+                <h3>Delivery</h3>
+                All deliveries are made using Econt Express and all orders are sent in 3 working days of their
+                creation.
+                <h3>Guaranteed origin</h3>
+                All products are imported to Bulgaria through the official distributors for Europe. Our close
+                cooperation
+                with them also allows us ordering products that they don't keep in stock.
+                <h3>Returns</h3>
+                Each client that has ordered a product through this site can return in 14 days after the product has
+                been received.
+            {% endblocktrans %}
+        </div>
+    </div>
+{% endblock %}

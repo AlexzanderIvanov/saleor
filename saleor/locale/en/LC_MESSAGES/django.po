@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-08 07:02-0600\n"
+"POT-Creation-Date: 2017-01-31 16:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1131,7 +1131,7 @@ msgstr ""
 msgid "Bulgarian"
 msgstr ""
 
-#: saleor/settings.py:266
+#: saleor/settings.py:267
 msgid "Cash on delivery"
 msgstr ""
 
@@ -1264,8 +1264,50 @@ msgstr ""
 msgid "Address successfully deleted."
 msgstr ""
 
+#: templates/about/about.html:4 templates/about/about.html:8
+#: templates/about/about.html:26 templates/base.html:163
+msgid "About us"
+msgstr ""
+
+#: templates/about/about.html:30
+msgid ""
+"\n"
+"                AP1 Ltd. is established in the year 2017 and specializes in "
+"importing the boutique automotive and\n"
+"                motorcycle oils and additives of the American company AMSOIL "
+"in Bulgaria.\n"
+"                <br><br>\n"
+"                Our biggest priority is offering a quality service. This "
+"includes a big assortment of products, as well\n"
+"                as a direct contact with our customers, so that we can "
+"consult and share our experience in choosing\n"
+"                the best for their needs.\n"
+"                <br><br>\n"
+"                We, the founders of the company, are automotive enthusiast "
+"and in the search of the best for our cars,\n"
+"                we decided to also offer it to the Bulgarian market.\n"
+"                <h3>Payment</h3>\n"
+"                Payment is on delivery of the product. All prices include "
+"VAT!\n"
+"                <h3>Delivery</h3>\n"
+"                All deliveries are made using Econt Express and all orders "
+"are sent in 3 working days of their\n"
+"                creation.\n"
+"                <h3>Guaranteed origin</h3>\n"
+"                All products are imported to Bulgaria through the official "
+"distributors for Europe. Our close\n"
+"                cooperation\n"
+"                with them also allows us ordering products that they don't "
+"keep in stock.\n"
+"                <h3>Returns</h3>\n"
+"                Each client that has ordered a product through this site can "
+"return in 14 days after the product has\n"
+"                been received.\n"
+"            "
+msgstr ""
+
 #: templates/about/contacts.html:4 templates/about/contacts.html:8
-#: templates/about/contacts.html:26 templates/base.html:156
+#: templates/about/contacts.html:26 templates/base.html:164
 msgid "Contacts"
 msgstr ""
 
@@ -1277,70 +1319,66 @@ msgstr ""
 msgid "Facebook"
 msgstr ""
 
-#: templates/base.html:14
+#: templates/base.html:20
 msgid ""
 "AP1shop.com is the Bulgarian supplier of AMSOIL engine and transmission "
 "lubricants, additives and filters."
 msgstr ""
 
-#: templates/base.html:15
+#: templates/base.html:21
 msgid "AP1 Ltd."
 msgstr ""
 
-#: templates/base.html:66
+#: templates/base.html:74
 msgid "Language"
 msgstr ""
 
-#: templates/base.html:86 templates/cart/index.html:11
+#: templates/base.html:94 templates/cart/index.html:11
 #: templates/checkout/details.html:44
 #: templates/checkout/shipping_address.html:8
 #: templates/checkout/shipping_method.html:10 templates/checkout/summary.html:8
 msgid "Cart"
 msgstr ""
 
-#: templates/base.html:91
+#: templates/base.html:99
 #, python-format
 msgid ""
 "Hello,\n"
 "                                %(user)s"
 msgstr ""
 
-#: templates/base.html:94 templates/registration/change_password.html:9
+#: templates/base.html:102 templates/registration/change_password.html:9
 #: templates/userprofile/address-delete.html:8
 #: templates/userprofile/address-edit.html:9
 #: templates/userprofile/details.html:4 templates/userprofile/details.html:8
 msgid "Your profile"
 msgstr ""
 
-#: templates/base.html:95 templates/order/details.html:14
+#: templates/base.html:103 templates/order/details.html:14
 #: templates/order/payment.html:15 templates/userprofile/orders.html:5
 #: templates/userprofile/orders.html:9
 msgid "Your orders"
 msgstr ""
 
-#: templates/base.html:98 templates/dashboard/base.html:30
+#: templates/base.html:106 templates/dashboard/base.html:30
 msgid "Dashboard"
 msgstr ""
 
-#: templates/base.html:101 templates/dashboard/base.html:46
+#: templates/base.html:109 templates/dashboard/base.html:46
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:106 templates/checkout/details.html:33
+#: templates/base.html:114 templates/checkout/details.html:33
 msgid "Sign in"
 msgstr ""
 
-#: templates/base.html:129 templates/dashboard/base.html:57
+#: templates/base.html:137 templates/dashboard/base.html:57
 #: templates/order/details.html:13 templates/order/payment.html:14
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:151
-msgid "2016 - AP1 Ltd. - The Bulgarian AMSOIL dealer."
-msgstr ""
-
-#: templates/base.html:155
-msgid "About us"
+#: templates/base.html:159
+msgid "2017 - AP1 Ltd. - AMSOIL in Bulgaria"
 msgstr ""
 
 #: templates/cart/index.html:7
@@ -1405,7 +1443,9 @@ msgstr ""
 #: templates/checkout/shipping_method.html:16
 #: templates/checkout/shipping_method.html:35
 #: templates/checkout/summary.html:14 templates/dashboard/order/detail.html:130
-#: templates/order/details.html:58 templates/order/payment.html:86
+#: templates/order/details.html:58
+#: templates/order/emails/internal_confirm_email.body.html:38
+#: templates/order/payment.html:86
 msgid "Shipping address"
 msgstr ""
 
@@ -1783,11 +1823,13 @@ msgstr ""
 msgid "You are about to delete <strong>%(voucher)s</strong>."
 msgstr ""
 
-#: templates/dashboard/includes/_address.html:5
+#: templates/dashboard/includes/_address.html:10
+#: templates/order/emails/internal_confirm_email.body.html:51
 msgid "To address"
 msgstr ""
 
-#: templates/dashboard/includes/_address.html:11
+#: templates/dashboard/includes/_address.html:16
+#: templates/order/emails/internal_confirm_email.body.html:57
 #: templates/userprofile/snippets/address-details.html:18
 msgid "To office"
 msgstr ""
@@ -2418,6 +2460,7 @@ msgid "You can see order details on our "
 msgstr ""
 
 #: templates/order/emails/confirm_email.body.html:36
+#: templates/order/emails/internal_confirm_email.body.html:74
 msgid "website"
 msgstr ""
 
@@ -2447,6 +2490,33 @@ msgstr ""
 
 #: templates/order/emails/confirm_email.subject.txt:2
 msgid "AP1shop order details"
+msgstr ""
+
+#: templates/order/emails/internal_confirm_email.body.html:5
+msgid ""
+"\n"
+"    Hi!\n"
+"\n"
+"    There is a new order!"
+msgstr ""
+
+#: templates/order/emails/internal_confirm_email.body.html:73
+msgid "Order details in dashboard: "
+msgstr ""
+
+#: templates/order/emails/internal_confirm_email.body.html:76
+msgid ""
+"\n"
+"\n"
+"        <br/><br/>\n"
+"        Sincerely,<br/>\n"
+"        AP1 Ltd. Team\n"
+"\n"
+"    "
+msgstr ""
+
+#: templates/order/emails/internal_confirm_email.subject.txt:2
+msgid "New AP1shop order details"
 msgstr ""
 
 #: templates/order/payment.html:9 templates/order/payment.html:43
