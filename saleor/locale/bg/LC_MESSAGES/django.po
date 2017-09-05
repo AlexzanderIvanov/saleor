@@ -1464,7 +1464,7 @@ msgstr "Вашата количка е празна"
 
 #: templates/category/_items.html:26
 msgid "Discount!"
-msgstr ""
+msgstr "Намаление!"
 
 #: templates/checkout/details.html:8
 msgid "Checkout"
@@ -1472,7 +1472,7 @@ msgstr ""
 
 #: templates/checkout/details.html:31
 msgid "Already have an account?"
-msgstr "Имаш акаунт?"
+msgstr "Съществуващ акаунт?"
 
 #: templates/checkout/details.html:49
 #: templates/checkout/shipping_address.html:14
@@ -2642,7 +2642,7 @@ msgstr ""
 
 #: templates/product/details.html:40
 msgid "You save"
-msgstr ""
+msgstr "Вие спестявате"
 
 #: templates/product/details.html:69
 msgid "Add to cart"

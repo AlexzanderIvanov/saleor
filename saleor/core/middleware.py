@@ -37,10 +37,10 @@ class DiscountMiddleware(object):
 class CountryMiddleware(object):
 
     def process_request(self, request):
-        if 'REMOTE_ADDR' in request.META:
-            request.country = get_country_by_ip(request.META['REMOTE_ADDR'])
-        else:
-            request.country = None
+        # if 'REMOTE_ADDR' in request.META:
+        #     request.country = get_country_by_ip(request.META['REMOTE_ADDR'])
+        # else:
+        request.country = None
 
 
 class CurrencyMiddleware(object):

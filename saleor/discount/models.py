@@ -270,7 +270,7 @@ class Sale(models.Model):
         check_price = variant.get_price_per_item()
         discounted_products = [p.pk for p in self.products.all()]
         discounted_categories = list(self.categories.all())
-        if discounted_products and variant.pk not in discounted_products:
+        if discounted_products and variant.product.pk not in discounted_products:
             raise NotApplicable('Discount not applicable for this product')
         if (discounted_categories and not
             self._product_has_category_discount(
