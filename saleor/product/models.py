@@ -19,6 +19,7 @@ from prices import TaxedMoneyRange
 from text_unidecode import unidecode
 from versatileimagefield.fields import PPOIField, VersatileImageField
 
+from saleor.autoparts.models import PartBrand
 from saleor.core.utils import build_absolute_uri
 
 from ..core import TaxRateType
@@ -119,6 +120,13 @@ class Product(SeoModel, PublishableModel):
     weight = MeasurementField(
         measurement=Weight, unit_choices=WeightUnits.CHOICES,
         blank=True, null=True)
+
+    #Autoparts fields
+    art_code_1 = models.CharField(max_length=128, blank=True, null=True)
+    art_code_2 = models.CharField(max_length=128, blank=True, null=True)
+    brand_art_code_1 = models.CharField(max_length=128, blank=True, null=True)
+    brand = models.ForeignKey(
+        PartBrand, related_name='products', on_delete=)
 
     translated = TranslationProxy()
 

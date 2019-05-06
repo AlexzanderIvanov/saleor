@@ -56,46 +56,10 @@ DATABASES = {
 
 
 TIME_ZONE = 'America/Chicago'
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'bg'
 LANGUAGES = [
-    ('ar', _('Arabic')),
-    ('az', _('Azerbaijani')),
-    ('bg', _('Bulgarian')),
-    ('bn', _('Bengali')),
-    ('ca', _('Catalan')),
-    ('cs', _('Czech')),
-    ('da', _('Danish')),
-    ('de', _('German')),
-    ('en', _('English')),
-    ('es', _('Spanish')),
-    ('et', _('Estonian')),
-    ('fa', _('Persian')),
-    ('fr', _('French')),
-    ('hi', _('Hindi')),
-    ('hu', _('Hungarian')),
-    ('hy', _('Armenian')),
-    ('id', _('Indonesian')),
-    ('it', _('Italian')),
-    ('ja', _('Japanese')),
-    ('ko', _('Korean')),
-    ('mn', _('Mongolian')),
-    ('nb', _('Norwegian')),
-    ('nl', _('Dutch')),
-    ('pl', _('Polish')),
-    ('pt', _('Portuguese')),
-    ('pt-br', _('Brazilian Portuguese')),
-    ('ro', _('Romanian')),
-    ('ru', _('Russian')),
-    ('sk', _('Slovak')),
-    ('sr', _('Serbian')),
-    ('sw', _('Swahili')),
-    ('sv', _('Swedish')),
-    ('th', _('Thai')),
-    ('tr', _('Turkish')),
-    ('uk', _('Ukrainian')),
-    ('vi', _('Vietnamese')),
-    ('zh-hans', _('Simplified Chinese')),
-    ('zh-hant', _('Traditional Chinese'))]
+    ('bg', _('Bulgarian'))
+]
 LOCALE_PATHS = [os.path.join(PROJECT_ROOT, 'locale')]
 USE_I18N = True
 USE_L10N = True
@@ -230,6 +194,7 @@ INSTALLED_APPS = [
     'saleor.data_feeds',
     'saleor.page',
     'saleor.payment',
+    'saleor.autoparts',
 
     # External apps
     'versatileimagefield',
@@ -325,8 +290,8 @@ AUTH_USER_MODEL = 'account.User'
 
 LOGIN_URL = '/account/login/'
 
-DEFAULT_COUNTRY = os.environ.get('DEFAULT_COUNTRY', 'US')
-DEFAULT_CURRENCY = os.environ.get('DEFAULT_CURRENCY', 'USD')
+DEFAULT_COUNTRY = os.environ.get('DEFAULT_COUNTRY', 'BG')
+DEFAULT_CURRENCY = os.environ.get('DEFAULT_CURRENCY', 'BGN')
 DEFAULT_DECIMAL_PLACES = get_currency_fraction(DEFAULT_CURRENCY)
 DEFAULT_MAX_DIGITS = 12
 AVAILABLE_CURRENCIES = [DEFAULT_CURRENCY]
@@ -458,7 +423,7 @@ LOGOUT_ON_PASSWORD_CHANGE = False
 # SEARCH CONFIGURATION
 DB_SEARCH_ENABLED = True
 
-# support deployment-dependant elastic enviroment variable
+# support deployment-dependant elastic environment variable
 ES_URL = (
     os.environ.get('ELASTICSEARCH_URL')
     or os.environ.get('SEARCHBOX_URL')
