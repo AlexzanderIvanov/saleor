@@ -5,6 +5,7 @@ from django.conf import settings
 from django.contrib.postgres.fields import HStoreField, JSONField
 from django.core.validators import MinValueValidator
 from django.db import models
+from django.db.models import SET_NULL
 from django.urls import reverse
 from django.utils.encoding import smart_text
 from django.utils.text import slugify
@@ -126,7 +127,8 @@ class Product(SeoModel, PublishableModel):
     art_code_2 = models.CharField(max_length=128, blank=True, null=True)
     brand_art_code_1 = models.CharField(max_length=128, blank=True, null=True)
     brand = models.ForeignKey(
-        PartBrand, related_name='products', on_delete=)
+        PartBrand, related_name='products', on_delete=models.SET_NULL, null=True)
+    is_autopart = models.BooleanField(default=False)
 
     translated = TranslationProxy()
 
