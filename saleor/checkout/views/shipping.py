@@ -89,7 +89,7 @@ def calc_shipping_costs(address, checkout):
     request = dict(receiver)
     request.update(shipment)
     request.update(services)
-    if checkout.get_total() > Price(Decimal(149), currency=settings.DEFAULT_CURRENCY):
+    if checkout.get_total() > Price(Decimal(149), currency=settings.DEFAULT_CURRENCY) and address.to_office:
         return Price(Decimal(0), currency=settings.DEFAULT_CURRENCY)
     else:
         try:
