@@ -16,6 +16,12 @@ def contacts(request):
     return TemplateResponse(
         request, 'about/contacts.html')
 
+
+def delivery(request):
+    return TemplateResponse(
+        request, 'about/delivery.html')
+
+
 def about(request):
     return TemplateResponse(
         request, 'about/about.html')
